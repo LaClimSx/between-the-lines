@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="2_y7qwu"]
 
 [node name="InteractionPanel" type="CanvasLayer" unique_id=1785751165]
+process_mode = 3
 script = ExtResource("1_ugcsn")
 
 [node name="Control" type="Control" parent="." unique_id=383730020]
@@ -74,21 +75,34 @@ layout_mode = 2
 
 [node name="Answer1" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1965616468]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Answer3")
+focus_neighbor_bottom = NodePath("../Answer2")
+focus_next = NodePath("../Answer2")
+focus_previous = NodePath("../Answer3")
 text = "Can you repeat? I didn't hear you"
 alignment = 0
 
 [node name="Answer2" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1685323429]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Answer1")
+focus_neighbor_bottom = NodePath("../Answer3")
+focus_next = NodePath("../Answer3")
+focus_previous = NodePath("../Answer1")
 text = "Oh yeah"
 alignment = 0
 
 [node name="Answer3" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1707424643]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Answer2")
+focus_neighbor_bottom = NodePath("../Answer1")
+focus_next = NodePath("../Answer1")
+focus_previous = NodePath("../Answer2")
 text = "Haha"
 alignment = 0
 
 [node name="TimerLabel" type="Label" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1101243199]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 text = "10s"
 horizontal_alignment = 1

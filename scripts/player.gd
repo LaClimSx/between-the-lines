@@ -3,23 +3,27 @@ class_name Player
 
 
 @export var speed : int = 75
+const WORLD_BORDERS: Vector2i = Vector2i(320, 180)
 
 enum Direction {LEFT, RIGHT, UP, DOWN}
 
 var prev_dir : Direction = Direction.DOWN
 
-func get_input():
-	var input_direction = Input.get_vector("left", "right", "up", "down")
+func get_input() -> void:
+	var input_direction : Vector2 = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 
-func _physics_process(delta):
+
+func _physics_process(_delta: float) -> void:
 	get_input()
 	animate()
 	move_and_slide()
+	position.x = clamp(position.x, 0, WORLD_BORDERS.x)
+	position.y = clamp(position.y, 0, WORLD_BORDERS.y)
 
 
-func animate():
-	var animation = $AnimatedSprite2D.animation
+func animate() -> void:
+	var animation : String = $AnimatedSprite2D.animation
 	if velocity == Vector2(0, 0):
 		match prev_dir:
 			Direction.UP:

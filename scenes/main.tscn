@@ -10,6 +10,7 @@ y_sort_enabled = true
 script = ExtResource("1_o5qli")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
+position = Vector2(160, 120)
 
 [node name="NPC" parent="." unique_id=1732191449 instance=ExtResource("3_sugp2")]
 position = Vector2(167, 78)
