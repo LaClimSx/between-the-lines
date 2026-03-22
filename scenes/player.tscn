@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://bie27k7qc55cr" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 8.0
-height = 20.0
+radius = 7.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -275,13 +275,15 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1711175431]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=473931021]
-position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=875704430]
+position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"idle_right"
 autoplay = "idle_down"

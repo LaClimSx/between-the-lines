@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b47o7t6ew8f43"]
+
+[ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npc.gd" id="1_abqhh"]
+[ext_resource type="Texture2D" uid="uid://v25wmitrx8l0" path="res://assets/temporary/blonde_man.png" id="1_nh2m4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl2vt"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwkja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n8xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wlns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl2vt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh2m4"]
+radius = 17.0
+height = 42.0
+
+[node name="NPC" type="StaticBody2D" unique_id=1732191449]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_abqhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1830750460]
+shape = SubResource("CapsuleShape2D_abqhh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27330966]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_hwkja")
+autoplay = "default"
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=502922032]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1786364444]
+shape = SubResource("CapsuleShape2D_nh2m4")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

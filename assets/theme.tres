@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://b7f08ixy72g71"]
+
+[ext_resource type="FontFile" uid="uid://bl0ur2w12mjc6" path="res://assets/Silver.ttf" id="1_5x3i2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09872847, 0.09872834, 0.09872835, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[resource]
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_5x3i2")
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_5x3i2")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_5x3i2")
