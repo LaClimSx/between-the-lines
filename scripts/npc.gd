@@ -26,6 +26,7 @@ func _input(event: InputEvent) -> void:
 # placeholder function to test
 func _received_answer(score: int) -> void:
 	print("Answered with a score of: ", score)
+	Global.score = score
 
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:
@@ -36,4 +37,3 @@ func _on_interaction_area_body_entered(body: Node2D) -> void:
 func _on_interaction_area_body_exited(body: Node2D) -> void:
 	if body is Player:
 		player_inside_area = false
-		
