@@ -18,7 +18,7 @@ func _input(event: InputEvent) -> void:
 		print("interacting with NPC: " + name)
 		var panel : InteractionPanel = INTERACTION_PANEL.instantiate()
 		panel.visible = false
-		add_child(panel)
+		$Panels.add_child(panel)
 		panel.setup(tex, question, [answer1, answer2, answer3], answers_order)
 		panel.answered.connect(_received_answer)
 		panel.too_late.connect(func() -> void: _received_answer(-2))

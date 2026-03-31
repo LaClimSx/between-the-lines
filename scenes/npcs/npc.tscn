@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b47o7t6ew8f43"]
 
-[ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npc.gd" id="1_abqhh"]
+[ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npcs/npc.gd" id="1_abqhh"]
 [ext_resource type="Texture2D" uid="uid://v25wmitrx8l0" path="res://assets/temporary/blonde_man.png" id="1_nh2m4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
@@ -65,6 +65,8 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1786364444]
 shape = SubResource("CapsuleShape2D_nh2m4")
+
+[node name="Panels" type="CanvasLayer" parent="." unique_id=319858104]
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

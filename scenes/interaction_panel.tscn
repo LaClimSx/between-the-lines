@@ -4,11 +4,8 @@
 [ext_resource type="Script" uid="uid://dvawgfnmm8vg2" path="res://scripts/interaction_panel.gd" id="1_ugcsn"]
 [ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="2_y7qwu"]
 
-[node name="InteractionPanel" type="CanvasLayer" unique_id=1785751165]
+[node name="InteractionPanel" type="Control" unique_id=1268752756]
 process_mode = 3
-script = ExtResource("1_ugcsn")
-
-[node name="Control" type="Control" parent="." unique_id=383730020]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,20 +13,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_d87a2")
+script = ExtResource("1_ugcsn")
 
-[node name="MarginContainer2" type="MarginContainer" parent="Control" unique_id=815408354]
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=815408354]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 74.0
+offset_bottom = 74.0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2" unique_id=347070464]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2" unique_id=347070464]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_y7qwu")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1016859258]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1016859258]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,21 +39,21 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer" unique_id=1988592741]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1988592741]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/PanelContainer" unique_id=4415170]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=4415170]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/MarginContainer" unique_id=300485339]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=300485339]
 layout_mode = 2
 alignment = 1
 
-[node name="QuestionLabel" type="Label" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1694332734]
+[node name="QuestionLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1694332734]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
@@ -63,17 +61,17 @@ text = "Jake the beaver: Do we know each other ? Who did you come with?"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=718325075]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=718325075]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="AnswersContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1086736840]
+[node name="AnswersContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1086736840]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Answer1" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1965616468]
+[node name="Answer1" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1965616468]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Answer3")
 focus_neighbor_bottom = NodePath("../Answer2")
@@ -82,7 +80,7 @@ focus_previous = NodePath("../Answer3")
 text = "Can you repeat? I didn't hear you"
 alignment = 0
 
-[node name="Answer2" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1685323429]
+[node name="Answer2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1685323429]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Answer1")
 focus_neighbor_bottom = NodePath("../Answer3")
@@ -91,7 +89,7 @@ focus_previous = NodePath("../Answer1")
 text = "Oh yeah"
 alignment = 0
 
-[node name="Answer3" type="Button" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1707424643]
+[node name="Answer3" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1707424643]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Answer2")
 focus_neighbor_bottom = NodePath("../Answer1")
@@ -100,7 +98,7 @@ focus_previous = NodePath("../Answer2")
 text = "Haha"
 alignment = 0
 
-[node name="TimerLabel" type="Label" parent="Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1101243199]
+[node name="TimerLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1101243199]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
