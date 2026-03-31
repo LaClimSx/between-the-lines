@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bcqrdkoemt0uy"]
+
+[ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="1_cwehk"]
+[ext_resource type="Script" uid="uid://c8mfi2vl7akno" path="res://scripts/simple_panel.gd" id="2_3xmq5"]
+[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="2_wwi2o"]
+
+[node name="SimplePanel" type="Control" unique_id=1238397256]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cwehk")
+script = ExtResource("2_3xmq5")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=2067090374]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 74.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2" unique_id=860140421]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_wwi2o")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=456142367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1655165194]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1129786200]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=276079456]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=282647742]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2129365487]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Annoying man: You want some vodka, a beer?
+You: No thank you.
+"
+
+[node name="NextButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1370055080]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Next"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

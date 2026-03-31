@@ -25,3 +25,5 @@ Button/fonts/font = ExtResource("1_5x3i2")
 Label/font_sizes/font_size = 12
 Label/fonts/font = ExtResource("1_5x3i2")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_5x3i2")
+RichTextLabel/font_sizes/normal_font_size = 12
+RichTextLabel/fonts/normal_font = ExtResource("1_5x3i2")
