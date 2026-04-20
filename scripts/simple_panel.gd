@@ -15,4 +15,5 @@ func setup(tex: CompressedTexture2D, text: String) -> void:
 
 
 func _on_next_button_pressed() -> void:
+	get_tree().paused = false
 	next.emit()

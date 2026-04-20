@@ -16,13 +16,13 @@ func setup(tex: CompressedTexture2D, question: String,
 	for i in range(answers.size()):
 		answer_buttons[i].text = answers[i]
 		answer_buttons[i].pressed.connect(func() -> void:
-			answered.emit(i)
 			get_tree().paused = false
+			answered.emit(i)
 			queue_free())
 	$Timer.wait_time = timer_duration
 	$Timer.timeout.connect(func() -> void: 
-		too_late.emit()
 		get_tree().paused = false
+		too_late.emit()
 		queue_free())
 	$Timer.start()
 	get_tree().paused = true

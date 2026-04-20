@@ -39,6 +39,7 @@ interaction_data = ExtResource("6_choun")
 npc_name = "Circle"
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
+process_mode = 1
 position = Vector2(220, 121)
 curve = SubResource("Curve2D_trceg")
 
