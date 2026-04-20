@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://bmbt7a54ero72"]
+
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_wk5ro"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_cmp71"]
+[ext_resource type="Texture2D" uid="uid://r1rql65hcg0j" path="res://assets/NPCs/hostess.png" id="3_6p6tt"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_76qfq"]
+
+[sub_resource type="Resource" id="Resource_eb6dy"]
+script = ExtResource("2_cmp71")
+text = "Thanks so much! I'm really glad you said that! I spent a lot of time putting everything together."
+tex = ExtResource("3_6p6tt")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_a8y0u"]
+script = ExtResource("2_cmp71")
+text = "I understand. Thanks for coming anyway, I really appreciate it."
+tex = ExtResource("3_6p6tt")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_jbj1t"]
+script = ExtResource("2_cmp71")
+text = "Aren't you exaggerating a bit? You can be honest, you know"
+tex = ExtResource("3_6p6tt")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[resource]
+script = ExtResource("4_76qfq")
+question = "So, are you enjoying the party so far?"
+answer1 = "Yeah, it's really cool"
+answer2 = "I don't know… I don't really go out much"
+answer3 = "This is the best party of my life!"
+answer_conclusions = Array[ExtResource("1_wk5ro")]([SubResource("Resource_eb6dy"), SubResource("Resource_a8y0u"), SubResource("Resource_jbj1t")])
+tex = ExtResource("3_6p6tt")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"

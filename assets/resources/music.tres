@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://dgljvypk6y4sa"]
+
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_tjo0u"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_ausq1"]
+[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_myqoh"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_oyyw7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tjo0u"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_ausq1"]
+script = ExtResource("2_ausq1")
+text = "Too late…"
+tex = SubResource("CompressedTexture2D_tjo0u")
+optional_score = -1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_myqoh"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_oyyw7"]
+script = ExtResource("2_ausq1")
+text = "That doesn't stop you from judging, though"
+tex = SubResource("CompressedTexture2D_myqoh")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ivy8"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_lakjl"]
+script = ExtResource("2_ausq1")
+text = " Oh, so you don't want to play your own music? ;)"
+tex = SubResource("CompressedTexture2D_7ivy8")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fu57l"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_byykh"]
+script = ExtResource("4_oyyw7")
+question = "Oh yeah ? Care to put on some music yourself?"
+answer1 = "Why not, but I hope it doesn't upset the person playing the music"
+answer2 = "No, thanks. I don’t want to be judged by others"
+answer3 = "Actually, what's playing isn't that bad"
+answer_conclusions = Array[ExtResource("1_tjo0u")]([SubResource("Resource_ausq1"), SubResource("Resource_oyyw7"), SubResource("Resource_lakjl")])
+tex = SubResource("CompressedTexture2D_fu57l")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rmnes"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_f677q"]
+script = ExtResource("2_ausq1")
+text = " It’s my favorite band"
+tex = SubResource("CompressedTexture2D_rmnes")
+optional_score = 1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_55f44"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_pyeu2"]
+script = ExtResource("2_ausq1")
+text = "Oh yeah… crazy…"
+tex = SubResource("CompressedTexture2D_55f44")
+optional_score = -1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[resource]
+script = ExtResource("4_oyyw7")
+question = "So, what do you think of the music?"
+answer1 = "Frankly, I’m not a fan"
+answer2 = "It’s nice"
+answer3 = "Music, what a great invention! In fact, originally... *Talk about music history*"
+answer_conclusions = Array[ExtResource("1_tjo0u")]([SubResource("Resource_byykh"), SubResource("Resource_f677q"), SubResource("Resource_pyeu2")])
+tex = ExtResource("3_myqoh")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"

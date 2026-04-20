@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://bpjhkrwbx1a5d"]
+
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_g7kt0"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_qbbkm"]
+[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_s5j7m"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_g71lq"]
+
+[sub_resource type="Resource" id="Resource_choun"]
+script = ExtResource("2_qbbkm")
+text = " *Hands over the pack*, You can sit here if you want."
+tex = ExtResource("3_s5j7m")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_a8y0u"]
+script = ExtResource("2_qbbkm")
+text = "Okay"
+tex = ExtResource("3_s5j7m")
+optional_score = 1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_jkv2x"]
+script = ExtResource("2_qbbkm")
+text = "Can’t you at least say thank you?"
+tex = ExtResource("3_s5j7m")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[resource]
+script = ExtResource("4_g71lq")
+question = "Hey! Want some chips?"
+answer1 = "Sure"
+answer2 = "No thank you"
+answer3 = "I don't eat food strangers offer me..."
+answer_conclusions = Array[ExtResource("1_g7kt0")]([SubResource("Resource_choun"), SubResource("Resource_a8y0u"), SubResource("Resource_jkv2x")])
+tex = ExtResource("3_s5j7m")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"

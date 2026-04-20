@@ -9,14 +9,14 @@ func _ready() -> void:
 
 
 func setup(tex: CompressedTexture2D, question: String,
- answers: Array[String], answers_order: Array[int], timer_duration: int = 10) -> void:
+ answers: Array[String], timer_duration: int = 10) -> void:
 	%TextureRect.texture = tex
 	%QuestionLabel.text = question
 	var answer_buttons: Array[Node] = %AnswersContainer.get_children()
 	for i in range(answers.size()):
 		answer_buttons[i].text = answers[i]
 		answer_buttons[i].pressed.connect(func() -> void:
-			answered.emit(answers_order[i])
+			answered.emit(i)
 			get_tree().paused = false
 			queue_free())
 	$Timer.wait_time = timer_duration
