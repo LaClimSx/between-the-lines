@@ -81,6 +81,7 @@ focus_next = NodePath("../Answer2")
 focus_previous = NodePath("../Answer3")
 text = "Can you repeat? I didn't hear you"
 alignment = 0
+autowrap_mode = 3
 
 [node name="Answer2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1685323429]
 layout_mode = 2
@@ -90,6 +91,7 @@ focus_next = NodePath("../Answer3")
 focus_previous = NodePath("../Answer1")
 text = "Oh yeah"
 alignment = 0
+autowrap_mode = 3
 
 [node name="Answer3" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AnswersContainer" unique_id=1707424643]
 layout_mode = 2
@@ -99,6 +101,7 @@ focus_next = NodePath("../Answer1")
 focus_previous = NodePath("../Answer2")
 text = "Haha"
 alignment = 0
+autowrap_mode = 3
 
 [node name="TimerLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1101243199]
 unique_name_in_owner = true

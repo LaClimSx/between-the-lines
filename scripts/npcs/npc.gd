@@ -18,6 +18,7 @@ func _input(event: InputEvent) -> void:
 		curr_data = interaction_data
 		interact()
 		interacted = true
+		Global.timer.start(Global.timer.time_left - 60)
 
 func interact() -> void:
 	if curr_data is NPCInteractionData:
