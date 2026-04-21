@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
+[ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -149,6 +150,11 @@ position = Vector2(248, 69)
 interaction_data = ExtResource("8_85g3d")
 npc_name = "Music"
 
+[node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
+position = Vector2(287, 31)
+interaction_data = ExtResource("15_jbj1t")
+npc_name = "Eye"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
 
@@ -172,3 +178,4 @@ text = "Score: 0"
 [editable path="NPCs/Zero"]
 [editable path="NPCs/Square"]
 [editable path="NPCs/Music"]
+[editable path="NPCs/Eye"]

@@ -36,6 +36,9 @@ func interact() -> void:
 		$Panels.add_child(simple_panel)
 		simple_panel.setup(curr_data.tex, curr_data.text)
 		simple_panel.next.connect(next)
+	else:
+		if curr_data.optional_score != 0:
+			Global.score = curr_data.optional_score
 
 
 func _received_answer(answer_nb: int) -> void:

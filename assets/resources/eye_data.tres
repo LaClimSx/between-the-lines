@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://gcc2n1eee8w4"]
+
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_0wjwd"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_s3jwc"]
+[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_rkxgj"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_qk67w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0wjwd"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_s3jwc"]
+script = ExtResource("2_s3jwc")
+text = "Meh…"
+tex = SubResource("CompressedTexture2D_0wjwd")
+optional_score = -1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rkxgj"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_qk67w"]
+script = ExtResource("2_s3jwc")
+text = "No"
+tex = SubResource("CompressedTexture2D_rkxgj")
+optional_score = -1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6tyjc"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_psrpc"]
+script = ExtResource("2_s3jwc")
+text = "Mm-hmm *Nods and smiles, embarrassed*"
+tex = SubResource("CompressedTexture2D_6tyjc")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8c7mo"]
+load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+
+[sub_resource type="Resource" id="Resource_hl0bf"]
+script = ExtResource("4_qk67w")
+question = "*He doesn't answer*"
+answer1 = "Not a bad party, huh?"
+answer2 = "Do you come to parties like this often?"
+answer3 = "You're not very talkative"
+answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_s3jwc"), SubResource("Resource_qk67w"), SubResource("Resource_psrpc")])
+tex = SubResource("CompressedTexture2D_8c7mo")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"
+
+[sub_resource type="Resource" id="Resource_6tyjc"]
+script = ExtResource("2_s3jwc")
+text = "That’s nice of you to ask; I have to admit I don’t know many people *You chat for a while*"
+tex = ExtResource("3_rkxgj")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_8c7mo"]
+script = ExtResource("2_s3jwc")
+text = "Yeah, it’s my favorite game! *You chat for a while*"
+tex = ExtResource("3_rkxgj")
+optional_score = 2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_ev4wh"]
+script = ExtResource("2_s3jwc")
+text = "Sorry, I just filled my glass"
+tex = ExtResource("3_rkxgj")
+optional_score = 1
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_0wjwd"]
+script = ExtResource("4_qk67w")
+question = "*Smiles slightly*"
+answer1 = "Hi, I see you’re keeping to yourself a bit, are you okay?"
+answer2 = "I saw your Celeste sweater, have you played a lot?"
+answer3 = "Hey, want to go get a drink together?"
+answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_6tyjc"), SubResource("Resource_8c7mo"), SubResource("Resource_ev4wh")])
+tex = ExtResource("3_rkxgj")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"
+
+[sub_resource type="Resource" id="Resource_rkxgj"]
+script = ExtResource("1_0wjwd")
+optional_score = -1
+metadata/_custom_type_script = "uid://f6c7wdr0rqlt"
+
+[resource]
+script = ExtResource("4_qk67w")
+question = "*Stares at you*"
+answer1 = "*Stare back*"
+answer2 = "*Smile*"
+answer3 = "*Leave*"
+answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_hl0bf"), SubResource("Resource_0wjwd"), SubResource("Resource_rkxgj")])
+tex = ExtResource("3_rkxgj")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"
