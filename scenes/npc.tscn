@@ -44,8 +44,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh2m4"]
-radius = 15.0
-height = 44.0
+radius = 17.0
+height = 42.0
 
 [node name="NPC" type="StaticBody2D" unique_id=1732191449]
 z_index = 1

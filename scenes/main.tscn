@@ -16,6 +16,8 @@
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
+[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
+[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -66,6 +68,10 @@ _data = {
 "points": PackedVector2Array(-6.9545374, 15.46785, 6.9545374, -15.46785, 49, 25, 0, 0, 0, 0, -3, -73, 25.5447, -1.5026295, -25.5447, 1.5026295, -69, -14, 12.53281, 0, -12.53281, 0, -154, -80, 0, 0, 0, 0, -171, 29, 0, 0, 0, 0, 49, 25)
 }
 point_count = 6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
+shader = ExtResource("16_muem4")
+shader_parameter/warmth = 0.0
 
 [node name="Main" type="Node2D" unique_id=1379244409]
 y_sort_enabled = true
@@ -131,14 +137,15 @@ position = Vector2(40, 100)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Triangle"
 
+[node name="AnimatedSprite2D" parent="NPCs/Triangle" index="1" unique_id=27330966]
+position = Vector2(0, 0)
+offset = Vector2(0, -8)
+
 [node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
 position = Vector2(-25, 167)
 interaction_data = ExtResource("12_jkv2x")
 npc_name = "Zero"
-
-[node name="AnimatedSprite2D" parent="NPCs/Zero" index="1" unique_id=27330966]
-sprite_frames = SubResource("SpriteFrames_hwkja")
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
 position = Vector2(91, 32)
@@ -157,6 +164,15 @@ npc_name = "Eye"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1876947052]
+material = SubResource("ShaderMaterial_dp3eg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_dp3eg")
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1552321931]
 layout_mode = 3

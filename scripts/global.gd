@@ -2,13 +2,13 @@ extends Node
 
 const SCORE_LOWER_BOUND: int = -10
 
-signal score_changed
+signal score_changed(value: int)
 @onready var timer : Timer = $Timer
 
-var score : int = 0:
+var score : int = 2:
 	set(value):
 		score += value
-		score_changed.emit()
+		score_changed.emit(score)
 		if score <= SCORE_LOWER_BOUND:
 			lost_confidence()
 	
