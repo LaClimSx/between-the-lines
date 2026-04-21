@@ -33,6 +33,7 @@ answer1 = "No need to drink to have fun"
 answer2 = "You’re a drag"
 answer3 = "Can I have a coke instead?"
 answer_conclusions = Array[ExtResource("1_cqaxg")]([SubResource("Resource_cqaxg"), SubResource("Resource_8hqfu"), SubResource("Resource_5s00r")])
+locked_answers = Array[bool]([false, true, false])
 tex = ExtResource("3_5s00r")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 

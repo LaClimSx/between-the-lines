@@ -9,22 +9,28 @@ func _ready() -> void:
 
 
 func setup(tex: CompressedTexture2D, question: String,
- answers: Array[String], timer_duration: int = 10) -> void:
+ answers: Array[String], locks: Array[bool], timer_duration: int = 10) -> void:
 	%TextureRect.texture = tex
 	%QuestionLabel.text = question
 	var answer_buttons: Array[Node] = %AnswersContainer.get_children()
 	for i in range(answers.size()):
 		answer_buttons[i].text = answers[i]
+		if locks[i] && Global.score < 0:
+			answer_buttons[i].disabled = true
+			answer_buttons[i].text += " [Not confident enough]"
 		answer_buttons[i].pressed.connect(func() -> void:
 			get_tree().paused = false
 			answered.emit(i)
 			queue_free())
-	$Timer.wait_time = timer_duration
-	$Timer.timeout.connect(func() -> void: 
-		get_tree().paused = false
-		too_late.emit()
-		queue_free())
-	$Timer.start()
+	if timer_duration < 0:
+		%TimerLabel.visible = false
+	else:
+		$Timer.wait_time = timer_duration
+		$Timer.timeout.connect(func() -> void: 
+			get_tree().paused = false
+			too_late.emit()
+			queue_free())
+		$Timer.start()
 	get_tree().paused = true
 	visible = true
 

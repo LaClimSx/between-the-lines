@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b1784wyycndga" path="res://assets/temporary/Sewer_Sunlight.png" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
+[ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
+[ext_resource type="Texture2D" uid="uid://v25wmitrx8l0" path="res://assets/temporary/blonde_man.png" id="6_a8y0u"]
 [ext_resource type="Resource" uid="uid://bpjhkrwbx1a5d" path="res://assets/resources/circle_data.tres" id="6_choun"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://6rqcdok1g3uc" path="res://scripts/npcs/hostess.gd" id="6_ya4ey"]
@@ -12,6 +14,51 @@
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
+[ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
+radius = 5.999178
+height = 27.996185
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbj1t"]
+radius = 20.0
+height = 48.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
+atlas = ExtResource("6_a8y0u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
+atlas = ExtResource("6_a8y0u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
+atlas = ExtResource("6_a8y0u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl2vt"]
+atlas = ExtResource("6_a8y0u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwkja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n8xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wlns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl2vt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_trceg"]
 _data = {
@@ -33,7 +80,28 @@ position = Vector2(160, 120)
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
-[node name="Circle" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
+[node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
+position = Vector2(193, 22)
+interaction_data = ExtResource("5_trceg")
+npc_name = "Heart"
+
+[node name="CollisionShape2D" parent="NPCs/Heart" index="0" unique_id=1830750460]
+position = Vector2(8, 1)
+rotation = -1.5873593
+shape = SubResource("CapsuleShape2D_jkv2x")
+
+[node name="InteractionArea" parent="NPCs/Heart" index="2" unique_id=502922032]
+position = Vector2(8, 0)
+
+[node name="CollisionShape2D" parent="NPCs/Heart/InteractionArea" index="0" unique_id=1786364444]
+shape = SubResource("CapsuleShape2D_jbj1t")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="NPCs/Heart" unique_id=550196190]
+position = Vector2(15, -8)
+sprite_frames = SubResource("SpriteFrames_hwkja")
+autoplay = "default"
+
+[node name="Circle" parent="NPCs" unique_id=1442999823 instance=ExtResource("3_sugp2")]
 position = Vector2(167, 78)
 interaction_data = ExtResource("6_choun")
 npc_name = "Circle"
@@ -61,6 +129,15 @@ npc_name = "Hostess"
 position = Vector2(40, 100)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Triangle"
+
+[node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
+unique_name_in_owner = true
+position = Vector2(-25, 167)
+interaction_data = ExtResource("12_jkv2x")
+npc_name = "Zero"
+
+[node name="AnimatedSprite2D" parent="NPCs/Zero" index="1" unique_id=27330966]
+sprite_frames = SubResource("SpriteFrames_hwkja")
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
 position = Vector2(91, 32)
@@ -90,6 +167,8 @@ offset_right = 50.0
 offset_bottom = 33.0
 text = "Score: 0"
 
+[editable path="NPCs/Heart"]
 [editable path="NPCs/Triangle"]
+[editable path="NPCs/Zero"]
 [editable path="NPCs/Square"]
 [editable path="NPCs/Music"]

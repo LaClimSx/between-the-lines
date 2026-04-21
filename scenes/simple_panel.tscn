@@ -59,11 +59,13 @@ size_flags_vertical = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2129365487]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Annoying man: You want some vodka, a beer?
 You: No thank you.
 "
+autowrap_mode = 3
 
 [node name="NextButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1370055080]
 unique_name_in_owner = true

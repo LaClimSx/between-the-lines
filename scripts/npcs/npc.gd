@@ -24,7 +24,10 @@ func interact() -> void:
 		var interaction_panel: InteractionPanel = INTERACTION_PANEL.instantiate()
 		interaction_panel.visible = false
 		$Panels.add_child(interaction_panel)
-		interaction_panel.setup(curr_data.tex, curr_data.question, [curr_data.answer1, curr_data.answer2, curr_data.answer3])
+		interaction_panel.setup(
+			curr_data.tex, curr_data.question, 
+			[curr_data.answer1, curr_data.answer2, curr_data.answer3], 
+			curr_data.locked_answers, curr_data.timer_duration)
 		interaction_panel.answered.connect(_received_answer)
 		interaction_panel.too_late.connect(func() -> void: _received_answer(-1))
 	elif curr_data is NPCSimpleData:
@@ -57,6 +60,7 @@ func next() -> void:
 	if curr_data is NPCSimpleData:
 		curr_data = curr_data.next
 		if curr_data: interact()
+
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:
 	if body is Player:

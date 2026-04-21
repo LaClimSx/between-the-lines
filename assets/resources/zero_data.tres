@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="NPCSimpleData" format=3 uid="uid://bc7a44wcsurkk"]
+
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_wc4nv"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_g1pua"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_lxbt0"]
+[ext_resource type="Texture2D" uid="uid://ce48r4r5v7k6k" path="res://assets/NPCs/friend.png" id="5_g1pua"]
+
+[sub_resource type="Resource" id="Resource_g1pua"]
+script = ExtResource("2_g1pua")
+text = "Your line is cut off, she left already…"
+tex = ExtResource("5_g1pua")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_lxbt0"]
+script = ExtResource("2_g1pua")
+text = "Your line is cut off, she left already…"
+tex = ExtResource("5_g1pua")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_c46ab"]
+script = ExtResource("2_g1pua")
+text = "Your line is cut off, she left already…"
+tex = ExtResource("5_g1pua")
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
+
+[sub_resource type="Resource" id="Resource_88uhq"]
+script = ExtResource("4_lxbt0")
+question = "Oh! My buddy’s in the yard, I’ll be back!"
+answer1 = "Wait..."
+answer2 = "See you later…"
+answer3 = "Can I come?"
+answer_conclusions = Array[ExtResource("1_wc4nv")]([SubResource("Resource_g1pua"), SubResource("Resource_lxbt0"), SubResource("Resource_c46ab")])
+timer_duration = -1
+locked_answers = Array[bool]([true, false, false])
+tex = ExtResource("5_g1pua")
+metadata/_custom_type_script = "uid://d2ow5inumutbj"
+
+[resource]
+script = ExtResource("2_g1pua")
+text = "Friend: I’m glad you came with me, I hope you’ll have a good time
+"
+next = SubResource("Resource_88uhq")
+tex = ExtResource("5_g1pua")
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
