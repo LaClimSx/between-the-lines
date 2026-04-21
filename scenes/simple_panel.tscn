@@ -26,6 +26,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("3_wwi2o")
 expand_mode = 3
+stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=456142367]
 layout_mode = 1
