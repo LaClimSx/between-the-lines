@@ -80,8 +80,9 @@ texture_filter = 1
 script = ExtResource("1_o5qli")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 1.0
+offset_right = 320.0
+offset_bottom = 181.0
 texture = ExtResource("2_0ld40")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
@@ -160,7 +161,7 @@ interaction_data = ExtResource("8_85g3d")
 npc_name = "Music"
 
 [node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
-position = Vector2(23, 164)
+position = Vector2(23, 165)
 interaction_data = ExtResource("15_jbj1t")
 npc_name = "Eye"
 
@@ -196,15 +197,17 @@ text = "Score: 0"
 
 [node name="ProgressBar" parent="CanvasLayer" unique_id=135526445 instance=ExtResource("19_0ld40")]
 unique_name_in_owner = true
-visible = false
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -42.0
-offset_top = 5.0
+offset_top = -15.0
 offset_right = 42.0
-offset_bottom = 13.0
+offset_bottom = -7.0
 grow_horizontal = 2
+grow_vertical = 0
 
 [editable path="NPCs/Heart"]
 [editable path="NPCs/Triangle"]

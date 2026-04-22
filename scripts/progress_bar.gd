@@ -10,7 +10,6 @@ var value : int = 2:
 	set(val):
 		value = val
 		bar.value = val
-		print("coubeh")
 
 func _on_value_changed(val: float) -> void:
 	if val - bar.min_value < (bar.max_value - bar.min_value)/3 :

@@ -7,4 +7,4 @@ extends ColorRect
 #		set_scene_temperature(score))
 
 func set_scene_temperature(value: float) -> void:
-	mat.set_shader_parameter("warmth", clamp(value, -5.0, 5.0))
+	mat.set_shader_parameter("warmth", clamp(value, Global.SCORE_LOWER_BOUND, Global.SCORE_UPPER_BOUND))
