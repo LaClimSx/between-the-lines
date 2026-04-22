@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cca1mhmmdh2s2" path="res://assets/temporary/progress bar most rounded over.png" id="3_relan"]
 [ext_resource type="Texture2D" uid="uid://c62hnlrkukp4b" path="res://assets/temporary/progress bar most rounded progress green.png" id="4_dk1bo"]
 [ext_resource type="Script" uid="uid://wslxmlcjvfe3" path="res://scripts/progress_bar.gd" id="5_tumid"]
-[ext_resource type="Texture2D" uid="uid://i4hgm6rdccx1" path="res://assets/temporary/progress bar most rounded progress blue.png" id="6_e5nlk"]
+[ext_resource type="Texture2D" uid="uid://bnbbewkjfy5pp" path="res://assets/temporary/progress bar most rounded progress red.png" id="6_dk1bo"]
 [ext_resource type="Texture2D" uid="uid://gjjqowfscdnf" path="res://assets/temporary/progress bar most rounded progress red orange.png" id="7_l17vb"]
 
 [node name="ProgressBar" type="TextureProgressBar" unique_id=1154741953]
@@ -31,8 +31,8 @@ texture_under = ExtResource("2_tumid")
 texture_over = ExtResource("3_relan")
 texture_progress = ExtResource("4_dk1bo")
 script = ExtResource("5_tumid")
-progress_low = ExtResource("6_e5nlk")
-progress_mid = ExtResource("4_dk1bo")
-progress_high = ExtResource("7_l17vb")
+progress_low = ExtResource("6_dk1bo")
+progress_mid = ExtResource("7_l17vb")
+progress_high = ExtResource("4_dk1bo")
 
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]

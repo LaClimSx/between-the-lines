@@ -49,6 +49,7 @@ func _received_answer(answer_nb: int) -> void:
 			if $Panels.get_child_count() != 0:
 				$Panels.get_child(0).queue_free()
 			Global.score = -2
+			Global.nb_interactions += 1
 			return
 		var next_data : NPCData = curr_data.answer_conclusions[answer_nb]
 		curr_data = next_data

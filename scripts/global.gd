@@ -24,7 +24,9 @@ var score : int = 2:
 	
 func lost_confidence() -> void:
 	print("End game, lost confidence")
+	get_tree().quit()
 
 
 func _on_timer_timeout() -> void:
 	print("End game")
+	get_tree().quit()
