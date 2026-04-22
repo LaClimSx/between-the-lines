@@ -3,7 +3,8 @@ class_name Player
 
 
 @export var speed : int = 75
-const WORLD_BORDERS: Vector2i = Vector2i(320, 180)
+const WORLD_BORDERS_MIN: Vector2i = Vector2i(10, 50)
+const WORLD_BORDERS_MAX: Vector2i = Vector2i(310, 175)
 
 enum Direction {LEFT, RIGHT, UP, DOWN}
 
@@ -18,8 +19,8 @@ func _physics_process(_delta: float) -> void:
 	get_input()
 	animate()
 	move_and_slide()
-	position.x = clamp(position.x, 0, WORLD_BORDERS.x)
-	position.y = clamp(position.y, 0, WORLD_BORDERS.y)
+	position.x = clamp(position.x, WORLD_BORDERS_MIN.x, WORLD_BORDERS_MAX.x)
+	position.y = clamp(position.y, WORLD_BORDERS_MIN.y, WORLD_BORDERS_MAX.y)
 
 
 func animate() -> void:

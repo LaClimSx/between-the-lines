@@ -2,27 +2,27 @@
 
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_vk01h"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_ceagr"]
-[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_3nv01"]
+[ext_resource type="Texture2D" uid="uid://dh4reqa1wlgw4" path="res://assets/NPCs/unknown.png" id="3_vk01h"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_dibru"]
 
 [sub_resource type="Resource" id="Resource_a8y0u"]
 script = ExtResource("2_ceagr")
 text = " Are you deaf or something?"
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_jkv2x"]
 script = ExtResource("2_ceagr")
 text = "Who are you talking about?"
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_jbj1t"]
 script = ExtResource("2_ceagr")
 text = "Oh yeah, she’s cool."
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
@@ -33,7 +33,7 @@ answer1 = "I’m sorry, I still didn’t hear you, can you repeat again?"
 answer2 = "Yeah, she's a good friend."
 answer3 = "I'm new here, I came with X."
 answer_conclusions = Array[ExtResource("1_vk01h")]([SubResource("Resource_a8y0u"), SubResource("Resource_jkv2x"), SubResource("Resource_jbj1t")])
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_eb6dy"]
@@ -41,14 +41,14 @@ script = ExtResource("2_ceagr")
 text = " No, you didn't hear me, who did you come with?
 *You answer, awkwardly*
 "
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_trceg"]
 script = ExtResource("2_ceagr")
 text = "Did I say something funny?!"
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
@@ -59,5 +59,5 @@ answer1 = "Could you repeat that? I didn't catch that."
 answer2 = "Yeah, yeah"
 answer3 = "Haha"
 answer_conclusions = Array[ExtResource("1_vk01h")]([SubResource("Resource_ya4ey"), SubResource("Resource_eb6dy"), SubResource("Resource_trceg")])
-tex = ExtResource("3_3nv01")
+tex = ExtResource("3_vk01h")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"

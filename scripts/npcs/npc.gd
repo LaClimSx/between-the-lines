@@ -40,6 +40,7 @@ func interact() -> void:
 	else:
 		if curr_data.optional_score != 0:
 			Global.score = curr_data.optional_score
+		Global.nb_interactions +=1
 
 
 func _received_answer(answer_nb: int) -> void:
@@ -64,6 +65,7 @@ func next() -> void:
 	if curr_data is NPCSimpleData:
 		curr_data = curr_data.next
 		if curr_data: interact()
+		else: Global.nb_interactions += 1
 
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:

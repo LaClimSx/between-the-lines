@@ -12,5 +12,6 @@ func _input(event: InputEvent) -> void:
 		interacted = true
 		Global.timer.start(Global.timer.time_left - 60)
 
+
 func _process(delta: float) -> void:
 	path_follow.progress_ratio += delta * move_speed

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d0v6gjvyo6jtc"]
 
 [ext_resource type="Script" uid="uid://bn66fn8uy4d56" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/temporary/background.png" id="2_0ld40"]
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://d32gb770ouont" path="res://assets/temporary/poc_background.png" id="2_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
@@ -66,7 +66,7 @@ animations = [{
 
 [sub_resource type="Curve2D" id="Curve2D_dp3eg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -187, 7, 0, 0, 0, 0, -134, 36, 0, 0, 0, 0, -80, 8, -16.172253, -1.2440193, 16.172253, 1.2440193, -31, 6, -23.947374, 0.31100488, 23.947374, -0.31100488, 25, 30, -50.476204, 4.882656, 50.476204, -4.882656, 72, -45, 0, 0, 0, 0, 20, -58, 21.459335, -5.287082, -21.459335, 5.287082, -15, -13, 0, 0, 0, 0, -81, -8, 0, 0, 0, 0, -147, -31, 0, 0, 0, 0, -187, 7)
+"points": PackedVector2Array(0, 0, 0, 0, -187, 7, 0, 0, 0, 0, -134, 36, 0, 0, 0, 0, -80, 8, -28.705063, -0.18191671, 28.705063, 0.18191671, -22, 0, -23.947374, 0.31100488, 23.947374, -0.31100488, 25, 30, -50.476204, 4.882656, 50.476204, -4.882656, 72, -45, 0, 0, 0, 0, 20, -58, 21.459335, -5.287082, -21.459335, 5.287082, -15, -13, 0, 0, 0, 0, -81, -8, 0, 0, 0, 0, -147, -31, 0, 0, 0, 0, -187, 7)
 }
 point_count = 11
 
@@ -82,7 +82,7 @@ script = ExtResource("1_o5qli")
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_dp3eg")
+texture = ExtResource("2_0ld40")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
 position = Vector2(265, 54)
@@ -90,7 +90,7 @@ position = Vector2(265, 54)
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
-position = Vector2(73, 120)
+position = Vector2(77, 117)
 interaction_data = ExtResource("5_trceg")
 npc_name = "Heart"
 
@@ -135,7 +135,7 @@ interaction_data = ExtResource("5_85g3d")
 npc_name = "Hostess"
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
-position = Vector2(277, 104)
+position = Vector2(299, 132)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Triangle"
 
