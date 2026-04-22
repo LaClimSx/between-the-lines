@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://bpjhkrwbx1a5d"]
 
-[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_g7kt0"]
-[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_qbbkm"]
-[ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_s5j7m"]
-[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_g71lq"]
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_g7kt0"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_qbbkm"]
+[ext_resource type="Texture2D" uid="uid://c4xdwmokqfe5b" path="res://assets/NPCs/chipsFellow.png" id="3_s5j7m"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_g71lq"]
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("2_qbbkm")

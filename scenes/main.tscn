@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bn66fn8uy4d56" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://b1784wyycndga" path="res://assets/temporary/Sewer_Sunlight.png" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://d32gb770ouont" path="res://assets/temporary/poc_background.png" id="2_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://d24vkk1tis2hd" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -63,11 +64,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_trceg"]
+[sub_resource type="Curve2D" id="Curve2D_dp3eg"]
 _data = {
-"points": PackedVector2Array(-6.9545374, 15.46785, 6.9545374, -15.46785, 49, 25, 0, 0, 0, 0, -3, -73, 25.5447, -1.5026295, -25.5447, 1.5026295, -69, -14, 12.53281, 0, -12.53281, 0, -154, -80, 0, 0, 0, 0, -171, 29, 0, 0, 0, 0, 49, 25)
+"points": PackedVector2Array(0, 0, 0, 0, -187, 7, 0, 0, 0, 0, -134, 36, 0, 0, 0, 0, -80, 8, -16.172253, -1.2440193, 16.172253, 1.2440193, -31, 6, -23.947374, 0.31100488, 23.947374, -0.31100488, 25, 30, -50.476204, 4.882656, 50.476204, -4.882656, 72, -45, 0, 0, 0, 0, 20, -58, 21.459335, -5.287082, -21.459335, 5.287082, -15, -13, 0, 0, 0, 0, -81, -8, 0, 0, 0, 0, -147, -31, 0, 0, 0, 0, -187, 7)
 }
-point_count = 6
+point_count = 11
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
 shader = ExtResource("16_muem4")
@@ -75,20 +76,21 @@ shader_parameter/warmth = 0.0
 
 [node name="Main" type="Node2D" unique_id=1379244409]
 y_sort_enabled = true
+texture_filter = 1
 script = ExtResource("1_o5qli")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_tbgi4")
+texture = ExtResource("2_dp3eg")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
-position = Vector2(160, 120)
+position = Vector2(265, 54)
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
-position = Vector2(193, 22)
+position = Vector2(73, 120)
 interaction_data = ExtResource("5_trceg")
 npc_name = "Heart"
 
@@ -109,17 +111,17 @@ sprite_frames = SubResource("SpriteFrames_hwkja")
 autoplay = "default"
 
 [node name="Circle" parent="NPCs" unique_id=1442999823 instance=ExtResource("3_sugp2")]
-position = Vector2(167, 78)
+position = Vector2(186, 44)
 interaction_data = ExtResource("6_choun")
 npc_name = "Circle"
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
 process_mode = 1
 position = Vector2(220, 121)
-curve = SubResource("Curve2D_trceg")
+curve = SubResource("Curve2D_dp3eg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCs/StarPath" unique_id=693324908]
-position = Vector2(49, 25)
+position = Vector2(-187, 7)
 rotation = -1.1482648
 rotates = false
 
@@ -133,7 +135,7 @@ interaction_data = ExtResource("5_85g3d")
 npc_name = "Hostess"
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
-position = Vector2(40, 100)
+position = Vector2(277, 104)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Triangle"
 
@@ -148,17 +150,17 @@ interaction_data = ExtResource("12_jkv2x")
 npc_name = "Zero"
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
-position = Vector2(91, 32)
+position = Vector2(78, 61)
 interaction_data = ExtResource("7_85g3d")
 npc_name = "Square"
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
-position = Vector2(248, 69)
+position = Vector2(144, 81)
 interaction_data = ExtResource("8_85g3d")
 npc_name = "Music"
 
 [node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
-position = Vector2(287, 31)
+position = Vector2(23, 164)
 interaction_data = ExtResource("15_jbj1t")
 npc_name = "Eye"
 
@@ -173,8 +175,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("17_dp3eg")
+metadata/_edit_lock_ = true
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1552321931]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -189,6 +193,11 @@ offset_right = 50.0
 offset_bottom = 33.0
 theme_override_font_sizes/font_size = 14
 text = "Score: 0"
+
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1154741953 instance=ExtResource("19_0ld40")]
+unique_name_in_owner = true
+visible = false
+value = 2.0
 
 [editable path="NPCs/Heart"]
 [editable path="NPCs/Triangle"]
