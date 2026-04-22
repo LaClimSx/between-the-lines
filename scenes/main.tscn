@@ -18,7 +18,7 @@
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://d24vkk1tis2hd" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
+[ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -194,10 +194,17 @@ offset_bottom = 33.0
 theme_override_font_sizes/font_size = 14
 text = "Score: 0"
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=1154741953 instance=ExtResource("19_0ld40")]
+[node name="ProgressBar" parent="CanvasLayer" unique_id=135526445 instance=ExtResource("19_0ld40")]
 unique_name_in_owner = true
 visible = false
-value = 2.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_top = 5.0
+offset_right = 42.0
+offset_bottom = 13.0
+grow_horizontal = 2
 
 [editable path="NPCs/Heart"]
 [editable path="NPCs/Triangle"]
