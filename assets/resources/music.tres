@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="NPCInteractionData" format=3 uid="uid://dgljvypk6y4sa"]
 
-[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://assets/resources/npc_data.gd" id="1_tjo0u"]
-[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://assets/resources/npc_simple_data.gd" id="2_ausq1"]
+[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_tjo0u"]
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_ausq1"]
 [ext_resource type="Texture2D" uid="uid://dwhmtyx8ws28k" path="res://assets/temporary/beaver.png" id="3_myqoh"]
-[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://assets/resources/npc_interaction_data.gd" id="4_oyyw7"]
+[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_oyyw7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tjo0u"]
 load_path = "res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
