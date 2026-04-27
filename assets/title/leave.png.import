@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfbjxg0pfvmnl"
-path="res://.godot/imported/symbol-of-infinity-of-autism-1192408_1280-3749592865.png-1ed9ceb1d7740bbee9c84a02adea0d35.ctex"
+uid="uid://dcpjqndgstt7d"
+path="res://.godot/imported/leave.png-aefb045dab2a2633c81bdc40ec8b4186.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/title/symbol-of-infinity-of-autism-1192408_1280-3749592865.png"
-dest_files=["res://.godot/imported/symbol-of-infinity-of-autism-1192408_1280-3749592865.png-1ed9ceb1d7740bbee9c84a02adea0d35.ctex"]
+source_file="res://assets/title/leave.png"
+dest_files=["res://.godot/imported/leave.png-aefb045dab2a2633c81bdc40ec8b4186.ctex"]
 
 [params]
 

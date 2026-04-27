@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcpjqndgstt7d"
-path="res://.godot/imported/leave.png-328227bee8b47cfb64c7ac67a1119990.ctex"
+uid="uid://c58n2u3b0huk8"
+path="res://.godot/imported/play.png-f625809b006533c37eb3cd52808e8217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/leave.png"
-dest_files=["res://.godot/imported/leave.png-328227bee8b47cfb64c7ac67a1119990.ctex"]
+source_file="res://assets/title/play.png"
+dest_files=["res://.godot/imported/play.png-f625809b006533c37eb3cd52808e8217.ctex"]
 
 [params]
 

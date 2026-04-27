@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7pba8ewcmi4x"
-path="res://.godot/imported/titleScreen.png-394fb69e5293121d2eb291e01773a845.ctex"
+uid="uid://dn13mwcgp020j"
+path="res://.godot/imported/playFocus.png-da8b7810d9381ee7d0c1ae1888e4f06f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/titleScreen.png"
-dest_files=["res://.godot/imported/titleScreen.png-394fb69e5293121d2eb291e01773a845.ctex"]
+source_file="res://assets/title/playFocus.png"
+dest_files=["res://.godot/imported/playFocus.png-da8b7810d9381ee7d0c1ae1888e4f06f.ctex"]
 
 [params]
 

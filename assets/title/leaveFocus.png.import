@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0fhshenqh48r"
-path="res://.godot/imported/continue.png-9f6c0c25a0fcb465ec8fee7111fd0220.ctex"
+uid="uid://dxmucm111pn6v"
+path="res://.godot/imported/leaveFocus.png-2a6aa21d83b324f32beddb32b38110a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/title/continue.png"
-dest_files=["res://.godot/imported/continue.png-9f6c0c25a0fcb465ec8fee7111fd0220.ctex"]
+source_file="res://assets/title/leaveFocus.png"
+dest_files=["res://.godot/imported/leaveFocus.png-2a6aa21d83b324f32beddb32b38110a0.ctex"]
 
 [params]
 
