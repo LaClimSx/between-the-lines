@@ -2,27 +2,27 @@
 
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_wc4nv"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_g1pua"]
+[ext_resource type="Texture2D" uid="uid://erf7ucvui0gi" path="res://assets/NPCs/friendV2.png" id="3_wc4nv"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_lxbt0"]
-[ext_resource type="Texture2D" uid="uid://ce48r4r5v7k6k" path="res://assets/NPCs/friend.png" id="5_g1pua"]
 
 [sub_resource type="Resource" id="Resource_g1pua"]
 script = ExtResource("2_g1pua")
 text = "Your line is cut off, she left already…"
-tex = ExtResource("5_g1pua")
+tex = ExtResource("3_wc4nv")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_lxbt0"]
 script = ExtResource("2_g1pua")
 text = "Your line is cut off, she left already…"
-tex = ExtResource("5_g1pua")
+tex = ExtResource("3_wc4nv")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_c46ab"]
 script = ExtResource("2_g1pua")
 text = "Your line is cut off, she left already…"
-tex = ExtResource("5_g1pua")
+tex = ExtResource("3_wc4nv")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
@@ -35,13 +35,12 @@ answer3 = "Can I come?"
 answer_conclusions = Array[ExtResource("1_wc4nv")]([SubResource("Resource_g1pua"), SubResource("Resource_lxbt0"), SubResource("Resource_c46ab")])
 timer_duration = -1
 locked_answers = Array[bool]([true, false, false])
-tex = ExtResource("5_g1pua")
+tex = ExtResource("3_wc4nv")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [resource]
 script = ExtResource("2_g1pua")
-text = "Friend: I’m glad you came with me, I hope you’ll have a good time
-"
+text = "Friend: I’m glad you came with me, I hope you’ll have a good time"
 next = SubResource("Resource_88uhq")
-tex = ExtResource("5_g1pua")
+tex = ExtResource("3_wc4nv")
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

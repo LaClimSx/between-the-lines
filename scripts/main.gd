@@ -2,7 +2,6 @@ extends Node2D
 
 func _ready() -> void:
 	Global.score_changed.connect(func(val: int) -> void:
-		$CanvasLayer/Control/ScoreLabel.text = "Score: " + str(val)
 		%ProgressBar.value = val)
 	%Zero.curr_data = %Zero.interaction_data
 	%Zero.interact()

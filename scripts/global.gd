@@ -10,7 +10,8 @@ signal score_changed(value: int)
 var nb_interactions : int = 0:
 	set(value):
 		nb_interactions = value
-		print(nb_interactions)
+		if (nb_interactions) == 1:
+			timer.start()
 		if nb_interactions >= TOTAL_INTERACTIONS:
 			await get_tree().create_timer(5).timeout
 			_on_timer_timeout()

@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("2_qbbkm")
-text = " *Hands over the pack*, You can sit here if you want."
+text = "*Hands over the pack*, You can sit here if you want."
 tex = ExtResource("3_s5j7m")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
