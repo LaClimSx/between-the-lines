@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d0v6gjvyo6jtc"]
+[gd_scene format=3 uid="uid://cd411utdfovce"]
 
 [ext_resource type="Script" uid="uid://bn66fn8uy4d56" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/temporary/background.png" id="2_0ld40"]
@@ -16,9 +16,9 @@
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
-[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
-[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
+[ext_resource type="Shader" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
+[ext_resource type="Script" path="res://scripts/color_rect.gd" id="17_dp3eg"]
+[ext_resource type="PackedScene" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="NPCSimpleData" format=3 uid="uid://dnvpupixhpc6x"]
 
-[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_cqaxg"]
-[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_8hqfu"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_data.gd" id="1_cqaxg"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_simple_data.gd" id="2_8hqfu"]
 [ext_resource type="Texture2D" uid="uid://cq62nv2lgp0dn" path="res://assets/NPCs/fratbro.png" id="3_5s00r"]
-[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_4yp7y"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_interaction_data.gd" id="4_4yp7y"]
 
 [sub_resource type="Resource" id="Resource_cqaxg"]
 script = ExtResource("2_8hqfu")

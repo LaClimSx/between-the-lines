@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="NPCSimpleData" format=3 uid="uid://bc7a44wcsurkk"]
 
-[ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_wc4nv"]
-[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_g1pua"]
-[ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_lxbt0"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_data.gd" id="1_wc4nv"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_simple_data.gd" id="2_g1pua"]
+[ext_resource type="Script" path="res://scripts/npcs/npc_interaction_data.gd" id="4_lxbt0"]
 [ext_resource type="Texture2D" uid="uid://ce48r4r5v7k6k" path="res://assets/NPCs/friend.png" id="5_g1pua"]
 
 [sub_resource type="Resource" id="Resource_g1pua"]
