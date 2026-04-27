@@ -15,19 +15,6 @@ grow_vertical = 2
 theme = ExtResource("1_d87a2")
 script = ExtResource("1_ugcsn")
 
-[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=143185657]
-layout_mode = 0
-offset_right = 94.66667
-offset_bottom = 56.0
-theme_override_constants/margin_left = 20
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer2" unique_id=2070710972]
-unique_name_in_owner = true
-layout_mode = 2
-texture = ExtResource("3_ugcsn")
-expand_mode = 3
-stretch_mode = 4
-
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1016859258]
 layout_mode = 1
 anchors_preset = 15
@@ -35,10 +22,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1988592741]
 layout_mode = 2
@@ -46,7 +33,7 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=4415170]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
@@ -54,13 +41,23 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 alignment = 1
 
-[node name="QuestionLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1694332734]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1278502110]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2070710972]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(270, 0)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_ugcsn")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="QuestionLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1694332734]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(216, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 text = "Jake the beaver: Do we know each other ? Who did you come with?"
-horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=718325075]
