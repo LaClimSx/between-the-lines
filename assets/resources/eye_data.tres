@@ -2,27 +2,28 @@
 
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_0wjwd"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_s3jwc"]
+[ext_resource type="Texture2D" uid="uid://b575ih5oq5pah" path="res://assets/NPCs/LonelyStares.png" id="3_s3jwc"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_qk67w"]
-[ext_resource type="Texture2D" uid="uid://dh4reqa1wlgw4" path="res://assets/NPCs/unknown.png" id="4_s3jwc"]
+[ext_resource type="Texture2D" uid="uid://bymehhcyrs5vt" path="res://assets/NPCs/LonelySmiles.png" id="5_rkxgj"]
 
 [sub_resource type="Resource" id="Resource_s3jwc"]
 script = ExtResource("2_s3jwc")
 text = "Meh…"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_qk67w"]
 script = ExtResource("2_s3jwc")
 text = "No"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_psrpc"]
 script = ExtResource("2_s3jwc")
 text = "Mm-hmm *Nods and smiles, embarrassed*"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
@@ -33,27 +34,27 @@ answer1 = "Not a bad party, huh?"
 answer2 = "Do you come to parties like this often?"
 answer3 = "You're not very talkative"
 answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_s3jwc"), SubResource("Resource_qk67w"), SubResource("Resource_psrpc")])
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_6tyjc"]
 script = ExtResource("2_s3jwc")
 text = "That’s nice of you to ask; I have to admit I don’t know many people *You chat for a while*"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("5_rkxgj")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_8c7mo"]
 script = ExtResource("2_s3jwc")
 text = "Yeah, it’s my favorite game! *You chat for a while*"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("5_rkxgj")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_ev4wh"]
 script = ExtResource("2_s3jwc")
 text = "Sorry, I just filled my glass"
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("5_rkxgj")
 optional_score = 1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
@@ -64,12 +65,12 @@ answer1 = "Hi, I see you’re keeping to yourself a bit, are you okay?"
 answer2 = "I saw your Celeste sweater, have you played a lot?"
 answer3 = "Hey, want to go get a drink together?"
 answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_6tyjc"), SubResource("Resource_8c7mo"), SubResource("Resource_ev4wh")])
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("5_rkxgj")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_rkxgj"]
 script = ExtResource("1_0wjwd")
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 optional_score = -1
 metadata/_custom_type_script = "uid://f6c7wdr0rqlt"
 
@@ -80,5 +81,5 @@ answer1 = "*Stare back*"
 answer2 = "*Smile*"
 answer3 = "*Leave*"
 answer_conclusions = Array[ExtResource("1_0wjwd")]([SubResource("Resource_hl0bf"), SubResource("Resource_0wjwd"), SubResource("Resource_rkxgj")])
-tex = ExtResource("4_s3jwc")
+tex = ExtResource("3_s3jwc")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"

@@ -21,7 +21,7 @@ metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_lcd3i"]
 script = ExtResource("2_jmi6a")
-text = "I... can leave if I'm bothering you…"
+text = "Oh, sorry, we didn't mean to leave you out"
 tex = ExtResource("3_7bqm7")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

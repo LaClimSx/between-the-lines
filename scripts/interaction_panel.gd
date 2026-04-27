@@ -25,7 +25,7 @@ func setup(tex: CompressedTexture2D, question: String,
 	if timer_duration < 0:
 		%TimerLabel.visible = false
 	else:
-		$Timer.wait_time = 15
+		$Timer.wait_time = timer_duration
 		$Timer.timeout.connect(func() -> void: 
 			get_tree().paused = false
 			too_late.emit()
