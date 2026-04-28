@@ -1,11 +1,11 @@
 extends Node2D
 
 const PARTICLE = preload("res://scenes/particle.tscn")
-var tween: Tween
 
 func _ready() -> void:
 	Global.score_changed.connect(func(val: int) -> void:
-		%ProgressBar.value = val)
+		%ProgressBar.value = val
+		)
 	Global.ending.connect(func(text: String) -> void:
 		%Label.text = text
 		$CanvasLayer/EndPanel.visible = true
@@ -16,16 +16,14 @@ func _ready() -> void:
 	%Zero.interact()
 
 
-func move_particle(_val: float) -> void:
-	var particle : TextureRect = PARTICLE.instantiate()
-	particle.global_position = $Player.global_position
+func move_particle(val: float) -> void:
+	var particle : Particle = PARTICLE.instantiate()
+	particle.texture = particle.texture_pos if val > 0 else particle.texture_neg
 	add_child(particle)
-	if tween:
-		tween.kill()
-	tween = get_tree().create_tween()
+	var tween : Tween = get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	var end_pos : Vector2 = %ProgressBar.global_position + Vector2(%ProgressBar.size.x / 2, -3)
-	tween.tween_property(particle, "global_position", end_pos, 1.0)
+	tween.tween_property(particle, "global_position", end_pos, 1.0).from($Player.global_position)
 	tween.tween_callback(particle.queue_free)
 
 func _process(_delta: float) -> void:
