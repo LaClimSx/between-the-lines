@@ -27,6 +27,29 @@
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wyq8"]
+size = Vector2(33, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxglm"]
+size = Vector2(30, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f3dj"]
+size = Vector2(24, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yq6so"]
+size = Vector2(68, 21)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2wyq8"]
+radius = 4.0
+height = 13.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vxglm"]
+radius = 4.0
+height = 13.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv21b"]
+size = Vector2(14, 15)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
 height = 27.996185
@@ -55,9 +78,81 @@ offset_top = 1.0
 offset_right = 320.0
 offset_bottom = 181.0
 texture = ExtResource("2_0ld40")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
 position = Vector2(114, 54)
+
+[node name="Furniture" type="Node" parent="." unique_id=994034929]
+
+[node name="Bookshelf" type="StaticBody2D" parent="Furniture" unique_id=948138631]
+position = Vector2(296.5, 34.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf" unique_id=1703983631]
+shape = SubResource("RectangleShape2D_2wyq8")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="Table" type="StaticBody2D" parent="Furniture" unique_id=1588291473]
+position = Vector2(297.5, 129.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Table" unique_id=649985082]
+shape = SubResource("RectangleShape2D_vxglm")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="TableSmall" type="StaticBody2D" parent="Furniture" unique_id=800763843]
+position = Vector2(62, 78.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/TableSmall" unique_id=624266442]
+shape = SubResource("RectangleShape2D_2f3dj")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="Speakers" type="StaticBody2D" parent="Furniture" unique_id=2041769725]
+position = Vector2(216, 47.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Speakers" unique_id=628073320]
+shape = SubResource("RectangleShape2D_yq6so")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="Sofa" type="StaticBody2D" parent="Furniture" unique_id=2012980441]
+position = Vector2(62, 48.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Sofa" unique_id=1003915637]
+position = Vector2(-21, 2)
+shape = SubResource("CapsuleShape2D_2wyq8")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Furniture/Sofa" unique_id=1515304560]
+position = Vector2(20, 2)
+shape = SubResource("CapsuleShape2D_vxglm")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="WhiteChairs" type="StaticBody2D" parent="Furniture" unique_id=1589697238]
+position = Vector2(123, 147.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/WhiteChairs" unique_id=900968066]
+polygon = PackedVector2Array(-24, -14.5, -22, -14.5, -22, -4.5, -11, -4.5, -11, 6.5, -24, 6.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Furniture/WhiteChairs" unique_id=1247147677]
+polygon = PackedVector2Array(9, -6.5, 17, -10.5, 17, -21.5, 25, -15.5, 25, -3.5, 17, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/WhiteChairs" unique_id=1771090627]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_fv21b")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="Armchair" type="StaticBody2D" parent="Furniture" unique_id=176626666]
+position = Vector2(25, 85.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Armchair" unique_id=1900531474]
+polygon = PackedVector2Array(-10, -17.5, -5, -17.5, -4, -13.5, 10, -13.5, 10, 13.5, -10, 13.5, -11, -5.5)
+
+[node name="WoodenChair" type="StaticBody2D" parent="Furniture" unique_id=2010053754]
+position = Vector2(301.5, 94.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Furniture/WoodenChair" unique_id=978158541]
+position = Vector2(-17.929691, 5.3958297)
+scale = Vector2(1.0546873, 1.0416665)
+polygon = PackedVector2Array(9, -6.5, 17, -10.5, 17, -21.5, 25, -15.5, 25, -3.5, 17.47409, -2.7799911)
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
