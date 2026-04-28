@@ -2,6 +2,28 @@
 
 [ext_resource type="FontFile" uid="uid://bl0ur2w12mjc6" path="res://assets/Silver.ttf" id="1_5x3i2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl1kw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5568628, 0.3529412, 0.87058824, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -22,6 +44,7 @@ corner_detail = 5
 [resource]
 Button/font_sizes/font_size = 14
 Button/fonts/font = ExtResource("1_5x3i2")
+Button/styles/focus = SubResource("StyleBoxFlat_wl1kw")
 Label/font_sizes/font_size = 12
 Label/fonts/font = ExtResource("1_5x3i2")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_5x3i2")
