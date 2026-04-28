@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq62nv2lgp0dn"
-path="res://.godot/imported/fratbro.png-e2e2c20557d7937b590e3089b95c8449.ctex"
+uid="uid://c4xdwmokqfe5b"
+path="res://.godot/imported/chipsFellow.png-1c2a728d3caf8fd3ded9168fb8c8318c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/fratbro.png"
-dest_files=["res://.godot/imported/fratbro.png-e2e2c20557d7937b590e3089b95c8449.ctex"]
+source_file="res://assets/NPCs/illustrations/chipsFellow.png"
+dest_files=["res://.godot/imported/chipsFellow.png-1c2a728d3caf8fd3ded9168fb8c8318c.ctex"]
 
 [params]
 

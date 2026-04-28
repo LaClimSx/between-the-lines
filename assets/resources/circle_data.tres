@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_g7kt0"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_qbbkm"]
-[ext_resource type="Texture2D" uid="uid://c4xdwmokqfe5b" path="res://assets/NPCs/chipsFellow.png" id="3_s5j7m"]
+[ext_resource type="Texture2D" uid="uid://c4xdwmokqfe5b" path="res://assets/NPCs/illustrations/chipsFellow.png" id="3_s5j7m"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_g71lq"]
 
 [sub_resource type="Resource" id="Resource_choun"]

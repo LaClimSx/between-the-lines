@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b575ih5oq5pah"
-path="res://.godot/imported/LonelyStares.png-918bc6f9ca9a0998b1d3b716ab81442d.ctex"
+uid="uid://bbdin68te2tfe"
+path="res://.godot/imported/alcool-sprite-cercle.png-46664643ec0c44c9bbc4c44a70e4071e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/LonelyStares.png"
-dest_files=["res://.godot/imported/LonelyStares.png-918bc6f9ca9a0998b1d3b716ab81442d.ctex"]
+source_file="res://assets/NPCs/sprites/alcool-sprite-cercle.png"
+dest_files=["res://.godot/imported/alcool-sprite-cercle.png-46664643ec0c44c9bbc4c44a70e4071e.ctex"]
 
 [params]
 

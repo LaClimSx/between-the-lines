@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cytl5h2jdtf42"]
+
+[ext_resource type="Texture2D" uid="uid://bpxwj6nsebmw0" path="res://assets/NPCs/sprites/hote-sprite-cercle.png" id="1_io0xf"]
+[ext_resource type="Texture2D" uid="uid://c5wxm5ilxlcbk" path="res://assets/NPCs/sprites/hote-sprite.png" id="2_28bq1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_io0xf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_28bq1")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

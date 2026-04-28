@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2wr2dioe002r"
-path="res://.godot/imported/MusicMan.png-640bc1eac92c5934da4e89c5ac83b2d5.ctex"
+uid="uid://7majg2uyipfm"
+path="res://.godot/imported/pote-sprite-cercle.png-518a4de042245d64c200c1b2e91eef3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/MusicMan.png"
-dest_files=["res://.godot/imported/MusicMan.png-640bc1eac92c5934da4e89c5ac83b2d5.ctex"]
+source_file="res://assets/NPCs/sprites/pote-sprite-cercle.png"
+dest_files=["res://.godot/imported/pote-sprite-cercle.png-518a4de042245d64c200c1b2e91eef3e.ctex"]
 
 [params]
 

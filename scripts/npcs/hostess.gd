@@ -10,6 +10,7 @@ func _input(event: InputEvent) -> void:
 		curr_data = interaction_data if Global.score >= 0 else interaction_data_minus
 		interact()
 		interacted = true
+		$AnimatedSprite2D.animation = "interacted"
 		Global.timer.start(Global.timer.time_left - 60)
 
 

@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cis26q2rv0v6g"]
+
+[ext_resource type="Texture2D" uid="uid://7majg2uyipfm" path="res://assets/NPCs/sprites/pote-sprite-cercle.png" id="1_7sw1s"]
+[ext_resource type="Texture2D" uid="uid://bcu2px6qyoi12" path="res://assets/NPCs/sprites/pote-sprite.png" id="2_8sqe0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7sw1s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8sqe0")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

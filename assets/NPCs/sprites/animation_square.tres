@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://btabfq0d35vy8"]
+
+[ext_resource type="Texture2D" uid="uid://66ocswya4v51" path="res://assets/NPCs/sprites/danse-sprite-cercle.png" id="1_a7at2"]
+[ext_resource type="Texture2D" uid="uid://dmi8f0dwdehev" path="res://assets/NPCs/sprites/danse-sprite.png" id="2_fr5le"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a7at2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fr5le")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

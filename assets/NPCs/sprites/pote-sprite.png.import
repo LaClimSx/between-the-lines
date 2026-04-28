@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bymehhcyrs5vt"
-path="res://.godot/imported/LonelySmiles.png-e3067231236fdc7c11bb9029c953063e.ctex"
+uid="uid://bcu2px6qyoi12"
+path="res://.godot/imported/pote-sprite.png-1ddd5a875c9feb6d2cc7756744e28bad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/LonelySmiles.png"
-dest_files=["res://.godot/imported/LonelySmiles.png-e3067231236fdc7c11bb9029c953063e.ctex"]
+source_file="res://assets/NPCs/sprites/pote-sprite.png"
+dest_files=["res://.godot/imported/pote-sprite.png-1ddd5a875c9feb6d2cc7756744e28bad.ctex"]
 
 [params]
 

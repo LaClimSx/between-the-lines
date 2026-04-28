@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_tjo0u"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_ausq1"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_oyyw7"]
-[ext_resource type="Texture2D" uid="uid://2wr2dioe002r" path="res://assets/NPCs/MusicMan.png" id="5_ausq1"]
-[ext_resource type="Texture2D" uid="uid://dc3dbgbkrhk46" path="res://assets/NPCs/ChooseTheMusicMan.png" id="5_myqoh"]
+[ext_resource type="Texture2D" uid="uid://2wr2dioe002r" path="res://assets/NPCs/illustrations/MusicMan.png" id="5_ausq1"]
+[ext_resource type="Texture2D" uid="uid://dc3dbgbkrhk46" path="res://assets/NPCs/illustrations/ChooseTheMusicMan.png" id="5_myqoh"]
 
 [sub_resource type="Resource" id="Resource_ausq1"]
 script = ExtResource("2_ausq1")

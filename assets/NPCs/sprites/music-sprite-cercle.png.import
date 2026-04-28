@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce48r4r5v7k6k"
-path="res://.godot/imported/friend.png-3daea2eaaacf35c61313d9ad6eb22d9f.ctex"
+uid="uid://xurlimu00qcc"
+path="res://.godot/imported/music-sprite-cercle.png-62726aaac1fdbcda6d3a27588655dd17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/friend.png"
-dest_files=["res://.godot/imported/friend.png-3daea2eaaacf35c61313d9ad6eb22d9f.ctex"]
+source_file="res://assets/NPCs/sprites/music-sprite-cercle.png"
+dest_files=["res://.godot/imported/music-sprite-cercle.png-62726aaac1fdbcda6d3a27588655dd17.ctex"]
 
 [params]
 

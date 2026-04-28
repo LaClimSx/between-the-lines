@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5e4a41gotxo2"
-path="res://.godot/imported/Couple.png-8edac36707fdaaac8f7a0c1ec37ad977.ctex"
+uid="uid://66ocswya4v51"
+path="res://.godot/imported/danse-sprite-cercle.png-f670b1a4433ab812524aa1a552974462.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/Couple.png"
-dest_files=["res://.godot/imported/Couple.png-8edac36707fdaaac8f7a0c1ec37ad977.ctex"]
+source_file="res://assets/NPCs/sprites/danse-sprite-cercle.png"
+dest_files=["res://.godot/imported/danse-sprite-cercle.png-f670b1a4433ab812524aa1a552974462.ctex"]
 
 [params]
 

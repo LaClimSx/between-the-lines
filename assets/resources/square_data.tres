@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f6c7wdr0rqlt" path="res://scripts/npcs/npc_data.gd" id="1_vk01h"]
 [ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="2_ceagr"]
-[ext_resource type="Texture2D" uid="uid://cugmdi1j0tegr" path="res://assets/NPCs/DancingQueen.png" id="3_vk01h"]
+[ext_resource type="Texture2D" uid="uid://cugmdi1j0tegr" path="res://assets/NPCs/illustrations/DancingQueen.png" id="3_vk01h"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_dibru"]
 
 [sub_resource type="Resource" id="Resource_a8y0u"]

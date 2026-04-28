@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cwryah4epifdb"]
+
+[ext_resource type="Texture2D" uid="uid://xurlimu00qcc" path="res://assets/NPCs/sprites/music-sprite-cercle.png" id="1_a7at2"]
+[ext_resource type="Texture2D" uid="uid://cibt50h06hwhf" path="res://assets/NPCs/sprites/music-man-sprite.png" id="2_fr5le"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a7at2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fr5le")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

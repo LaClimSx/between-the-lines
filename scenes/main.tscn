@@ -6,15 +6,23 @@
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
-[ext_resource type="Texture2D" uid="uid://v25wmitrx8l0" path="res://assets/temporary/blonde_man.png" id="6_a8y0u"]
+[ext_resource type="SpriteFrames" uid="uid://bx7bbsfy2pyw2" path="res://assets/NPCs/sprites/animation_heart_left.tres" id="6_2wyq8"]
 [ext_resource type="Resource" uid="uid://bpjhkrwbx1a5d" path="res://assets/resources/circle_data.tres" id="6_choun"]
 [ext_resource type="Script" uid="uid://6rqcdok1g3uc" path="res://scripts/npcs/hostess.gd" id="6_ya4ey"]
 [ext_resource type="Resource" uid="uid://y4vby8r7tjbc" path="res://assets/resources/square_data.tres" id="7_85g3d"]
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
+[ext_resource type="SpriteFrames" uid="uid://dmrhl55yj6f4v" path="res://assets/NPCs/sprites/animation_heart_right.tres" id="7_vxglm"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
+[ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
+[ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
+[ext_resource type="SpriteFrames" uid="uid://chrdbnbq8qlm3" path="res://assets/NPCs/sprites/animation_triangle.tres" id="12_pm3ni"]
+[ext_resource type="SpriteFrames" uid="uid://cis26q2rv0v6g" path="res://assets/NPCs/sprites/animation_zero.tres" id="13_jscy8"]
+[ext_resource type="SpriteFrames" uid="uid://btabfq0d35vy8" path="res://assets/NPCs/sprites/animation_square.tres" id="14_yc10j"]
+[ext_resource type="SpriteFrames" uid="uid://cwryah4epifdb" path="res://assets/NPCs/sprites/animation_music.tres" id="15_gqmmt"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
+[ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
@@ -26,42 +34,6 @@ height = 27.996185
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbj1t"]
 radius = 20.0
 height = 48.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
-atlas = ExtResource("6_a8y0u")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
-atlas = ExtResource("6_a8y0u")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
-atlas = ExtResource("6_a8y0u")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tl2vt"]
-atlas = ExtResource("6_a8y0u")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hwkja"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv78h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7n8xq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wlns")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tl2vt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="Curve2D" id="Curve2D_dp3eg"]
 _data = {
@@ -92,12 +64,16 @@ position = Vector2(265, 54)
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
 position = Vector2(77, 117)
 interaction_data = ExtResource("5_trceg")
-npc_name = "Heart"
+npc_name = "Alix & Alex"
 
 [node name="CollisionShape2D" parent="NPCs/Heart" index="0" unique_id=1830750460]
 position = Vector2(8, 1)
 rotation = -1.5873593
 shape = SubResource("CapsuleShape2D_jkv2x")
+
+[node name="AnimatedSprite2D" parent="NPCs/Heart" index="1" unique_id=27330966]
+sprite_frames = ExtResource("6_2wyq8")
+offset = Vector2(0, 4)
 
 [node name="InteractionArea" parent="NPCs/Heart" index="2" unique_id=502922032]
 position = Vector2(8, 0)
@@ -107,13 +83,18 @@ shape = SubResource("CapsuleShape2D_jbj1t")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="NPCs/Heart" unique_id=550196190]
 position = Vector2(15, -8)
-sprite_frames = SubResource("SpriteFrames_hwkja")
+sprite_frames = ExtResource("7_vxglm")
 autoplay = "default"
+offset = Vector2(0, 4)
 
 [node name="Circle" parent="NPCs" unique_id=1442999823 instance=ExtResource("3_sugp2")]
 position = Vector2(186, 44)
 interaction_data = ExtResource("6_choun")
-npc_name = "Circle"
+npc_name = "Charlie"
+
+[node name="AnimatedSprite2D" parent="NPCs/Circle" index="1" unique_id=27330966]
+sprite_frames = ExtResource("9_2f3dj")
+offset = Vector2(0, 8)
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
 process_mode = 1
@@ -132,37 +113,53 @@ interaction_data_minus = ExtResource("7_eb6dy")
 path_follow = NodePath("..")
 move_speed = 0.05
 interaction_data = ExtResource("5_85g3d")
-npc_name = "Hostess"
+npc_name = "Diana"
+
+[node name="AnimatedSprite2D" parent="NPCs/StarPath/PathFollow2D/Star" index="1" unique_id=27330966]
+sprite_frames = ExtResource("11_y6deb")
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
 position = Vector2(299, 132)
 interaction_data = ExtResource("7_tipki")
-npc_name = "Triangle"
+npc_name = "Greg"
 
 [node name="AnimatedSprite2D" parent="NPCs/Triangle" index="1" unique_id=27330966]
 position = Vector2(0, 0)
+sprite_frames = ExtResource("12_pm3ni")
 offset = Vector2(0, -8)
 
 [node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
 position = Vector2(-25, 167)
 interaction_data = ExtResource("12_jkv2x")
-npc_name = "Zero"
+npc_name = "Sarah"
+
+[node name="AnimatedSprite2D" parent="NPCs/Zero" index="1" unique_id=27330966]
+sprite_frames = ExtResource("13_jscy8")
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
-position = Vector2(78, 61)
+position = Vector2(78, 66)
 interaction_data = ExtResource("7_85g3d")
-npc_name = "Square"
+npc_name = "Talia"
+
+[node name="AnimatedSprite2D" parent="NPCs/Square" index="1" unique_id=27330966]
+sprite_frames = ExtResource("14_yc10j")
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
-position = Vector2(144, 81)
+position = Vector2(144, 86)
 interaction_data = ExtResource("8_85g3d")
-npc_name = "Music"
+npc_name = "Jules"
+
+[node name="AnimatedSprite2D" parent="NPCs/Music" index="1" unique_id=27330966]
+sprite_frames = ExtResource("15_gqmmt")
 
 [node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
-position = Vector2(23, 165)
+position = Vector2(32, 170)
 interaction_data = ExtResource("15_jbj1t")
-npc_name = "Eye"
+npc_name = "Theo"
+
+[node name="AnimatedSprite2D" parent="NPCs/Eye" index="1" unique_id=27330966]
+sprite_frames = ExtResource("16_0ld40")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
@@ -193,6 +190,8 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [editable path="NPCs/Heart"]
+[editable path="NPCs/Circle"]
+[editable path="NPCs/StarPath/PathFollow2D/Star"]
 [editable path="NPCs/Triangle"]
 [editable path="NPCs/Zero"]
 [editable path="NPCs/Square"]

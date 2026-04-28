@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dmrhl55yj6f4v"]
+
+[ext_resource type="Texture2D" uid="uid://d11k3iqlv6yyc" path="res://assets/NPCs/sprites/couple-gal-sprite-cercle.png" id="1_yld58"]
+[ext_resource type="Texture2D" uid="uid://bkevlywg12wbv" path="res://assets/NPCs/sprites/couple-gal-sprite.png" id="2_y6ydx"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yld58")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y6ydx")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

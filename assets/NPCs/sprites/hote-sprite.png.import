@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cugmdi1j0tegr"
-path="res://.godot/imported/DancingQueen.png-bc50733c7eb1f541f0c4349b0af8d338.ctex"
+uid="uid://c5wxm5ilxlcbk"
+path="res://.godot/imported/hote-sprite.png-24aad57c8c44b54353e6256d2e027b49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/DancingQueen.png"
-dest_files=["res://.godot/imported/DancingQueen.png-bc50733c7eb1f541f0c4349b0af8d338.ctex"]
+source_file="res://assets/NPCs/sprites/hote-sprite.png"
+dest_files=["res://.godot/imported/hote-sprite.png-24aad57c8c44b54353e6256d2e027b49.ctex"]
 
 [params]
 

@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://uese3vtunyd"]
+
+[ext_resource type="Texture2D" uid="uid://y10wj2eu00xh" path="res://assets/NPCs/sprites/lonely-sprite-cercle.png" id="1_d4mji"]
+[ext_resource type="Texture2D" uid="uid://cd58kmb6v3mvp" path="res://assets/NPCs/sprites/lonely-sprite.png" id="2_w26b5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d4mji")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w26b5")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

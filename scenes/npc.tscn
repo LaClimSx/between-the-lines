@@ -1,47 +1,11 @@
 [gd_scene format=3 uid="uid://b47o7t6ew8f43"]
 
 [ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npcs/npc.gd" id="1_abqhh"]
-[ext_resource type="Texture2D" uid="uid://v25wmitrx8l0" path="res://assets/temporary/blonde_man.png" id="1_nh2m4"]
+[ext_resource type="SpriteFrames" uid="uid://daxahtdjlhv52" path="res://assets/NPCs/sprites/animation_placeholder.tres" id="2_abqhh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
 radius = 7.0
 height = 14.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
-atlas = ExtResource("1_nh2m4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
-atlas = ExtResource("1_nh2m4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
-atlas = ExtResource("1_nh2m4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tl2vt"]
-atlas = ExtResource("1_nh2m4")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hwkja"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv78h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7n8xq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wlns")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tl2vt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh2m4"]
 radius = 17.0
@@ -58,7 +22,7 @@ shape = SubResource("CapsuleShape2D_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27330966]
 position = Vector2(0, -8)
-sprite_frames = SubResource("SpriteFrames_hwkja")
+sprite_frames = ExtResource("2_abqhh")
 autoplay = "default"
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=502922032]

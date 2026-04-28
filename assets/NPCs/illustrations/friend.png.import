@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r1rql65hcg0j"
-path="res://.godot/imported/hostess.png-f9c200c3a0117a44853dc7f1cb29d5b0.ctex"
+uid="uid://ce48r4r5v7k6k"
+path="res://.godot/imported/friend.png-dee799291b5b6cf198af4034cc1028f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/hostess.png"
-dest_files=["res://.godot/imported/hostess.png-f9c200c3a0117a44853dc7f1cb29d5b0.ctex"]
+source_file="res://assets/NPCs/illustrations/friend.png"
+dest_files=["res://.godot/imported/friend.png-dee799291b5b6cf198af4034cc1028f6.ctex"]
 
 [params]
 

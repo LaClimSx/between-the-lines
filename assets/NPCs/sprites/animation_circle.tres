@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cidc11k4wkiro"]
+
+[ext_resource type="Texture2D" uid="uid://l71wyb74ynbl" path="res://assets/NPCs/sprites/chips-sprite-cercle.png" id="1_2638p"]
+[ext_resource type="Texture2D" uid="uid://b5ocyghsxhrb3" path="res://assets/NPCs/sprites/chips-sprite.png" id="2_qxk36"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2638p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qxk36")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc3dbgbkrhk46"
-path="res://.godot/imported/ChooseTheMusicMan.png-1c7bc2eb208d30d5314ba5cadbd2b10e.ctex"
+uid="uid://dh5gkjdyuag7f"
+path="res://.godot/imported/couple-dude-sprite-cercle.png-c7fa39bbbe482812c39b675498b471b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/ChooseTheMusicMan.png"
-dest_files=["res://.godot/imported/ChooseTheMusicMan.png-1c7bc2eb208d30d5314ba5cadbd2b10e.ctex"]
+source_file="res://assets/NPCs/sprites/couple-dude-sprite-cercle.png"
+dest_files=["res://.godot/imported/couple-dude-sprite-cercle.png-c7fa39bbbe482812c39b675498b471b1.ctex"]
 
 [params]
 

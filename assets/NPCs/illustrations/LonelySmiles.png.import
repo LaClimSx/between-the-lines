@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4xdwmokqfe5b"
-path="res://.godot/imported/chipsFellow.png-5be696ecbbec4b9f2d699ec5f5128cf9.ctex"
+uid="uid://bymehhcyrs5vt"
+path="res://.godot/imported/LonelySmiles.png-052ff7620f915e164433354a93e63a58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/chipsFellow.png"
-dest_files=["res://.godot/imported/chipsFellow.png-5be696ecbbec4b9f2d699ec5f5128cf9.ctex"]
+source_file="res://assets/NPCs/illustrations/LonelySmiles.png"
+dest_files=["res://.godot/imported/LonelySmiles.png-052ff7620f915e164433354a93e63a58.ctex"]
 
 [params]
 
