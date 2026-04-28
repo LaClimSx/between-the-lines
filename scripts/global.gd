@@ -5,6 +5,8 @@ const SCORE_UPPER_BOUND: int = 10
 const TOTAL_INTERACTIONS: int = 8
 
 signal score_changed(value: int)
+signal ending(text: String)
+
 @onready var timer : Timer = $Timer
 
 var nb_interactions : int = 0:
@@ -24,10 +26,10 @@ var score : int = 2:
 			lost_confidence()
 	
 func lost_confidence() -> void:
+	ending.emit("Your social battery runs low, you are tired and decide to go home. Before leaving, you find Sarah and thank her for inviting you.")
 	print("End game, lost confidence")
-	get_tree().quit()
 
 
 func _on_timer_timeout() -> void:
+	ending.emit("The party is ending, you find Sarah and leave together. On your way back, you thank her for inviting you.")
 	print("End game")
-	get_tree().quit()

@@ -26,6 +26,7 @@
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
+[ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -188,6 +189,67 @@ offset_right = 42.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="EndPanel" type="Control" parent="CanvasLayer" unique_id=1238397256]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("27_2f3dj")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/EndPanel" unique_id=456142367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/EndPanel/MarginContainer" unique_id=1655165194]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer" unique_id=1129786200]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer" unique_id=276079456]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=282647742]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1173467109]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=2129365487]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Annoying man: You want some vodka, a beer?
+You: No thank you."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="EndButton" type="Button" parent="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1370055080]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Leave"
+
+[connection signal="pressed" from="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 
 [editable path="NPCs/Heart"]
 [editable path="NPCs/Circle"]
