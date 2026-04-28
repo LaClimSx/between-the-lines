@@ -15,7 +15,6 @@
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
-[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 
@@ -68,10 +67,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -187, 7, 0, 0, 0, 0, -134, 36, 0, 0, 0, 0, -80, 8, -28.705063, -0.18191671, 28.705063, 0.18191671, -22, 0, -23.947374, 0.31100488, 23.947374, -0.31100488, 25, 30, -50.476204, 4.882656, 50.476204, -4.882656, 72, -45, 0, 0, 0, 0, 20, -58, 21.459335, -5.287082, -21.459335, 5.287082, -15, -13, 0, 0, 0, 0, -81, -8, 0, 0, 0, 0, -147, -31, 0, 0, 0, 0, -187, 7)
 }
 point_count = 11
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
-shader = ExtResource("16_muem4")
-shader_parameter/warmth = 0.0
 
 [node name="Main" type="Node2D" unique_id=1379244409]
 y_sort_enabled = true
@@ -168,12 +163,12 @@ npc_name = "Eye"
 layer = 0
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1876947052]
-material = SubResource("ShaderMaterial_dp3eg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 1, 1, 0)
 script = ExtResource("17_dp3eg")
 metadata/_edit_lock_ = true
 
