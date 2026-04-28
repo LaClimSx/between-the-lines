@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_twosj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vvaj2"]
-load_path = "res://.godot/imported/hostess.png-f9c200c3a0117a44853dc7f1cb29d5b0.ctex"
 
 [sub_resource type="Resource" id="Resource_obobi"]
 script = ExtResource("2_obobi")
@@ -16,7 +15,6 @@ optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h8ovf"]
-load_path = "res://.godot/imported/hostess.png-f9c200c3a0117a44853dc7f1cb29d5b0.ctex"
 
 [sub_resource type="Resource" id="Resource_twosj"]
 script = ExtResource("2_obobi")
@@ -26,7 +24,6 @@ optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s0g03"]
-load_path = "res://.godot/imported/hostess.png-f9c200c3a0117a44853dc7f1cb29d5b0.ctex"
 
 [sub_resource type="Resource" id="Resource_4gn7m"]
 script = ExtResource("2_obobi")
