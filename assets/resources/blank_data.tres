@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPCSimpleData" format=3 uid="uid://cbqvgtljuw7qc"]
+
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="1_htt2q"]
+
+[resource]
+script = ExtResource("1_htt2q")
+text = "There was a blank in the conversation..."
+optional_score = -2
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

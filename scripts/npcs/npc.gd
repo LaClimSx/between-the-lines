@@ -8,6 +8,8 @@ class_name NPC
 const INTERACTION_PANEL = preload("res://scenes/interaction_panel.tscn")
 const SIMPLE_PANEL = preload("res://scenes/simple_panel.tscn")
 
+var blank_panel : NPCSimpleData = preload("res://assets/resources/blank_data.tres")
+
 var curr_data : NPCData
 
 var player_inside_area: bool = false
@@ -50,9 +52,9 @@ func _received_answer(answer_nb: int) -> void:
 		if answer_nb == -1:
 			if $Panels.get_child_count() != 0:
 				$Panels.get_child(0).queue_free()
-			Global.score = -2
-			Global.nb_interactions += 1
-			return
+			blank_panel.tex = curr_data.tex
+			curr_data = blank_panel
+			return interact()
 		var next_data : NPCData = curr_data.answer_conclusions[answer_nb]
 		curr_data = next_data
 		if $Panels.get_child_count() != 0:
