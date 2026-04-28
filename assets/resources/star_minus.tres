@@ -5,30 +5,24 @@
 [ext_resource type="Texture2D" uid="uid://r1rql65hcg0j" path="res://assets/NPCs/illustrations/hostess.png" id="3_h8ovf"]
 [ext_resource type="Script" uid="uid://d2ow5inumutbj" path="res://scripts/npcs/npc_interaction_data.gd" id="4_twosj"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vvaj2"]
-
 [sub_resource type="Resource" id="Resource_obobi"]
 script = ExtResource("2_obobi")
 text = "That’s nice, but you don't have to lie..."
-tex = SubResource("CompressedTexture2D_vvaj2")
+tex = ExtResource("3_h8ovf")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h8ovf"]
 
 [sub_resource type="Resource" id="Resource_twosj"]
 script = ExtResource("2_obobi")
 text = "I understand. Thanks for coming anyway, I really appreciate it."
-tex = SubResource("CompressedTexture2D_h8ovf")
+tex = ExtResource("3_h8ovf")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s0g03"]
 
 [sub_resource type="Resource" id="Resource_4gn7m"]
 script = ExtResource("2_obobi")
 text = "Aren't you exaggerating a bit? You can be honest, you know"
-tex = SubResource("CompressedTexture2D_s0g03")
+tex = ExtResource("3_h8ovf")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 

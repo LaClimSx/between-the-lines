@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://cd411utdfovce"]
 
 [ext_resource type="Script" uid="uid://bn66fn8uy4d56" path="res://scripts/main.gd" id="1_o5qli"]
-[ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/temporary/background.png" id="2_0ld40"]
+[ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/background.png" id="2_0ld40"]
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
-[ext_resource type="SpriteFrames" uid="uid://bx7bbsfy2pyw2" path="res://assets/NPCs/sprites/animation_heart_left.tres" id="6_2wyq8"]
+[ext_resource type="SpriteFrames" uid="uid://bx7bbsfy2pyw2" path="res://assets/NPCs/sprites/animation_heart.tres" id="6_2wyq8"]
 [ext_resource type="Resource" uid="uid://bpjhkrwbx1a5d" path="res://assets/resources/circle_data.tres" id="6_choun"]
 [ext_resource type="Script" uid="uid://6rqcdok1g3uc" path="res://scripts/npcs/hostess.gd" id="6_ya4ey"]
 [ext_resource type="Resource" uid="uid://y4vby8r7tjbc" path="res://assets/resources/square_data.tres" id="7_85g3d"]
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
-[ext_resource type="SpriteFrames" uid="uid://dmrhl55yj6f4v" path="res://assets/NPCs/sprites/animation_heart_right.tres" id="7_vxglm"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
@@ -38,9 +37,9 @@ height = 48.0
 
 [sub_resource type="Curve2D" id="Curve2D_dp3eg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -187, 7, 0, 0, 0, 0, -134, 36, 0, 0, 0, 0, -80, 8, -28.705063, -0.18191671, 28.705063, 0.18191671, -22, 0, -23.947374, 0.31100488, 23.947374, -0.31100488, 25, 30, -50.476204, 4.882656, 50.476204, -4.882656, 72, -45, 0, 0, 0, 0, 20, -58, 21.459335, -5.287082, -21.459335, 5.287082, -15, -13, 0, 0, 0, 0, -81, -8, 0, 0, 0, 0, -147, -31, 0, 0, 0, 0, -187, 7)
+"points": PackedVector2Array(0, 0, 0, 0, -69, -11, 0, 0, 0, 0, -56, 10, -18.441902, -0.52402204, 18.441902, 0.52402204, -40, 45, -4.447371, 25.626799, 4.447371, -25.626799, 25, 30, 10.084311, 13.989501, -10.084311, -13.989501, 67, -43, 0, 0, 0, 0, 30, -44, 19.404308, 0.5263133, -19.404308, -0.5263133, -21, -40, 0, 0, 0, 0, -66, -43, 0, 0, 0, 0, -69, -11)
 }
-point_count = 11
+point_count = 9
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
 shader = ExtResource("16_muem4")
@@ -58,44 +57,33 @@ offset_bottom = 181.0
 texture = ExtResource("2_0ld40")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
-position = Vector2(265, 54)
+position = Vector2(114, 54)
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
-position = Vector2(77, 117)
+position = Vector2(216, 109)
 interaction_data = ExtResource("5_trceg")
 npc_name = "Alix & Alex"
 
 [node name="CollisionShape2D" parent="NPCs/Heart" index="0" unique_id=1830750460]
-position = Vector2(8, 1)
 rotation = -1.5873593
 shape = SubResource("CapsuleShape2D_jkv2x")
 
 [node name="AnimatedSprite2D" parent="NPCs/Heart" index="1" unique_id=27330966]
 sprite_frames = ExtResource("6_2wyq8")
-offset = Vector2(0, 4)
 
-[node name="InteractionArea" parent="NPCs/Heart" index="2" unique_id=502922032]
-position = Vector2(8, 0)
-
-[node name="CollisionShape2D" parent="NPCs/Heart/InteractionArea" index="0" unique_id=1786364444]
+[node name="CollisionShape2D" parent="NPCs/Heart/InteractionArea" parent_id_path=PackedInt32Array(1732191449, 502922032) index="0" unique_id=1786364444]
 shape = SubResource("CapsuleShape2D_jbj1t")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="NPCs/Heart" unique_id=550196190]
-position = Vector2(15, -8)
-sprite_frames = ExtResource("7_vxglm")
-autoplay = "default"
-offset = Vector2(0, 4)
-
 [node name="Circle" parent="NPCs" unique_id=1442999823 instance=ExtResource("3_sugp2")]
-position = Vector2(186, 44)
+position = Vector2(69, 47)
 interaction_data = ExtResource("6_choun")
 npc_name = "Charlie"
 
 [node name="AnimatedSprite2D" parent="NPCs/Circle" index="1" unique_id=27330966]
 sprite_frames = ExtResource("9_2f3dj")
-offset = Vector2(0, 8)
+offset = Vector2(0, -2)
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
 process_mode = 1
@@ -103,7 +91,7 @@ position = Vector2(220, 121)
 curve = SubResource("Curve2D_dp3eg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCs/StarPath" unique_id=693324908]
-position = Vector2(-187, 7)
+position = Vector2(-69, -11)
 rotation = -1.1482648
 rotates = false
 
@@ -120,14 +108,12 @@ npc_name = "Diana"
 sprite_frames = ExtResource("11_y6deb")
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
-position = Vector2(299, 132)
+position = Vector2(277, 137)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Greg"
 
 [node name="AnimatedSprite2D" parent="NPCs/Triangle" index="1" unique_id=27330966]
-position = Vector2(0, 0)
 sprite_frames = ExtResource("12_pm3ni")
-offset = Vector2(0, -8)
 
 [node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
@@ -139,7 +125,7 @@ npc_name = "Sarah"
 sprite_frames = ExtResource("13_jscy8")
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
-position = Vector2(78, 66)
+position = Vector2(220, 64)
 interaction_data = ExtResource("7_85g3d")
 npc_name = "Talia"
 
@@ -147,7 +133,7 @@ npc_name = "Talia"
 sprite_frames = ExtResource("14_yc10j")
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
-position = Vector2(144, 86)
+position = Vector2(27, 84)
 interaction_data = ExtResource("8_85g3d")
 npc_name = "Jules"
 
@@ -155,7 +141,7 @@ npc_name = "Jules"
 sprite_frames = ExtResource("15_gqmmt")
 
 [node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
-position = Vector2(32, 170)
+position = Vector2(15, 142)
 interaction_data = ExtResource("15_jbj1t")
 npc_name = "Theo"
 

@@ -20,8 +20,7 @@ func _input(event: InputEvent) -> void:
 		curr_data = interaction_data
 		interact()
 		interacted = true
-		find_children("", "AnimatedSprite2D", false).map(func(anim: AnimatedSprite2D) -> void :
-			anim.animation = "interacted")
+		$AnimatedSprite2D.animation = "interacted"
 		Global.timer.start(Global.timer.time_left - 60)
 
 func interact() -> void:

@@ -283,7 +283,7 @@ script = ExtResource("1_g2els")
 shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=875704430]
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"idle_down"
 autoplay = "idle_down"
+offset = Vector2(0, -8)

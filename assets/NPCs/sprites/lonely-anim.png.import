@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwhmtyx8ws28k"
-path="res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"
+uid="uid://dqiwovmjrf7f5"
+path="res://.godot/imported/lonely-anim.png-75b6dcdb66f6db53bd446eace22ea375.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/beaver.png"
-dest_files=["res://.godot/imported/beaver.png-a640769135a292984fb879845b1fbeed.ctex"]
+source_file="res://assets/NPCs/sprites/lonely-anim.png"
+dest_files=["res://.godot/imported/lonely-anim.png-75b6dcdb66f6db53bd446eace22ea375.ctex"]
 
 [params]
 

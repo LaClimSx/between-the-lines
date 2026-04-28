@@ -4,7 +4,7 @@ class_name Player
 
 @export var speed : int = 75
 const WORLD_BORDERS_MIN: Vector2i = Vector2i(10, 50)
-const WORLD_BORDERS_MAX: Vector2i = Vector2i(310, 175)
+const WORLD_BORDERS_MAX: Vector2i = Vector2i(310, 170)
 
 enum Direction {LEFT, RIGHT, UP, DOWN}
 

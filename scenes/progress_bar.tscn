@@ -45,4 +45,4 @@ texture_progress = ExtResource("4_dk1bo")
 layout_mode = 2
 texture = ExtResource("7_e5nlk")
 
-[connection signal="value_changed" from="ProgressBar" to="." method="_on_value_changed"]
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

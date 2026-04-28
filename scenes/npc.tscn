@@ -21,9 +21,9 @@ script = ExtResource("1_abqhh")
 shape = SubResource("CapsuleShape2D_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27330966]
-position = Vector2(0, -8)
 sprite_frames = ExtResource("2_abqhh")
 autoplay = "default"
+offset = Vector2(0, -3)
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=502922032]
 collision_layer = 0

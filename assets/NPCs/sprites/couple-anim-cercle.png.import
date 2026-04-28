@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d32gb770ouont"
-path="res://.godot/imported/poc_background.png-cfdb1a311e231e3fb657438032a2c331.ctex"
+uid="uid://dbxt7tagudog"
+path="res://.godot/imported/couple-anim-cercle.png-c5a9a9ecd09b0de71b3a6243591607ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/poc_background.png"
-dest_files=["res://.godot/imported/poc_background.png-cfdb1a311e231e3fb657438032a2c331.ctex"]
+source_file="res://assets/NPCs/sprites/couple-anim-cercle.png"
+dest_files=["res://.godot/imported/couple-anim-cercle.png-c5a9a9ecd09b0de71b3a6243591607ef.ctex"]
 
 [params]
 

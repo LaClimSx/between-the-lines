@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ql4716v0gmip"]
+
+[ext_resource type="Texture2D" uid="uid://d377sm7prhte8" path="res://assets/temporary/smiley-happy.png" id="1_jw3tu"]
+
+[node name="Particle" type="TextureRect" unique_id=801679255]
+texture_filter = 1
+offset_right = 8.0
+offset_bottom = 8.0
+texture = ExtResource("1_jw3tu")
