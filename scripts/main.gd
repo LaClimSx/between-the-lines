@@ -7,10 +7,11 @@ func _ready() -> void:
 		%ProgressBar.value = val
 		)
 	Global.ending.connect(func(text: String) -> void:
-		%Label.text = text
-		$CanvasLayer/EndPanel.visible = true
-		get_tree().paused = true
-		%EndButton.grab_focus.call_deferred())
+		if !$CanvasLayer/EndPanel.visible:
+			%Label.text = text
+			$CanvasLayer/EndPanel.visible = true
+			get_tree().paused = true
+			%EndButton.grab_focus.call_deferred())
 	%ProgressBar.value_changed.connect(move_particle)
 	%Zero.curr_data = %Zero.interaction_data
 	%Zero.interact()
@@ -28,7 +29,7 @@ func move_particle(val: float) -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
+		Global.restart()
 
 func _on_end_button_pressed() -> void:
-	get_tree().quit()
+	Global.restart()
