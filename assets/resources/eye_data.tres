@@ -8,28 +8,28 @@
 
 [sub_resource type="Resource" id="Resource_s3jwc"]
 script = ExtResource("2_s3jwc")
-text = "Meh…"
+text = "Theo: Meh…"
 tex = ExtResource("3_s3jwc")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_qk67w"]
 script = ExtResource("2_s3jwc")
-text = "No"
+text = "Theo: No"
 tex = ExtResource("3_s3jwc")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_psrpc"]
 script = ExtResource("2_s3jwc")
-text = "Mm-hmm *Nods and smiles, embarrassed*"
+text = "Theo: Mm-hmm *Nods and smiles, embarrassed*"
 tex = ExtResource("3_s3jwc")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_hl0bf"]
 script = ExtResource("4_qk67w")
-question = "*He doesn't answer*"
+question = "Theo: *He doesn't answer*"
 answer1 = "Not a bad party, huh?"
 answer2 = "Do you come to parties like this often?"
 answer3 = "You're not very talkative"
@@ -39,28 +39,28 @@ metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_6tyjc"]
 script = ExtResource("2_s3jwc")
-text = "That’s nice of you to ask; I have to admit I don’t know many people *You chat for a while*"
+text = "Theo: That’s nice of you to ask; I have to admit I don’t know many people *You chat for a while*"
 tex = ExtResource("5_rkxgj")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_8c7mo"]
 script = ExtResource("2_s3jwc")
-text = "Yeah, it’s my favorite game! *You chat for a while*"
+text = "Theo: Yeah, it’s my favorite game! *You chat for a while*"
 tex = ExtResource("5_rkxgj")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_ev4wh"]
 script = ExtResource("2_s3jwc")
-text = "Sorry, I just filled my glass"
+text = "Theo: Sorry, I just filled my glass"
 tex = ExtResource("5_rkxgj")
 optional_score = 1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_0wjwd"]
 script = ExtResource("4_qk67w")
-question = "*Smiles slightly*"
+question = "Theo: *Smiles slightly*"
 answer1 = "Hi, I see you’re keeping to yourself a bit, are you okay?"
 answer2 = "I saw your Celeste sweater, have you played a lot?"
 answer3 = "Hey, want to go get a drink together?"
@@ -76,7 +76,7 @@ metadata/_custom_type_script = "uid://f6c7wdr0rqlt"
 
 [resource]
 script = ExtResource("4_qk67w")
-question = "*Stares at you*"
+question = "Theo: *Stares at you*"
 answer1 = "*Stare back*"
 answer2 = "*Smile*"
 answer3 = "*Leave*"

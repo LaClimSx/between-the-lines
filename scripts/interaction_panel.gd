@@ -19,7 +19,7 @@ func setup(tex: CompressedTexture2D, question: String,
 	var answer_buttons: Array[Node] = %AnswersContainer.get_children()
 	for i in range(answers.size()):
 		answer_buttons[i].text = answers[i]
-		if locks[i] && Global.score < 0:
+		if locks[i] && Global.score <= 2:
 			answer_buttons[i].disabled = true
 			answer_buttons[i].text += " [Not confident enough]"
 		answer_buttons[i].pressed.connect(func() -> void:

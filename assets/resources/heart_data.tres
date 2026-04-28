@@ -7,28 +7,28 @@
 
 [sub_resource type="Resource" id="Resource_7bqm7"]
 script = ExtResource("2_jmi6a")
-text = "Don't worry, it's just between us"
+text = "Alix & Alex: Don't worry, it's just between us"
 tex = ExtResource("5_jmi6a")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_jmi6a"]
 script = ExtResource("2_jmi6a")
-text = "*Look at you weirdly*"
+text = "Alix & Alex: *Look at you weirdly*"
 tex = ExtResource("5_jmi6a")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_lcd3i"]
 script = ExtResource("2_jmi6a")
-text = "Oh, sorry, we didn't mean to leave you out"
+text = "Alix & Alex: Oh, sorry, we didn't mean to leave you out"
 tex = ExtResource("5_jmi6a")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [resource]
 script = ExtResource("4_tmvt1")
-question = "Hey, are you having a good time? *Turn to each other and whisper and laugh*"
+question = "Alix & Alex: Hey, are you having a good time? *Turn to each other and whisper and laugh*"
 answer1 = "Haha I didn’t get it, what’s the joke?"
 answer2 = "*Laugh awkwardly*"
 answer3 = "I... can leave if I'm bothering you…"

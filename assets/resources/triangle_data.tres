@@ -7,28 +7,28 @@
 
 [sub_resource type="Resource" id="Resource_cqaxg"]
 script = ExtResource("2_8hqfu")
-text = "You’re so boring…"
+text = "Greg: You’re so boring…"
 tex = ExtResource("3_5s00r")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_8hqfu"]
 script = ExtResource("2_8hqfu")
-text = "Oh, sorry, I didn't mean to push it."
+text = "Greg: Oh, sorry, I didn't mean to push it"
 tex = ExtResource("3_5s00r")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_5s00r"]
 script = ExtResource("2_8hqfu")
-text = "Do you think I'm your bartender?"
+text = "Greg: Do you think I'm your bartender?"
 tex = ExtResource("3_5s00r")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_trceg"]
 script = ExtResource("4_4yp7y")
-question = " Greg: You're no fun, how do you plan on having a good time? You’re sure you don’t want a lil’ beer?"
+question = "Greg: You're no fun, how do you plan on having a good time? You’re sure you don’t want a lil’ beer?"
 answer1 = "No need to drink to have fun"
 answer2 = "You’re a drag"
 answer3 = "Can I have a coke instead?"
@@ -40,7 +40,7 @@ metadata/_custom_type_script = "uid://d2ow5inumutbj"
 [resource]
 script = ExtResource("2_8hqfu")
 text = "Greg: You want some vodka, a beer?
-You: No thank you."
+You: No thank you"
 next = SubResource("Resource_trceg")
 tex = ExtResource("3_5s00r")
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

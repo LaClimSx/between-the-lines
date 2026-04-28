@@ -7,28 +7,28 @@
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("2_qbbkm")
-text = "*Hands over the pack*, You can sit here if you want."
+text = "Charlie: *Hands over the pack*, You can sit here if you want."
 tex = ExtResource("3_s5j7m")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_a8y0u"]
 script = ExtResource("2_qbbkm")
-text = "Okay"
+text = "Charlie: Okay"
 tex = ExtResource("3_s5j7m")
 optional_score = 1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_jkv2x"]
 script = ExtResource("2_qbbkm")
-text = "Can’t you at least say thank you?"
+text = "Charlie: Can’t you at least say thank you?"
 tex = ExtResource("3_s5j7m")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [resource]
 script = ExtResource("4_g71lq")
-question = "Hey! Want some chips?"
+question = "Charlie: Hey! Want some chips?"
 answer1 = "Sure"
 answer2 = "No thank you"
 answer3 = "I don't eat food strangers offer me..."

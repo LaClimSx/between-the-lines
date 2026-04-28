@@ -7,28 +7,28 @@
 
 [sub_resource type="Resource" id="Resource_obobi"]
 script = ExtResource("2_obobi")
-text = "That’s nice, but you don't have to lie..."
+text = "Sarah: That’s nice, but you don't have to lie..."
 tex = ExtResource("3_h8ovf")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_twosj"]
 script = ExtResource("2_obobi")
-text = "I understand. Thanks for coming anyway, I really appreciate it."
+text = "Sarah: I understand. Thanks for coming anyway, I really appreciate it"
 tex = ExtResource("3_h8ovf")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_4gn7m"]
 script = ExtResource("2_obobi")
-text = "Aren't you exaggerating a bit? You can be honest, you know"
+text = "Sarah: Aren't you exaggerating a bit? You can be honest, you know"
 tex = ExtResource("3_h8ovf")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [resource]
 script = ExtResource("4_twosj")
-question = "So, are you enjoying the party so far?"
+question = "Sarah: So, are you enjoying the party so far?"
 answer1 = "[Lie] Yeah, it's really cool"
 answer2 = "I don't know… I don't really go out much"
 answer3 = "This is the best party of my life!"

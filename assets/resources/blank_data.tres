@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_htt2q")
-text = "There was a blank in the conversation..."
+text = "*There was a blank in the conversation...*"
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

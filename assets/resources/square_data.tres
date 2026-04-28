@@ -28,34 +28,33 @@ metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_ya4ey"]
 script = ExtResource("4_dibru")
-question = "Do we know each other ? Who _ you _ _?"
+question = "Talia: Do we know each other ? Who _ you _ _?"
 answer1 = "I’m sorry, I still didn’t hear you, can you repeat again?"
-answer2 = "Yeah, she's a good friend."
-answer3 = "I'm new here, I came with X."
+answer2 = "Yeah, she's a good friend"
+answer3 = "I'm new here, I came with Sarah"
 answer_conclusions = Array[ExtResource("1_vk01h")]([SubResource("Resource_a8y0u"), SubResource("Resource_jkv2x"), SubResource("Resource_jbj1t")])
 tex = ExtResource("3_vk01h")
 metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_eb6dy"]
 script = ExtResource("2_ceagr")
-text = " No, you didn't hear me, who did you come with?
-*You answer, awkwardly*
-"
+text = "Talia: No, you didn't hear me, who did you come with?
+*You answer, awkwardly*"
 tex = ExtResource("3_vk01h")
 optional_score = -1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_trceg"]
 script = ExtResource("2_ceagr")
-text = "Did I say something funny?!"
+text = "Talia: Did I say something funny?!"
 tex = ExtResource("3_vk01h")
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [resource]
 script = ExtResource("4_dibru")
-question = "Do we know _ _ ? Who _ _ _ _?"
-answer1 = "Could you repeat that? I didn't catch that."
+question = "Talia: Do we know _ _ ? Who _ _ _ _?"
+answer1 = "Could you repeat that? I didn't catch that"
 answer2 = "Yeah, yeah"
 answer3 = "Haha"
 answer_conclusions = Array[ExtResource("1_vk01h")]([SubResource("Resource_ya4ey"), SubResource("Resource_eb6dy"), SubResource("Resource_trceg")])

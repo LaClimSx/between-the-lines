@@ -10,6 +10,8 @@ func _ready() -> void:
 func setup(tex: CompressedTexture2D, text: String) -> void:
 	%TextureRect.texture = tex
 	%Label.text = text
+	if not tex:
+		%TextureRect.visible = false
 	get_tree().paused = true
 	visible = true
 

@@ -7,28 +7,25 @@
 
 [sub_resource type="Resource" id="Resource_g1pua"]
 script = ExtResource("2_g1pua")
-text = "Your line is cut off, she left already…"
-tex = ExtResource("3_wc4nv")
+text = "*Your line is cut off, she left already…*"
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_lxbt0"]
 script = ExtResource("2_g1pua")
-text = "Your line is cut off, she left already…"
-tex = ExtResource("3_wc4nv")
+text = "*Your line is cut off, she left already…*"
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_c46ab"]
 script = ExtResource("2_g1pua")
-text = "Your line is cut off, she left already…"
-tex = ExtResource("3_wc4nv")
+text = "*Your line is cut off, she left already…*"
 optional_score = -2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_88uhq"]
 script = ExtResource("4_lxbt0")
-question = "Oh! My buddy’s in the yard, I’ll be back!"
+question = "Sarah: Oh! My buddy’s in the yard, I’ll be back!"
 answer1 = "Wait..."
 answer2 = "See you later…"
 answer3 = "Can I come?"
@@ -40,7 +37,7 @@ metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [resource]
 script = ExtResource("2_g1pua")
-text = "Friend: I’m glad you came with me, I hope you’ll have a good time"
+text = "Sarah: I’m glad you came with me, I hope you’ll have a good time"
 next = SubResource("Resource_88uhq")
 tex = ExtResource("3_wc4nv")
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
