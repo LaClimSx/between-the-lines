@@ -16,7 +16,7 @@ func get_input() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	get_input()
+	if Global.tuto_done: get_input()
 	animate()
 	move_and_slide()
 	position.x = clamp(position.x, WORLD_BORDERS_MIN.x, WORLD_BORDERS_MAX.x)

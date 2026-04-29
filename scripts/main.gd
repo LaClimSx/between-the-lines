@@ -12,9 +12,8 @@ func _ready() -> void:
 			$CanvasLayer/EndPanel.visible = true
 			get_tree().paused = true
 			%EndButton.grab_focus.call_deferred())
+	Global.tuto_finished.connect(close_tuto)
 	%ProgressBar.value_changed.connect(move_particle)
-	%Zero.curr_data = %Zero.interaction_data
-	%Zero.interact()
 
 
 func move_particle(val: float) -> void:
@@ -27,9 +26,15 @@ func move_particle(val: float) -> void:
 	tween.tween_property(particle, "global_position", end_pos, 1.0).from($Player.global_position)
 	tween.tween_callback(particle.queue_free)
 
+
+func close_tuto() -> void:
+	%Zero.global_position = Vector2(-25, 167)
+	%Zero/TutoControlAnimation.queue_free()
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Global.restart()
+
 
 func _on_end_button_pressed() -> void:
 	Global.restart()

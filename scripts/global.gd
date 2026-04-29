@@ -6,6 +6,9 @@ const TOTAL_INTERACTIONS: int = 8
 
 var bypass_setters: bool = false
 
+var tuto_done: bool = false
+signal tuto_finished
+
 signal score_changed(value: int)
 signal ending(text: String)
 
@@ -19,6 +22,8 @@ var nb_interactions : int = 0:
 		nb_interactions = value
 		if (nb_interactions) == 1:
 			timer.start(900)
+			tuto_done = true
+			tuto_finished.emit()
 		if nb_interactions >= TOTAL_INTERACTIONS:
 			await get_tree().create_timer(5).timeout
 			_on_timer_timeout()

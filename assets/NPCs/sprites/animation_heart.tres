@@ -66,6 +66,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_yetan")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yetan")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8skaf")
 }, {
 "duration": 1.0,
@@ -88,6 +91,9 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwqll")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gwqll")
 }, {

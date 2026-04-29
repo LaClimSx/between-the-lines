@@ -24,6 +24,7 @@
 [ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://7bcwhvnyy548" path="res://assets/temporary/xp_orb.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
@@ -64,6 +65,17 @@ _data = {
 }
 point_count = 9
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2f3dj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_vxglm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
 shader = ExtResource("16_muem4")
 shader_parameter/warmth = 0.0
@@ -81,7 +93,7 @@ texture = ExtResource("2_0ld40")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
-position = Vector2(114, 54)
+position = Vector2(109, 54)
 
 [node name="Furniture" type="Node" parent="." unique_id=994034929]
 
@@ -212,12 +224,16 @@ sprite_frames = ExtResource("12_pm3ni")
 
 [node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
-position = Vector2(-25, 167)
+position = Vector2(126, 54)
 interaction_data = ExtResource("12_jkv2x")
 npc_name = "Sarah"
 
 [node name="AnimatedSprite2D" parent="NPCs/Zero" index="1" unique_id=27330966]
 sprite_frames = ExtResource("13_jscy8")
+
+[node name="TutoControlAnimation" type="AnimatedSprite2D" parent="NPCs/Zero" unique_id=490042561]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_2f3dj")
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
 position = Vector2(220, 64)

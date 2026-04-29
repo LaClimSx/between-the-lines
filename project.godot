@@ -14,7 +14,6 @@ config/name="Between The Lines"
 run/main_scene="uid://dos75u60v48mt"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=240
-config/icon="res://assets/icon.svg"
 
 [autoload]
 

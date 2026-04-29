@@ -1,6 +1,6 @@
 extends Control
 
-const MAIN_SCENE : PackedScene = preload("res://scenes/main.tscn")
+@onready var MAIN_SCENE : PackedScene = load("res://scenes/main.tscn")
 
 func _ready() -> void:
 	$StartButton.grab_focus.call_deferred()
