@@ -3,6 +3,7 @@ extends Node2D
 const PARTICLE = preload("res://scenes/particle.tscn")
 
 func _ready() -> void:
+	get_tree().paused = false
 	Global.score_changed.connect(func(val: int) -> void:
 		%ProgressBar.value = val
 		)
@@ -28,8 +29,7 @@ func move_particle(val: float) -> void:
 
 
 func close_tuto() -> void:
-	%Zero.global_position = Vector2(-25, 167)
-	%Zero/TutoControlAnimation.queue_free()
+	%Zero.queue_free()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):

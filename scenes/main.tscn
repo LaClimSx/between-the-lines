@@ -24,7 +24,7 @@
 [ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://7bcwhvnyy548" path="res://assets/temporary/xp_orb.png" id="17_vxglm"]
+[ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/tuto-touche.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
@@ -65,11 +65,29 @@ _data = {
 }
 point_count = 9
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f3dj"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq6so"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv21b"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 64, 96, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2f3dj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_vxglm")
+"texture": SubResource("AtlasTexture_2f3dj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq6so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv21b")
 }],
 "loop": true,
 "name": &"default",
@@ -233,7 +251,9 @@ sprite_frames = ExtResource("13_jscy8")
 
 [node name="TutoControlAnimation" type="AnimatedSprite2D" parent="NPCs/Zero" unique_id=490042561]
 position = Vector2(0, -32)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_2f3dj")
+autoplay = "default"
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
 position = Vector2(220, 64)
