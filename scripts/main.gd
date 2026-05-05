@@ -17,9 +17,9 @@ func _ready() -> void:
 	%ProgressBar.value_changed.connect(move_particle)
 
 
-func move_particle(val: float) -> void:
+func move_particle(diff: float) -> void:
 	var particle : Particle = PARTICLE.instantiate()
-	particle.texture = particle.texture_pos if val > 0 else particle.texture_neg
+	particle.texture = particle.texture_pos if diff > 0 else particle.texture_neg
 	add_child(particle)
 	var tween : Tween = get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)

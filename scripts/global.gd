@@ -49,6 +49,7 @@ func _on_timer_timeout() -> void:
 	print("End game")
 
 func restart() -> void:
+	tuto_done = false
 	bypass_setters = true
 	timer.stop()
 	score = 2

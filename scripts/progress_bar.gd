@@ -6,12 +6,13 @@ extends HBoxContainer
 
 @onready var bar : TextureProgressBar = $ProgressBar
 
-signal value_changed(val: float)
+signal value_changed(diff: float)
 
 var value : int = 2:
 	set(val):
+		var diff: int = val - value
 		value = val
-		value_changed.emit(val)
+		value_changed.emit(diff)
 		animate_bar(val)
 
 
@@ -22,7 +23,7 @@ func animate_bar(val: float) -> void:
 	tween.tween_property(bar, "value", val, 0.75)
 
 
-func _on_value_changed(_val: float) -> void:
+func _on_value_changed(_diff: float) -> void:
 	get_tree().create_timer(0.5).timeout.connect(func() -> void:
 		visible = true)
 	get_tree().create_timer(4.5).timeout.connect(func() -> void:
