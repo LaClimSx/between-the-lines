@@ -287,3 +287,6 @@ sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"idle_down"
 autoplay = "idle_down"
 offset = Vector2(0, -8)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=524671311]
+current = true
