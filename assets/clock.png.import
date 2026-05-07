@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbdin68te2tfe"
-path="res://.godot/imported/alcool-sprite-cercle.png-46664643ec0c44c9bbc4c44a70e4071e.ctex"
+uid="uid://dtanqglovn1pd"
+path="res://.godot/imported/clock.png-88b7e3c1d6bf3320ad0578ddb9831701.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/alcool-sprite-cercle.png"
-dest_files=["res://.godot/imported/alcool-sprite-cercle.png-46664643ec0c44c9bbc4c44a70e4071e.ctex"]
+source_file="res://assets/clock.png"
+dest_files=["res://.godot/imported/clock.png-88b7e3c1d6bf3320ad0578ddb9831701.ctex"]
 
 [params]
 

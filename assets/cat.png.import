@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmi8f0dwdehev"
-path="res://.godot/imported/danse-sprite.png-12fd038fa6f93fbf2b91981e525888c4.ctex"
+uid="uid://chjgo71a2jf0d"
+path="res://.godot/imported/cat.png-74418c656f64bad1813a4e0137c5108d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/danse-sprite.png"
-dest_files=["res://.godot/imported/danse-sprite.png-12fd038fa6f93fbf2b91981e525888c4.ctex"]
+source_file="res://assets/cat.png"
+dest_files=["res://.godot/imported/cat.png-74418c656f64bad1813a4e0137c5108d.ctex"]
 
 [params]
 

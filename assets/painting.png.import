@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deht3qx6gjtuk"
-path="res://.godot/imported/couple-dude-sprite.png-da769079534cf21ab2f8ed52a3f563b4.ctex"
+uid="uid://ctoqwai0mkdk"
+path="res://.godot/imported/painting.png-a09501a0bbb2931a389fca66d5e454a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/couple-dude-sprite.png"
-dest_files=["res://.godot/imported/couple-dude-sprite.png-da769079534cf21ab2f8ed52a3f563b4.ctex"]
+source_file="res://assets/painting.png"
+dest_files=["res://.godot/imported/painting.png-a09501a0bbb2931a389fca66d5e454a9.ctex"]
 
 [params]
 

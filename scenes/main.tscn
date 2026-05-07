@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
 [ext_resource type="Script" uid="uid://d27omin5v7mvr" path="res://scripts/interactable_object.gd" id="4_2f3dj"]
+[ext_resource type="Texture2D" uid="uid://dtanqglovn1pd" path="res://assets/clock.png" id="5_5q0nq"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
 [ext_resource type="Script" uid="uid://bcrbyuhygvq8p" path="res://scripts/seating_area.gd" id="6_2f3dj"]
 [ext_resource type="SpriteFrames" uid="uid://bx7bbsfy2pyw2" path="res://assets/NPCs/sprites/animation_heart.tres" id="6_2wyq8"]
 [ext_resource type="Resource" uid="uid://bpjhkrwbx1a5d" path="res://assets/resources/circle_data.tres" id="6_choun"]
+[ext_resource type="PackedScene" uid="uid://c8hyoxf1q7kgg" path="res://scenes/interactable_object.tscn" id="6_tel4y"]
 [ext_resource type="Script" uid="uid://6rqcdok1g3uc" path="res://scripts/npcs/hostess.gd" id="6_ya4ey"]
 [ext_resource type="Resource" uid="uid://y4vby8r7tjbc" path="res://assets/resources/square_data.tres" id="7_85g3d"]
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
@@ -17,16 +19,19 @@
 [ext_resource type="Script" uid="uid://bsl2e2ol0vk2g" path="res://scripts/door.gd" id="7_yq6so"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
+[ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="9_qkpxi"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
+[ext_resource type="Texture2D" uid="uid://ctoqwai0mkdk" path="res://assets/painting.png" id="12_j8jky"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
 [ext_resource type="SpriteFrames" uid="uid://chrdbnbq8qlm3" path="res://assets/NPCs/sprites/animation_triangle.tres" id="12_pm3ni"]
 [ext_resource type="SpriteFrames" uid="uid://cis26q2rv0v6g" path="res://assets/NPCs/sprites/animation_zero.tres" id="13_jscy8"]
+[ext_resource type="Texture2D" uid="uid://bn8471l1xpqhs" path="res://assets/painting_highlight.png" id="13_kmb1v"]
 [ext_resource type="SpriteFrames" uid="uid://btabfq0d35vy8" path="res://assets/NPCs/sprites/animation_square.tres" id="14_yc10j"]
 [ext_resource type="SpriteFrames" uid="uid://cwryah4epifdb" path="res://assets/NPCs/sprites/animation_music.tres" id="15_gqmmt"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
 [ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
-[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
+[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/background_shader.gd" id="17_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/interaction_controls.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
@@ -35,11 +40,86 @@
 shader = ExtResource("16_muem4")
 shader_parameter/confidence = 1.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vchkt"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(0, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txyw0"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(21, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc5cj"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(42, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvyfr"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(63, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty1g6"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(84, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2jfr"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(105, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjg73"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(126, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu4jf"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(147, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7ddy"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(168, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0loja"]
+atlas = ExtResource("5_5q0nq")
+region = Rect2(189, 0, 21, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ids8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vchkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txyw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc5cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvyfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty1g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2jfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjg73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu4jf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7ddy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0loja")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wyq8"]
 size = Vector2(33, 45)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q0nq"]
-size = Vector2(33, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxglm"]
 size = Vector2(30, 35)
@@ -67,12 +147,93 @@ size = Vector2(14, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkpxi"]
 size = Vector2(20, 41)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf3a"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(0, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pibwh"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(16, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6pm6"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(32, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5he1u"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(48, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5poiv"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(64, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cjbq"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(80, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chjal"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(96, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjqg0"]
+atlas = ExtResource("9_qkpxi")
+region = Rect2(112, 0, 16, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vchkt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuf3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pibwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6pm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5he1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5poiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cjbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chjal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjqg0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yq6so"]
 radius = 6.0
 height = 20.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv21b"]
 radius = 11.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fuf3a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_j8jky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kmb1v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pibwh"]
+size = Vector2(27, 44)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -166,6 +327,10 @@ texture = ExtResource("2_0ld40")
 script = ExtResource("17_dp3eg")
 metadata/_edit_lock_ = true
 
+[node name="Clock" type="AnimatedSprite2D" parent="." unique_id=1498262886]
+position = Vector2(223, 18)
+sprite_frames = SubResource("SpriteFrames_ids8r")
+
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
 position = Vector2(109, 54)
 
@@ -178,14 +343,7 @@ position = Vector2(296.5, 34.5)
 shape = SubResource("RectangleShape2D_2wyq8")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
-[node name="InteractableObject" type="Area2D" parent="Furniture/Bookshelf" unique_id=875075948]
-script = ExtResource("4_2f3dj")
-metadata/_custom_type_script = "uid://d27omin5v7mvr"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf/InteractableObject" unique_id=1749050851]
-position = Vector2(0, 18.5)
-shape = SubResource("RectangleShape2D_5q0nq")
-debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
+[node name="InteractableBookshelf" parent="Furniture/Bookshelf" unique_id=1644386114 instance=ExtResource("6_tel4y")]
 
 [node name="Table" type="StaticBody2D" parent="Furniture" unique_id=1588291473]
 position = Vector2(297.5, 129.5)
@@ -266,7 +424,12 @@ shape = SubResource("RectangleShape2D_qkpxi")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="Cat" type="StaticBody2D" parent="Furniture" unique_id=1461439193]
-position = Vector2(55, 168)
+texture_filter = 1
+position = Vector2(55, 166)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Cat" unique_id=554870095]
+sprite_frames = SubResource("SpriteFrames_vchkt")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat" unique_id=584662833]
 rotation = 1.5707964
@@ -280,6 +443,17 @@ script = ExtResource("4_2f3dj")
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fv21b")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
+
+[node name="Painting" parent="Furniture" unique_id=395841763 instance=ExtResource("6_tel4y")]
+position = Vector2(160, 25)
+
+[node name="AnimatedSprite2D" parent="Furniture/Painting" index="0" unique_id=1750630893]
+sprite_frames = SubResource("SpriteFrames_fuf3a")
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="Furniture/Painting" index="1" unique_id=1779733638]
+position = Vector2(-0.5, 12)
+shape = SubResource("RectangleShape2D_pibwh")
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
@@ -336,6 +510,7 @@ npc_name = "Greg"
 
 [node name="AnimatedSprite2D" parent="NPCs/Triangle" index="1" unique_id=27330966]
 sprite_frames = ExtResource("12_pm3ni")
+animation = &"interacted"
 
 [node name="Zero" parent="NPCs" unique_id=1988922979 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
@@ -362,7 +537,7 @@ npc_name = "Talia"
 sprite_frames = ExtResource("14_yc10j")
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
-position = Vector2(27, 84)
+position = Vector2(32, 82)
 interaction_data = ExtResource("8_85g3d")
 npc_name = "Jules"
 
@@ -376,6 +551,7 @@ npc_name = "Theo"
 
 [node name="AnimatedSprite2D" parent="NPCs/Eye" index="1" unique_id=27330966]
 sprite_frames = ExtResource("16_0ld40")
+animation = &"interacted"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
@@ -457,6 +633,7 @@ text = "Leave"
 [connection signal="sitting" from="Furniture/Sofa/SeatingArea" to="." method="_sit_on_sofa"]
 [connection signal="pressed" from="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 
+[editable path="Furniture/Painting"]
 [editable path="NPCs/Heart"]
 [editable path="NPCs/Circle"]
 [editable path="NPCs/StarPath/PathFollow2D/Star"]

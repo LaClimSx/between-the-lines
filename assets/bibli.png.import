@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cobbildp0vvtp"
-path="res://.godot/imported/alcool-sprite.png-6c6222c72114b654496798b724e21c97.ctex"
+uid="uid://b55j6edhyh2wi"
+path="res://.godot/imported/bibli.png-d8a8bcdda6dc40cc6b38b5c460bf3c9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/alcool-sprite.png"
-dest_files=["res://.godot/imported/alcool-sprite.png-6c6222c72114b654496798b724e21c97.ctex"]
+source_file="res://assets/bibli.png"
+dest_files=["res://.godot/imported/bibli.png-d8a8bcdda6dc40cc6b38b5c460bf3c9b.ctex"]
 
 [params]
 

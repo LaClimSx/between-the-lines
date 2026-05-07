@@ -1,13 +1,54 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://uese3vtunyd"]
 
-[ext_resource type="Texture2D" uid="uid://y10wj2eu00xh" path="res://assets/NPCs/sprites/lonely-sprite-cercle.png" id="1_d4mji"]
-[ext_resource type="Texture2D" uid="uid://cd58kmb6v3mvp" path="res://assets/NPCs/sprites/lonely-sprite.png" id="2_w26b5"]
+[ext_resource type="Texture2D" uid="uid://73tw04iwblb8" path="res://assets/NPCs/sprites/lonely-anim-cercle.png" id="1_d4mji"]
+[ext_resource type="Texture2D" uid="uid://dqiwovmjrf7f5" path="res://assets/NPCs/sprites/lonely-anim.png" id="2_d4mji"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w26b5"]
+atlas = ExtResource("1_d4mji")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mwsb"]
+atlas = ExtResource("1_d4mji")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnfry"]
+atlas = ExtResource("1_d4mji")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi51v"]
+atlas = ExtResource("1_d4mji")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpk2q"]
+atlas = ExtResource("2_d4mji")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0152"]
+atlas = ExtResource("2_d4mji")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xmlj"]
+atlas = ExtResource("2_d4mji")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b522h"]
+atlas = ExtResource("2_d4mji")
+region = Rect2(96, 0, 32, 32)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_d4mji")
+"texture": SubResource("AtlasTexture_w26b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mwsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnfry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi51v")
 }],
 "loop": true,
 "name": &"default",
@@ -15,7 +56,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_w26b5")
+"texture": SubResource("AtlasTexture_wpk2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0152")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xmlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b522h")
 }],
 "loop": true,
 "name": &"interacted",

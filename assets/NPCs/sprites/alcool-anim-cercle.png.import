@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y10wj2eu00xh"
-path="res://.godot/imported/lonely-sprite-cercle.png-94c627cbd19d6cd11d0fa5e47cca01aa.ctex"
+uid="uid://blyynqowgg7jg"
+path="res://.godot/imported/alcool-anim-cercle.png-beeb31433431fbfcc83915bfd49cadba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/lonely-sprite-cercle.png"
-dest_files=["res://.godot/imported/lonely-sprite-cercle.png-94c627cbd19d6cd11d0fa5e47cca01aa.ctex"]
+source_file="res://assets/NPCs/sprites/alcool-anim-cercle.png"
+dest_files=["res://.godot/imported/alcool-anim-cercle.png-beeb31433431fbfcc83915bfd49cadba.ctex"]
 
 [params]
 

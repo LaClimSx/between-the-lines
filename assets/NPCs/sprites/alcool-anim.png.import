@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkevlywg12wbv"
-path="res://.godot/imported/couple-gal-sprite.png-6cf74462b0fc4d3b44882ed73c928d03.ctex"
+uid="uid://va1x2ioyhr0h"
+path="res://.godot/imported/alcool-anim.png-2558a31504ddf9b7f95a8382697a702e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/couple-gal-sprite.png"
-dest_files=["res://.godot/imported/couple-gal-sprite.png-6cf74462b0fc4d3b44882ed73c928d03.ctex"]
+source_file="res://assets/NPCs/sprites/alcool-anim.png"
+dest_files=["res://.godot/imported/alcool-anim.png-2558a31504ddf9b7f95a8382697a702e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd58kmb6v3mvp"
-path="res://.godot/imported/lonely-sprite.png-0f187f6ce9577bb9cd2aa202c99b11f3.ctex"
+uid="uid://dlxog26mglkv6"
+path="res://.godot/imported/music-anim.png-2f3394e81fbd3a3f7d8b9a93977fc001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/lonely-sprite.png"
-dest_files=["res://.godot/imported/lonely-sprite.png-0f187f6ce9577bb9cd2aa202c99b11f3.ctex"]
+source_file="res://assets/NPCs/sprites/music-anim.png"
+dest_files=["res://.godot/imported/music-anim.png-2f3394e81fbd3a3f7d8b9a93977fc001.ctex"]
 
 [params]
 

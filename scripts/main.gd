@@ -36,7 +36,8 @@ func close_tuto() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Global.restart()
-
+	if not Global.timer.is_stopped():
+		$Clock.frame = floori(10 - (Global.timer.time_left / Global.GAME_TIME) * 10)
 
 func _on_end_button_pressed() -> void:
 	Global.restart()

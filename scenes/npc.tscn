@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npcs/npc.gd" id="1_abqhh"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="2_7n8xq"]
 [ext_resource type="SpriteFrames" uid="uid://daxahtdjlhv52" path="res://assets/NPCs/sprites/animation_placeholder.tres" id="2_abqhh"]
-[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="4_4wlns"]
+[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/background_shader.gd" id="4_4wlns"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
 radius = 7.0
