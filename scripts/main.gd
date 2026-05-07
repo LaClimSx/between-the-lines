@@ -38,3 +38,8 @@ func _process(_delta: float) -> void:
 
 func _on_end_button_pressed() -> void:
 	Global.restart()
+
+
+func _sit_on_sofa() -> void:
+	const SOFA_POSITION : Vector2 = Vector2(50, 47)
+	$Player.sit(SOFA_POSITION)
