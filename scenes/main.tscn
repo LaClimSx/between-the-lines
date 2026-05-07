@@ -28,6 +28,10 @@
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxglm"]
+shader = ExtResource("16_muem4")
+shader_parameter/confidence = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wyq8"]
 size = Vector2(33, 45)
 
@@ -94,20 +98,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dp3eg"]
-shader = ExtResource("16_muem4")
-shader_parameter/warmth = 0.0
-
 [node name="Main" type="Node2D" unique_id=1379244409]
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_o5qli")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
+material = SubResource("ShaderMaterial_vxglm")
 offset_top = 1.0
 offset_right = 320.0
 offset_bottom = 181.0
 texture = ExtResource("2_0ld40")
+script = ExtResource("17_dp3eg")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
@@ -281,16 +283,6 @@ sprite_frames = ExtResource("16_0ld40")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1876947052]
-material = SubResource("ShaderMaterial_dp3eg")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("17_dp3eg")
-metadata/_edit_lock_ = true
 
 [node name="ProgressBar" parent="CanvasLayer" unique_id=135526445 instance=ExtResource("19_0ld40")]
 unique_name_in_owner = true

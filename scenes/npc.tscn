@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://b47o7t6ew8f43"]
 
 [ext_resource type="Script" uid="uid://dc5kl3g6qo0tu" path="res://scripts/npcs/npc.gd" id="1_abqhh"]
+[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="2_7n8xq"]
 [ext_resource type="SpriteFrames" uid="uid://daxahtdjlhv52" path="res://assets/NPCs/sprites/animation_placeholder.tres" id="2_abqhh"]
+[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="4_4wlns"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
 radius = 7.0
 height = 14.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tl2vt"]
+shader = ExtResource("2_7n8xq")
+shader_parameter/confidence = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh2m4"]
 radius = 17.0
@@ -21,9 +27,11 @@ script = ExtResource("1_abqhh")
 shape = SubResource("CapsuleShape2D_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27330966]
+material = SubResource("ShaderMaterial_tl2vt")
 sprite_frames = ExtResource("2_abqhh")
 autoplay = "default"
 offset = Vector2(0, -3)
+script = ExtResource("4_4wlns")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=502922032]
 collision_layer = 0
