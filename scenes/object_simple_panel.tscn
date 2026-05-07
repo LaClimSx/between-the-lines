@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cd1821gv4bbwq"]
+
+[ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="1_ipoy0"]
+[ext_resource type="Script" uid="uid://c8mfi2vl7akno" path="res://scripts/simple_panel.gd" id="2_bgd7a"]
+[ext_resource type="Texture2D" uid="uid://dxum6xcim74km" path="res://assets/cat_illus.png" id="3_3ete2"]
+
+[node name="ObjectSimplePanel" type="Control" unique_id=1238397256]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ipoy0")
+script = ExtResource("2_bgd7a")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=456142367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1655165194]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1129786200]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=544010295]
+layout_mode = 2
+texture = ExtResource("3_3ete2")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=520065870]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/MarginContainer" unique_id=276079456]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=627613111]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2129365487]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "*You pet the cat*"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1370055080]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Next"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/MarginContainer/VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
