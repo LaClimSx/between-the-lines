@@ -107,6 +107,7 @@ texture_filter = 1
 script = ExtResource("1_o5qli")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=194157029]
+process_mode = 3
 position = Vector2(216, 47.5)
 stream = ExtResource("5_yq6so")
 attenuation = 20.0
