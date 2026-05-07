@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnbbewkjfy5pp"
-path="res://.godot/imported/progress bar most rounded progress red.png-4ecd97df798c04f6d9c7c06a93286157.ctex"
+uid="uid://pfbr200h5k4m"
+path="res://.godot/imported/danse-anim-cercle.png-39aa9455d1ca587c3d2f31c1f94b49db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/progress bar most rounded progress red.png"
-dest_files=["res://.godot/imported/progress bar most rounded progress red.png-4ecd97df798c04f6d9c7c06a93286157.ctex"]
+source_file="res://assets/NPCs/sprites/danse-anim-cercle.png"
+dest_files=["res://.godot/imported/danse-anim-cercle.png-39aa9455d1ca587c3d2f31c1f94b49db.ctex"]
 
 [params]
 

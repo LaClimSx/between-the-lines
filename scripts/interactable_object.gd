@@ -16,6 +16,8 @@ func _unhandled_input(event : InputEvent) -> void:
 
 
 func interact() -> void:
+	Global.score += 1
+	print("Interacted with ", get_parent().name)
 	interacted = true
 
 

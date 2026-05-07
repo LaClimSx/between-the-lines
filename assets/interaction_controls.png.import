@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj3kfaekslgio"
-path="res://.godot/imported/tuto-touche.png-b050a21ff5f9b5f0e83958790c97367a.ctex"
+path="res://.godot/imported/interaction_controls.png-b68c547951bd83ec4a7476dcb277d0dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tuto-touche.png"
-dest_files=["res://.godot/imported/tuto-touche.png-b050a21ff5f9b5f0e83958790c97367a.ctex"]
+source_file="res://assets/interaction_controls.png"
+dest_files=["res://.godot/imported/interaction_controls.png-b68c547951bd83ec4a7476dcb277d0dc.ctex"]
 
 [params]
 

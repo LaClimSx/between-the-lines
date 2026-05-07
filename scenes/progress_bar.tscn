@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bejtqam34ts7h"]
 
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="1_eu8db"]
-[ext_resource type="Texture2D" uid="uid://cbevthq6vmtgd" path="res://assets/temporary/smiley-sad.png" id="2_dk1bo"]
-[ext_resource type="Texture2D" uid="uid://bcx7egdmt83mv" path="res://assets/temporary/progress bar most rounded under.png" id="2_tumid"]
-[ext_resource type="Texture2D" uid="uid://cca1mhmmdh2s2" path="res://assets/temporary/progress bar most rounded over.png" id="3_relan"]
-[ext_resource type="Texture2D" uid="uid://c62hnlrkukp4b" path="res://assets/temporary/progress bar most rounded progress green.png" id="4_dk1bo"]
+[ext_resource type="Texture2D" uid="uid://cbevthq6vmtgd" path="res://assets/progress_bar/smiley-sad.png" id="2_dk1bo"]
+[ext_resource type="Texture2D" uid="uid://bcx7egdmt83mv" path="res://assets/progress_bar/progress bar most rounded under.png" id="2_tumid"]
+[ext_resource type="Texture2D" uid="uid://cca1mhmmdh2s2" path="res://assets/progress_bar/progress bar most rounded over.png" id="3_relan"]
+[ext_resource type="Texture2D" uid="uid://c62hnlrkukp4b" path="res://assets/progress_bar/progress bar most rounded progress green.png" id="4_dk1bo"]
 [ext_resource type="Script" uid="uid://0v2hnea8aov5" path="res://scripts/progress_bar.gd" id="5_tumid"]
-[ext_resource type="Texture2D" uid="uid://bnbbewkjfy5pp" path="res://assets/temporary/progress bar most rounded progress red.png" id="6_dk1bo"]
-[ext_resource type="Texture2D" uid="uid://d377sm7prhte8" path="res://assets/temporary/smiley-happy.png" id="7_e5nlk"]
-[ext_resource type="Texture2D" uid="uid://gjjqowfscdnf" path="res://assets/temporary/progress bar most rounded progress red orange.png" id="7_l17vb"]
+[ext_resource type="Texture2D" uid="uid://bnbbewkjfy5pp" path="res://assets/progress_bar/progress bar most rounded progress red.png" id="6_dk1bo"]
+[ext_resource type="Texture2D" uid="uid://d377sm7prhte8" path="res://assets/progress_bar/smiley-happy.png" id="7_e5nlk"]
+[ext_resource type="Texture2D" uid="uid://gjjqowfscdnf" path="res://assets/progress_bar/progress bar most rounded progress red orange.png" id="7_l17vb"]
 
 [node name="ProgressBar" type="HBoxContainer" unique_id=1558495223]
 texture_filter = 1

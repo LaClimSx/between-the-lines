@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/background.png" id="2_0ld40"]
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://d27omin5v7mvr" path="res://scripts/interactable_object.gd" id="4_2f3dj"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
 [ext_resource type="Script" uid="uid://bcrbyuhygvq8p" path="res://scripts/seating_area.gd" id="6_2f3dj"]
@@ -26,7 +27,7 @@
 [ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/color_rect.gd" id="17_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/tuto-touche.png" id="17_vxglm"]
+[ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/interaction_controls.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
 
@@ -36,6 +37,9 @@ shader_parameter/confidence = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wyq8"]
 size = Vector2(33, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q0nq"]
+size = Vector2(33, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxglm"]
 size = Vector2(30, 35)
@@ -63,6 +67,13 @@ size = Vector2(14, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkpxi"]
 size = Vector2(20, 41)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yq6so"]
+radius = 6.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv21b"]
+radius = 11.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
 height = 27.996185
@@ -77,29 +88,64 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2f3dj"]
-atlas = ExtResource("17_vxglm")
-region = Rect2(0, 0, 96, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq6so"]
 atlas = ExtResource("17_vxglm")
-region = Rect2(0, 32, 96, 32)
+region = Rect2(0, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv21b"]
 atlas = ExtResource("17_vxglm")
-region = Rect2(0, 64, 96, 32)
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tel4y"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 64, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkpxi"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 96, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q0nq"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 128, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgi5k"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 160, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8jky"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 192, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmb1v"]
+atlas = ExtResource("17_vxglm")
+region = Rect2(0, 224, 48, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2f3dj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2f3dj")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_yq6so")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fv21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tel4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkpxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q0nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgi5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8jky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmb1v")
 }],
 "loop": true,
 "name": &"default",
@@ -131,6 +177,15 @@ position = Vector2(296.5, 34.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf" unique_id=1703983631]
 shape = SubResource("RectangleShape2D_2wyq8")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="InteractableObject" type="Area2D" parent="Furniture/Bookshelf" unique_id=875075948]
+script = ExtResource("4_2f3dj")
+metadata/_custom_type_script = "uid://d27omin5v7mvr"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf/InteractableObject" unique_id=1749050851]
+position = Vector2(0, 18.5)
+shape = SubResource("RectangleShape2D_5q0nq")
+debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="Table" type="StaticBody2D" parent="Furniture" unique_id=1588291473]
 position = Vector2(297.5, 129.5)
@@ -210,6 +265,22 @@ script = ExtResource("7_yq6so")
 shape = SubResource("RectangleShape2D_qkpxi")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
+[node name="Cat" type="StaticBody2D" parent="Furniture" unique_id=1461439193]
+position = Vector2(55, 168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat" unique_id=584662833]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yq6so")
+debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
+
+[node name="Area2D" type="Area2D" parent="Furniture/Cat" unique_id=1229612184]
+script = ExtResource("4_2f3dj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat/Area2D" unique_id=564468178]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fv21b")
+debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
+
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
@@ -280,6 +351,7 @@ position = Vector2(0, -32)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_2f3dj")
 autoplay = "default"
+speed_scale = 0.8
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
 position = Vector2(220, 64)

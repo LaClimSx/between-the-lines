@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbevthq6vmtgd"
-path="res://.godot/imported/smiley-sad.png-838a8b91328847b5e99e0766a8b38868.ctex"
+uid="uid://d377sm7prhte8"
+path="res://.godot/imported/smiley-happy.png-6ab52e3a3b1783b446d15be533e6da95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/smiley-sad.png"
-dest_files=["res://.godot/imported/smiley-sad.png-838a8b91328847b5e99e0766a8b38868.ctex"]
+source_file="res://assets/progress_bar/smiley-happy.png"
+dest_files=["res://.godot/imported/smiley-happy.png-6ab52e3a3b1783b446d15be533e6da95.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gjjqowfscdnf"
-path="res://.godot/imported/progress bar most rounded progress red orange.png-dd70b934c3a76a08a9b5ea7edfd0ae26.ctex"
+uid="uid://cbevthq6vmtgd"
+path="res://.godot/imported/smiley-sad.png-6d906954dd37441cf253eeb6f4d7b33e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/progress bar most rounded progress red orange.png"
-dest_files=["res://.godot/imported/progress bar most rounded progress red orange.png-dd70b934c3a76a08a9b5ea7edfd0ae26.ctex"]
+source_file="res://assets/progress_bar/smiley-sad.png"
+dest_files=["res://.godot/imported/smiley-sad.png-6d906954dd37441cf253eeb6f4d7b33e.ctex"]
 
 [params]
 
