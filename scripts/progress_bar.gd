@@ -26,8 +26,7 @@ func animate_bar(val: float) -> void:
 func _on_value_changed(_diff: float) -> void:
 	get_tree().create_timer(0.5).timeout.connect(func() -> void:
 		visible = true)
-	get_tree().create_timer(4.5).timeout.connect(func() -> void:
-		visible = false)
+	$Timer.start(4.5)
 
 
 func _on_progress_bar_value_changed(val: float) -> void:
@@ -37,3 +36,7 @@ func _on_progress_bar_value_changed(val: float) -> void:
 		bar.texture_progress = progress_high
 	else:
 		bar.texture_progress = progress_mid
+
+
+func _on_timer_timeout() -> void:
+	visible = false

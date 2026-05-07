@@ -33,13 +33,12 @@ var score : int = 2:
 		if bypass_setters:
 			score = value
 			return
-		score = clamp(score + value, SCORE_LOWER_BOUND, SCORE_UPPER_BOUND)
+		score = clamp(value, SCORE_LOWER_BOUND, SCORE_UPPER_BOUND)
 		score_changed.emit(score)
 		if score <= SCORE_LOWER_BOUND:
-			lost_confidence()
+			get_tree().create_timer(4).timeout.connect(lost_confidence)
 	
 func lost_confidence() -> void:
-	await get_tree().create_timer(4).timeout
 	ending.emit("Your social battery runs low, you are tired and decide to go home. Before leaving, you find Sarah and thank her for inviting you.")
 	print("End game, lost confidence")
 

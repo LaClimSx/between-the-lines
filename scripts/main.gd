@@ -15,6 +15,8 @@ func _ready() -> void:
 			%EndButton.grab_focus.call_deferred())
 	Global.tuto_finished.connect(close_tuto)
 	%ProgressBar.value_changed.connect(move_particle)
+	$Furniture/Door.interacting.connect(func(panel: Control) -> void:
+		$CanvasLayer.add_child(panel))
 
 
 func move_particle(diff: float) -> void:

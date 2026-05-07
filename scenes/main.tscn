@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://y4vby8r7tjbc" path="res://assets/resources/square_data.tres" id="7_85g3d"]
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
+[ext_resource type="Script" uid="uid://bsl2e2ol0vk2g" path="res://scripts/door.gd" id="7_yq6so"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
@@ -58,6 +59,9 @@ size = Vector2(17, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fv21b"]
 size = Vector2(14, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkpxi"]
+size = Vector2(20, 41)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
 radius = 5.999178
@@ -197,6 +201,14 @@ position = Vector2(301.5, 94.5)
 position = Vector2(-17.929691, 5.3958297)
 scale = Vector2(1.0546873, 1.0416665)
 polygon = PackedVector2Array(9, -6.5, 17, -10.5, 17, -21.5, 25, -15.5, 25, -3.5, 17.47409, -2.7799911)
+
+[node name="Door" type="Area2D" parent="Furniture" unique_id=767554394]
+position = Vector2(115, 36.5)
+script = ExtResource("7_yq6so")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Door" unique_id=1936465426]
+shape = SubResource("RectangleShape2D_qkpxi")
+debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 

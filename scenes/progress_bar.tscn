@@ -45,5 +45,9 @@ texture_progress = ExtResource("4_dk1bo")
 layout_mode = 2
 texture = ExtResource("7_e5nlk")
 
+[node name="Timer" type="Timer" parent="." unique_id=119592543]
+wait_time = 4.5
+
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]
 [connection signal="value_changed" from="ProgressBar" to="." method="_on_progress_bar_value_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

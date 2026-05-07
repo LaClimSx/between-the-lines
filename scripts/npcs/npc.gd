@@ -42,7 +42,7 @@ func interact() -> void:
 		simple_panel.next.connect(next)
 	else:
 		if curr_data.optional_score != 0:
-			Global.score = curr_data.optional_score
+			Global.score += curr_data.optional_score
 		Global.nb_interactions +=1
 
 
@@ -65,7 +65,7 @@ func next() -> void:
 	if $Panels.get_child_count() != 0:
 		$Panels.get_child(0).queue_free()
 	if curr_data.optional_score != 0:
-		Global.score = curr_data.optional_score
+		Global.score += curr_data.optional_score
 	if curr_data is NPCSimpleData:
 		curr_data = curr_data.next
 		if curr_data: interact()
