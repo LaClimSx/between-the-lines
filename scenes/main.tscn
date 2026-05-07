@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://bn66fn8uy4d56" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://ddcrxiy5ewtt2" path="res://assets/background.png" id="2_0ld40"]
 [ext_resource type="PackedScene" uid="uid://deee207fgc34h" path="res://scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://hq7511ccd6t7" path="res://music.gd" id="3_fv21b"]
 [ext_resource type="PackedScene" uid="uid://b47o7t6ew8f43" path="res://scenes/npc.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://dsnokfalskvdx" path="res://scripts/speakers.gd" id="4_2f3dj"]
 [ext_resource type="Resource" uid="uid://bmbt7a54ero72" path="res://assets/resources/star_plus.tres" id="5_85g3d"]
 [ext_resource type="Resource" uid="uid://drg4djx6u800x" path="res://assets/resources/heart_data.tres" id="5_trceg"]
+[ext_resource type="AudioStream" uid="uid://bhr4tywypqna6" path="res://assets/ArtSound_-_Tropical_Paradise.mp3" id="5_yq6so"]
 [ext_resource type="SpriteFrames" uid="uid://bx7bbsfy2pyw2" path="res://assets/NPCs/sprites/animation_heart.tres" id="6_2wyq8"]
 [ext_resource type="Resource" uid="uid://bpjhkrwbx1a5d" path="res://assets/resources/circle_data.tres" id="6_choun"]
 [ext_resource type="Script" uid="uid://6rqcdok1g3uc" path="res://scripts/npcs/hostess.gd" id="6_ya4ey"]
@@ -103,6 +106,13 @@ y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_o5qli")
 
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=194157029]
+process_mode = 3
+position = Vector2(216, 47.5)
+stream = ExtResource("5_yq6so")
+attenuation = 20.0
+script = ExtResource("3_fv21b")
+
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
 material = SubResource("ShaderMaterial_vxglm")
 offset_top = 1.0
@@ -140,6 +150,7 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="Speakers" type="StaticBody2D" parent="Furniture" unique_id=2041769725]
 position = Vector2(216, 47.5)
+script = ExtResource("4_2f3dj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Speakers" unique_id=628073320]
 shape = SubResource("RectangleShape2D_yq6so")

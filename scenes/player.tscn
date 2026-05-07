@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dl1ia7qmke1um" path="res://assets/temporary/blue_haired_woman.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bie27k7qc55cr" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://21487qjwq3jv" path="res://scripts/audio_listener_2d.gd" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 radius = 7.0
@@ -287,3 +288,6 @@ sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"idle_down"
 autoplay = "idle_down"
 offset = Vector2(0, -8)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=524671311]
+script = ExtResource("3_qhqgy")
