@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
 [ext_resource type="Script" uid="uid://bsl2e2ol0vk2g" path="res://scripts/door.gd" id="7_yq6so"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
+[ext_resource type="AudioStream" uid="uid://cvorhs2ejpohe" path="res://assets/music_start.mp3" id="8_kmb1v"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
 [ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="9_qkpxi"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
@@ -361,6 +362,12 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="Speakers" type="StaticBody2D" parent="Furniture" unique_id=2041769725]
 position = Vector2(216, 47.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Furniture/Speakers" unique_id=1696269004]
+process_mode = 3
+stream = ExtResource("8_kmb1v")
+autoplay = true
+attenuation = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Speakers" unique_id=628073320]
 shape = SubResource("RectangleShape2D_yq6so")
