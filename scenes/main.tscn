@@ -40,6 +40,10 @@
 shader = ExtResource("16_muem4")
 shader_parameter/confidence = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j8jky"]
+shader = ExtResource("16_muem4")
+shader_parameter/confidence = 1.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vchkt"]
 atlas = ExtResource("5_5q0nq")
 region = Rect2(0, 0, 21, 21)
@@ -118,6 +122,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fuf3a"]
+shader = ExtResource("16_muem4")
+shader_parameter/confidence = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wyq8"]
 size = Vector2(33, 45)
 
@@ -146,6 +154,10 @@ size = Vector2(14, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkpxi"]
 size = Vector2(20, 41)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmb1v"]
+shader = ExtResource("16_muem4")
+shader_parameter/confidence = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuf3a"]
 atlas = ExtResource("9_qkpxi")
@@ -328,8 +340,10 @@ script = ExtResource("17_dp3eg")
 metadata/_edit_lock_ = true
 
 [node name="Clock" type="AnimatedSprite2D" parent="." unique_id=1498262886]
+material = SubResource("ShaderMaterial_j8jky")
 position = Vector2(223, 18)
 sprite_frames = SubResource("SpriteFrames_ids8r")
+script = ExtResource("17_dp3eg")
 
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
 position = Vector2(109, 54)
@@ -337,7 +351,9 @@ position = Vector2(109, 54)
 [node name="Furniture" type="Node" parent="." unique_id=994034929]
 
 [node name="Bookshelf" type="StaticBody2D" parent="Furniture" unique_id=948138631]
+material = SubResource("ShaderMaterial_fuf3a")
 position = Vector2(296.5, 34.5)
+script = ExtResource("17_dp3eg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf" unique_id=1703983631]
 shape = SubResource("RectangleShape2D_2wyq8")
@@ -428,8 +444,10 @@ texture_filter = 1
 position = Vector2(55, 166)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Cat" unique_id=554870095]
+material = SubResource("ShaderMaterial_kmb1v")
 sprite_frames = SubResource("SpriteFrames_vchkt")
 autoplay = "default"
+script = ExtResource("17_dp3eg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat" unique_id=584662833]
 rotation = 1.5707964
@@ -450,6 +468,7 @@ position = Vector2(160, 25)
 [node name="AnimatedSprite2D" parent="Furniture/Painting" index="0" unique_id=1750630893]
 sprite_frames = SubResource("SpriteFrames_fuf3a")
 frame_progress = 0.0
+script = ExtResource("17_dp3eg")
 
 [node name="CollisionShape2D" parent="Furniture/Painting" index="1" unique_id=1779733638]
 position = Vector2(-0.5, 12)
