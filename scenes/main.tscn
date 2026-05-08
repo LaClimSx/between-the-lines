@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
 [ext_resource type="AudioStream" uid="uid://cvorhs2ejpohe" path="res://assets/music_start.mp3" id="8_kmb1v"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
+[ext_resource type="Script" uid="uid://ceby8clgxj834" path="res://scenes/audio_stream_player_2d.gd" id="9_fuf3a"]
 [ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="9_qkpxi"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
 [ext_resource type="Texture2D" uid="uid://ctoqwai0mkdk" path="res://assets/painting.png" id="12_j8jky"]
@@ -368,6 +369,7 @@ process_mode = 3
 stream = ExtResource("8_kmb1v")
 autoplay = true
 attenuation = 15.0
+script = ExtResource("9_fuf3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Speakers" unique_id=628073320]
 shape = SubResource("RectangleShape2D_yq6so")
@@ -638,6 +640,7 @@ theme_override_font_sizes/font_size = 14
 text = "Leave"
 
 [connection signal="sitting" from="Furniture/Sofa/SeatingArea" to="." method="_sit_on_sofa"]
+[connection signal="music_changes" from="NPCs/Music" to="Furniture/Speakers/AudioStreamPlayer2D" method="_on_music_music_changes"]
 [connection signal="pressed" from="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 
 [editable path="Furniture/Painting"]
