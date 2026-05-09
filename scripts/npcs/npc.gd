@@ -15,6 +15,7 @@ var curr_data : NPCData
 var player_inside_area: bool = false
 var interacted: bool = false
 
+
 func _input(event: InputEvent) -> void:
 	if player_inside_area && event.is_action_pressed("interact") && not interacted:
 		curr_data = interaction_data

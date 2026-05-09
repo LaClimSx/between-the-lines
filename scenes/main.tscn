@@ -17,8 +17,9 @@
 [ext_resource type="Resource" uid="uid://cxvmhilxsp2jd" path="res://assets/resources/star_minus.tres" id="7_eb6dy"]
 [ext_resource type="Resource" uid="uid://dnvpupixhpc6x" path="res://assets/resources/triangle_data.tres" id="7_tipki"]
 [ext_resource type="Script" uid="uid://bsl2e2ol0vk2g" path="res://scripts/door.gd" id="7_yq6so"]
-[ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music.tres" id="8_85g3d"]
+[ext_resource type="AudioStream" uid="uid://cvorhs2ejpohe" path="res://assets/music_party.mp3" id="8_kmb1v"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
+[ext_resource type="Script" uid="uid://ceby8clgxj834" path="res://scripts/audio_stream_player_2d.gd" id="9_fuf3a"]
 [ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="9_qkpxi"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
 [ext_resource type="Texture2D" uid="uid://ctoqwai0mkdk" path="res://assets/painting.png" id="12_j8jky"]
@@ -35,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/interaction_controls.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
+[ext_resource type="Script" uid="uid://cb7v7cjpnj03m" path="res://scripts/npcs/music_guy.gd" id="32_fuf3a"]
+[ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music_data.tres" id="33_pibwh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vxglm"]
 shader = ExtResource("16_muem4")
@@ -362,6 +365,14 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 [node name="Speakers" type="StaticBody2D" parent="Furniture" unique_id=2041769725]
 position = Vector2(216, 47.5)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Furniture/Speakers" unique_id=1696269004]
+process_mode = 3
+stream = ExtResource("8_kmb1v")
+autoplay = true
+attenuation = 15.0
+parameters/looping = true
+script = ExtResource("9_fuf3a")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Speakers" unique_id=628073320]
 shape = SubResource("RectangleShape2D_yq6so")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
@@ -538,7 +549,8 @@ sprite_frames = ExtResource("14_yc10j")
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
 position = Vector2(32, 82)
-interaction_data = ExtResource("8_85g3d")
+script = ExtResource("32_fuf3a")
+interaction_data = ExtResource("33_pibwh")
 npc_name = "Jules"
 
 [node name="AnimatedSprite2D" parent="NPCs/Music" index="1" unique_id=27330966]
@@ -631,6 +643,7 @@ theme_override_font_sizes/font_size = 14
 text = "Leave"
 
 [connection signal="sitting" from="Furniture/Sofa/SeatingArea" to="." method="_sit_on_sofa"]
+[connection signal="change_music" from="NPCs/Music" to="Furniture/Speakers/AudioStreamPlayer2D" method="_on_change_music"]
 [connection signal="pressed" from="CanvasLayer/EndPanel/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 
 [editable path="Furniture/Painting"]
