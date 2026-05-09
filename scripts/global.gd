@@ -27,7 +27,7 @@ var nb_interactions : int = 0:
 			tuto_finished.emit()
 		if nb_interactions >= TOTAL_INTERACTIONS:
 			await get_tree().create_timer(5).timeout
-			# _on_timer_timeout()
+			_on_timer_timeout()
 
 var score : int = 2:
 	set(value):
