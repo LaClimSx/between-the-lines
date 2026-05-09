@@ -15,7 +15,6 @@ var curr_data : NPCData
 var player_inside_area: bool = false
 var interacted: bool = false
 
-signal music_changes
 
 func _input(event: InputEvent) -> void:
 	if player_inside_area && event.is_action_pressed("interact") && not interacted:
@@ -49,8 +48,6 @@ func interact() -> void:
 
 
 func _received_answer(answer_nb: int) -> void:
-	if npc_name == "Jules" && answer_nb == 0:
-		music_changes.emit()
 	if curr_data is NPCInteractionData:
 		if answer_nb == -1:
 			if $Panels.get_child_count() != 0:
