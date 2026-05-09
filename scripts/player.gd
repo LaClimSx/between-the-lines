@@ -66,8 +66,7 @@ func animate() -> void:
 
 func sit(pos: Vector2) -> void:
 	position = pos
-	#TODO: change to sitting animation when available
-	$AnimatedSprite2D.animation = "walking_right"
+	$AnimatedSprite2D.animation = "sitting"
 	sitting = true
 
 

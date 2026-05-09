@@ -1,57 +1,99 @@
-[gd_scene format=3 uid="uid://c8hyoxf1q7kgg"]
+[gd_scene format=3 uid="uid://c7a5cseib8aax"]
 
-[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="1_d0wbb"]
-[ext_resource type="Script" uid="uid://d1ol6k2dk6xso" path="res://scripts/highlightable_object.gd" id="1_y8u8h"]
-[ext_resource type="Texture2D" uid="uid://b55j6edhyh2wi" path="res://assets/bibli.png" id="2_d0wbb"]
-[ext_resource type="Texture2D" uid="uid://uecofjuc0cle" path="res://assets/bibli-highlight.png" id="3_5sow2"]
+[ext_resource type="Script" uid="uid://d27omin5v7mvr" path="res://scripts/interactable_object.gd" id="1_qcewj"]
+[ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="2_bxbiw"]
+[ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="2_e8hyp"]
+[ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/background_shader.gd" id="3_bxbiw"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tl2vt"]
-shader = ExtResource("1_d0wbb")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ukti"]
+shader = ExtResource("2_e8hyp")
 shader_parameter/confidence = 1.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ukjo"]
-atlas = ExtResource("2_d0wbb")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf3a"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(0, 0, 16, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fplu8"]
-atlas = ExtResource("3_5sow2")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pibwh"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(16, 0, 16, 10)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lqhew"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6pm6"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(32, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5he1u"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(48, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5poiv"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(64, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cjbq"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(80, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chjal"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(96, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjqg0"]
+atlas = ExtResource("2_bxbiw")
+region = Rect2(112, 0, 16, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5pu4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8ukjo")
+"texture": SubResource("AtlasTexture_fuf3a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fplu8")
+"texture": SubResource("AtlasTexture_pibwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6pm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5he1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5poiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cjbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chjal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjqg0")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q0nq"]
-size = Vector2(33, 24)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkurx"]
+radius = 11.0
 
-[node name="InteractableObject" type="Area2D" unique_id=1644386114]
-script = ExtResource("1_y8u8h")
-metadata/_custom_type_script = "uid://d27omin5v7mvr"
+[node name="InteractableObject" type="Area2D" unique_id=1244392111]
+script = ExtResource("1_qcewj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1750630893]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=206152433]
 texture_filter = 1
-material = SubResource("ShaderMaterial_tl2vt")
-position = Vector2(-0.5, -0.5)
-sprite_frames = SubResource("SpriteFrames_lqhew")
-frame_progress = 0.69322056
+material = SubResource("ShaderMaterial_0ukti")
+sprite_frames = SubResource("SpriteFrames_i5pu4")
+script = ExtResource("3_bxbiw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1779733638]
-position = Vector2(0, 18.5)
-shape = SubResource("RectangleShape2D_5q0nq")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=829335022]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nkurx")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
-[node name="Timer" type="Timer" parent="." unique_id=1513557809]
+[node name="Timer" type="Timer" parent="." unique_id=2076354705]
 wait_time = 1.5
 one_shot = true
+
+[node name="Panels" type="CanvasLayer" parent="." unique_id=721673839]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

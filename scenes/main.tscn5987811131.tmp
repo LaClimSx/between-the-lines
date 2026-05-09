@@ -470,9 +470,10 @@ curve = SubResource("Curve2D_dp3eg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCs/StarPath" unique_id=693324908]
 position = Vector2(-69, -11)
-rotates = false
+rotation = 1.0164888
 
 [node name="Star" parent="NPCs/StarPath/PathFollow2D" unique_id=2006402757 node_paths=PackedStringArray("path_follow") instance=ExtResource("3_sugp2")]
+rotation = 1.1482648
 script = ExtResource("6_ya4ey")
 interaction_data_minus = ExtResource("7_eb6dy")
 path_follow = NodePath("..")
@@ -482,7 +483,6 @@ npc_name = "Diana"
 
 [node name="AnimatedSprite2D" parent="NPCs/StarPath/PathFollow2D/Star" index="1" unique_id=27330966]
 sprite_frames = ExtResource("11_y6deb")
-animation = &"walking_left_default"
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
 position = Vector2(277, 137)

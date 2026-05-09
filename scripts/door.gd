@@ -1,6 +1,6 @@
 extends InteractableObject
 
-const QUIT_PANEL = preload("res://scenes/quit_panel.tscn")
+var QUIT_PANEL : PackedScene  = load("res://scenes/quit_panel.tscn")
 
 signal interacting(panel: Control)
 

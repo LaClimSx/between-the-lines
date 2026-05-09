@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l71wyb74ynbl"
-path="res://.godot/imported/chips-sprite-cercle.png-683073c7f97cb9a77135070590249c88.ctex"
+uid="uid://xtn5wqjddje7"
+path="res://.godot/imported/mc-anim.png-3a56ac6d168808884f5f23c2eeb194ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NPCs/sprites/chips-sprite-cercle.png"
-dest_files=["res://.godot/imported/chips-sprite-cercle.png-683073c7f97cb9a77135070590249c88.ctex"]
+source_file="res://assets/NPCs/sprites/mc-anim.png"
+dest_files=["res://.godot/imported/mc-anim.png-3a56ac6d168808884f5f23c2eeb194ef.ctex"]
 
 [params]
 
