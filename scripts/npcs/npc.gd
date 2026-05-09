@@ -68,10 +68,10 @@ func next() -> void:
 	if curr_data.optional_score != 0:
 		Global.score += curr_data.optional_score
 	if curr_data is NPCSimpleData:
+		var fade: bool = curr_data.text.contains("*You chat for a while*")
 		curr_data = curr_data.next
 		if curr_data: interact()
 		else: 
-			var fade: bool = curr_data.text.contains("*You chat for a while*")
 			if fade: Global.fade_to_black.emit()
 			Global.nb_interactions += 1
 
