@@ -47,3 +47,6 @@ func _on_end_button_pressed() -> void:
 func _sit_on_sofa() -> void:
 	const SOFA_POSITION : Vector2 = Vector2(50, 47)
 	$Player.sit(SOFA_POSITION)
+
+func fade_to_black() -> void:
+	pass
