@@ -45,8 +45,22 @@ func _on_end_button_pressed() -> void:
 
 
 func _sit_on_sofa() -> void:
+	fade_to_black();
 	const SOFA_POSITION : Vector2 = Vector2(50, 47)
 	$Player.sit(SOFA_POSITION)
 
+
+
 func fade_to_black() -> void:
-	pass
+	var child = get_node("ShaderLayer/ColorRect");
+	var mat = child.material;
+	if mat != null: 
+		var curr_tween = create_tween();
+		mat.set_shader_parameter("start_x", 1.);
+		mat.set_shader_parameter("end_x", 1.);  
+		var maxX = DisplayServer.screen_get_size().x;
+		curr_tween.tween_property(mat, "shader_parameter/end_x", float(maxX), 1.5);
+		curr_tween.tween_property(mat, "shader_parameter/start_x", float(maxX), 1.5);
+	
+
+	

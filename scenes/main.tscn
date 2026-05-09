@@ -20,7 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://cvorhs2ejpohe" path="res://assets/music_party.mp3" id="8_kmb1v"]
 [ext_resource type="SpriteFrames" uid="uid://cidc11k4wkiro" path="res://assets/NPCs/sprites/animation_circle.tres" id="9_2f3dj"]
 [ext_resource type="Texture2D" uid="uid://uecofjuc0cle" path="res://assets/bibli-highlight.png" id="9_5he1u"]
-[ext_resource type="Script" uid="uid://ceby8clgxj834" path="res://scripts/audio_stream_player_2d.gd" id="9_fuf3a"]
+[ext_resource type="Script" path="res://scripts/audio_stream_player_2d.gd" id="9_fuf3a"]
 [ext_resource type="SpriteFrames" uid="uid://cytl5h2jdtf42" path="res://assets/NPCs/sprites/animation_star.tres" id="11_y6deb"]
 [ext_resource type="Resource" uid="uid://bc7a44wcsurkk" path="res://assets/resources/zero_data.tres" id="12_jkv2x"]
 [ext_resource type="SpriteFrames" uid="uid://chrdbnbq8qlm3" path="res://assets/NPCs/sprites/animation_triangle.tres" id="12_pm3ni"]
@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://cd1821gv4bbwq" path="res://scenes/cat_panel.tscn" id="15_5he1u"]
 [ext_resource type="SpriteFrames" uid="uid://cwryah4epifdb" path="res://assets/NPCs/sprites/animation_music.tres" id="15_gqmmt"]
 [ext_resource type="Resource" uid="uid://gcc2n1eee8w4" path="res://assets/resources/eye_data.tres" id="15_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://c7a5cseib8aax" path="res://scenes/interactable_object.tscn" id="15_pibwh"]
+[ext_resource type="PackedScene" uid="uid://c8hyoxf1q7kgg" path="res://scenes/interactable_object.tscn" id="15_pibwh"]
 [ext_resource type="SpriteFrames" uid="uid://uese3vtunyd" path="res://assets/NPCs/sprites/animation_eye.tres" id="16_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bmrekvv51xgt3" path="res://scenes/painting_panel.tscn" id="16_5poiv"]
 [ext_resource type="Shader" uid="uid://cjrqp8nun1kph" path="res://scripts/confidence_shader.gdshader" id="16_muem4"]
@@ -39,8 +39,19 @@
 [ext_resource type="Texture2D" uid="uid://cj3kfaekslgio" path="res://assets/interaction_controls.png" id="17_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bejtqam34ts7h" path="res://scenes/progress_bar.tscn" id="19_0ld40"]
 [ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="27_2f3dj"]
-[ext_resource type="Script" uid="uid://cb7v7cjpnj03m" path="res://scripts/npcs/music_guy.gd" id="32_fuf3a"]
+[ext_resource type="Script" path="res://scripts/npcs/music_guy.gd" id="32_fuf3a"]
 [ext_resource type="Resource" uid="uid://dgljvypk6y4sa" path="res://assets/resources/music_data.tres" id="33_pibwh"]
+[ext_resource type="Shader" uid="uid://dp133dwfpw5uq" path="res://scripts/fade_shader.gdshader" id="40_2cjbq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2cjbq"]
+shader = ExtResource("40_2cjbq")
+shader_parameter/start_x = 0.0
+shader_parameter/end_x = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chjal"]
+shader = ExtResource("40_2cjbq")
+shader_parameter/start_x = 0.0
+shader_parameter/end_x = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vxglm"]
 shader = ExtResource("16_muem4")
@@ -288,7 +299,16 @@ height = 14.0
 [node name="Main" type="Node2D" unique_id=1379244409]
 y_sort_enabled = true
 texture_filter = 1
+material = SubResource("ShaderMaterial_2cjbq")
 script = ExtResource("1_o5qli")
+
+[node name="ShaderLayer" type="CanvasLayer" parent="." unique_id=65133090]
+
+[node name="ColorRect" type="ColorRect" parent="ShaderLayer" unique_id=307059139]
+material = SubResource("ShaderMaterial_chjal")
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(1, 1, 1, 0)
 
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
 material = SubResource("ShaderMaterial_vxglm")
