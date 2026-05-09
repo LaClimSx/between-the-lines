@@ -14,6 +14,7 @@ func _ready() -> void:
 			get_tree().paused = true
 			%EndButton.grab_focus.call_deferred())
 	Global.tuto_finished.connect(close_interaction_tuto)
+	Global.fade_to_black.connect(fade_to_black)
 	%ProgressBar.value_changed.connect(move_particle)
 	$Furniture/Door.interacting.connect(func(panel: Control) -> void:
 		$CanvasLayer.add_child(panel))
@@ -47,6 +48,7 @@ func _on_end_button_pressed() -> void:
 func _sit_on_sofa() -> void:
 	const SOFA_POSITION : Vector2 = Vector2(50, 47)
 	$Player.sit(SOFA_POSITION)
+
 
 func fade_to_black() -> void:
 	pass
