@@ -13,7 +13,7 @@ func _ready() -> void:
 			$CanvasLayer/EndPanel.visible = true
 			get_tree().paused = true
 			%EndButton.grab_focus.call_deferred())
-	Global.tuto_finished.connect(close_tuto)
+	Global.tuto_finished.connect(close_interaction_tuto)
 	%ProgressBar.value_changed.connect(move_particle)
 	$Furniture/Door.interacting.connect(func(panel: Control) -> void:
 		$CanvasLayer.add_child(panel))
@@ -30,8 +30,9 @@ func move_particle(diff: float) -> void:
 	tween.tween_callback(particle.queue_free)
 
 
-func close_tuto() -> void:
+func close_interaction_tuto() -> void:
 	%Zero.queue_free()
+	$Player.tuto_movement()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):

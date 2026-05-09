@@ -11,6 +11,8 @@ enum Direction {LEFT, RIGHT, UP, DOWN}
 var prev_dir : Direction = Direction.DOWN
 
 var sitting : bool = false
+var has_moved: bool = false
+signal moved
 
 func get_input() -> void:
 	var input_direction : Vector2 = Input.get_vector("left", "right", "up", "down")
@@ -40,6 +42,9 @@ func animate() -> void:
 					animation = "idle_right"
 	else:
 		sitting = false
+		if not has_moved: 
+			moved.emit()
+			has_moved = true
 		#DOWN
 		if velocity.y >= abs(velocity.x):
 			animation = "walking_down"
@@ -64,3 +69,13 @@ func sit(pos: Vector2) -> void:
 	#TODO: change to sitting animation when available
 	$AnimatedSprite2D.animation = "walking_right"
 	sitting = true
+
+
+func tuto_movement() -> void :
+	$TutoControlAnimation.visible = true
+	$TutoControlAnimation.play()
+
+
+func _on_moved() -> void:
+	await get_tree().create_timer(0.5).timeout
+	$TutoControlAnimation.queue_free()
