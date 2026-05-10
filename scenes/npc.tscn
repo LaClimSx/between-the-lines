@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://5tm065t4t75g" path="res://scripts/background_shader.gd" id="4_4wlns"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abqhh"]
-radius = 7.0
-height = 14.0
+radius = 6.0
+height = 12.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tl2vt"]
 shader = ExtResource("2_7n8xq")
@@ -24,6 +24,7 @@ texture_filter = 1
 script = ExtResource("1_abqhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1830750460]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27330966]

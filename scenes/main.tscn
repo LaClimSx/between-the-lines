@@ -165,7 +165,7 @@ size = Vector2(24, 13)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5poiv"]
 a = Vector2(0, -18.5)
-b = Vector2(0, 14.5)
+b = Vector2(0, 9.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq6so"]
 size = Vector2(68, 21)
@@ -188,7 +188,7 @@ size = Vector2(14, 15)
 size = Vector2(20, 41)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yq6so"]
-radius = 6.0
+radius = 3.0
 height = 14.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pibwh"]
@@ -213,7 +213,7 @@ animations = [{
 size = Vector2(28, 48)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkv2x"]
-radius = 5.999178
+radius = 3.9994583
 height = 27.996185
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbj1t"]
@@ -326,7 +326,8 @@ script = ExtResource("17_dp3eg")
 [node name="Player" parent="." unique_id=1711175431 instance=ExtResource("2_0wfyh")]
 position = Vector2(109, 54)
 
-[node name="Furniture" type="Node" parent="." unique_id=994034929]
+[node name="Furniture" type="Node2D" parent="." unique_id=107899276]
+y_sort_enabled = true
 
 [node name="Bookshelf" type="StaticBody2D" parent="Furniture" unique_id=948138631]
 position = Vector2(296.5, 33.5)
@@ -442,10 +443,13 @@ shape = SubResource("RectangleShape2D_qkpxi")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="Cat" type="StaticBody2D" parent="Furniture" unique_id=1461439193]
+z_index = 1
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(55, 165)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat" unique_id=584662833]
+position = Vector2(0, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_yq6so")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
@@ -467,7 +471,8 @@ position = Vector2(0, 14)
 rotation = 0.0
 shape = SubResource("RectangleShape2D_5poiv")
 
-[node name="NPCs" type="Node" parent="." unique_id=1065737768]
+[node name="NPCs" type="Node2D" parent="." unique_id=1692288220]
+y_sort_enabled = true
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
 position = Vector2(216, 108)
@@ -475,6 +480,7 @@ interaction_data = ExtResource("5_trceg")
 npc_name = "Alix & Alex"
 
 [node name="CollisionShape2D" parent="NPCs/Heart" index="0" unique_id=1830750460]
+position = Vector2(0, 2)
 rotation = -1.5873593
 shape = SubResource("CapsuleShape2D_jkv2x")
 
@@ -495,10 +501,12 @@ offset = Vector2(0, -2)
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
 process_mode = 1
+y_sort_enabled = true
 position = Vector2(220, 120)
 curve = SubResource("Curve2D_dp3eg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCs/StarPath" unique_id=693324908]
+y_sort_enabled = true
 position = Vector2(-69, -11)
 rotates = false
 
