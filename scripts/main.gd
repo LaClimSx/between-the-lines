@@ -53,15 +53,18 @@ func _sit_on_sofa() -> void:
 
 
 func fade_to_black() -> void:
-	var child = get_node("ShaderLayer/ColorRect");
-	var mat = child.material;
+	get_tree().paused = true
+	var mat : ShaderMaterial = $ShaderLayer/ColorRect.material;
 	if mat != null: 
-		var curr_tween = create_tween();
+		var curr_tween : Tween = get_tree().create_tween().bind_node($ShaderLayer/ColorRect);
+		
 		mat.set_shader_parameter("start_x", 1.);
 		mat.set_shader_parameter("end_x", 1.);  
-		var maxX = DisplayServer.screen_get_size().x;
+		var maxX : int = DisplayServer.screen_get_size().x;
 		curr_tween.tween_property(mat, "shader_parameter/end_x", float(maxX), 1.5);
 		curr_tween.tween_property(mat, "shader_parameter/start_x", float(maxX), 1.5);
+		curr_tween.tween_callback(func() -> void: get_tree().paused = false)
+		#get_tree().create_timer(1.5).timeout.connect(func() -> void: get_tree().paused = false)
 	
 
 	
