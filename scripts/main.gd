@@ -24,6 +24,7 @@ func move_particle(diff: float) -> void:
 	var particle : Particle = PARTICLE.instantiate()
 	particle.texture = particle.texture_pos if diff > 0 else particle.texture_neg
 	add_child(particle)
+	particle.global_position = Vector2(-10, -10)
 	var tween : Tween = get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	var end_pos : Vector2 = %ProgressBar.global_position + Vector2(%ProgressBar.size.x / 2, -3)
@@ -55,16 +56,8 @@ func _sit_on_sofa() -> void:
 func fade_to_black() -> void:
 	get_tree().paused = true
 	var mat : ShaderMaterial = $ShaderLayer/ColorRect.material;
-	if mat != null: 
+	if mat: 
 		var curr_tween : Tween = get_tree().create_tween().bind_node($ShaderLayer/ColorRect);
-		
-		mat.set_shader_parameter("start_x", 1.);
-		mat.set_shader_parameter("end_x", 1.);  
-		var maxX : int = DisplayServer.screen_get_size().x;
-		curr_tween.tween_property(mat, "shader_parameter/end_x", float(maxX), 1.5);
-		curr_tween.tween_property(mat, "shader_parameter/start_x", float(maxX), 1.5);
+		curr_tween.tween_property(mat, "shader_parameter/fade", 1.0, 1.2);
+		curr_tween.tween_property(mat, "shader_parameter/fade", 0.0, 1.2);
 		curr_tween.tween_callback(func() -> void: get_tree().paused = false)
-		#get_tree().create_timer(1.5).timeout.connect(func() -> void: get_tree().paused = false)
-	
-
-	

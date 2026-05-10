@@ -45,13 +45,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2cjbq"]
 shader = ExtResource("40_2cjbq")
-shader_parameter/start_x = 0.0
-shader_parameter/end_x = 0.0
+shader_parameter/fade = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_chjal"]
 shader = ExtResource("40_2cjbq")
-shader_parameter/start_x = 0.0
-shader_parameter/end_x = 0.0
+shader_parameter/fade = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vxglm"]
 shader = ExtResource("16_muem4")
@@ -313,9 +311,8 @@ color = Color(1, 1, 1, 0)
 
 [node name="Background" type="TextureRect" parent="." unique_id=1261762725]
 material = SubResource("ShaderMaterial_vxglm")
-offset_top = 1.0
 offset_right = 320.0
-offset_bottom = 181.0
+offset_bottom = 180.0
 texture = ExtResource("2_0ld40")
 script = ExtResource("17_dp3eg")
 metadata/_edit_lock_ = true
