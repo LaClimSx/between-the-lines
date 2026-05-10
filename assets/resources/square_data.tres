@@ -21,7 +21,7 @@ metadata/_custom_type_script = "uid://bl4ey0p7k6r27"
 
 [sub_resource type="Resource" id="Resource_jbj1t"]
 script = ExtResource("2_ceagr")
-text = "Oh yeah, she’s cool."
+text = "Oh yeah, she’s cool *You chat for a while*"
 tex = ExtResource("3_vk01h")
 optional_score = 2
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

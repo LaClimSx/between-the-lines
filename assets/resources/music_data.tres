@@ -39,7 +39,7 @@ metadata/_custom_type_script = "uid://d2ow5inumutbj"
 
 [sub_resource type="Resource" id="Resource_f677q"]
 script = ExtResource("2_8njw2")
-text = "Jules: It’s my favorite band"
+text = "Jules: It’s my favorite band *You chat for a while*"
 tex = ExtResource("3_2xuwf")
 optional_score = 1
 metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

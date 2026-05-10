@@ -9,6 +9,8 @@ var bypass_setters: bool = false
 var tuto_done: bool = false
 signal tuto_finished
 
+signal fade_to_black
+
 signal score_changed(value: int)
 signal ending(text: String)
 
