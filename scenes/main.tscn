@@ -329,7 +329,7 @@ position = Vector2(109, 54)
 [node name="Furniture" type="Node" parent="." unique_id=994034929]
 
 [node name="Bookshelf" type="StaticBody2D" parent="Furniture" unique_id=948138631]
-position = Vector2(296.5, 34.5)
+position = Vector2(296.5, 33.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf" unique_id=1703983631]
 shape = SubResource("RectangleShape2D_2wyq8")
@@ -348,14 +348,14 @@ position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_2cjbq")
 
 [node name="Table" type="StaticBody2D" parent="Furniture" unique_id=1588291473]
-position = Vector2(297.5, 129.5)
+position = Vector2(297.5, 128.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Table" unique_id=649985082]
 shape = SubResource("RectangleShape2D_vxglm")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="TableSmall" type="StaticBody2D" parent="Furniture" unique_id=800763843]
-position = Vector2(62, 78.5)
+position = Vector2(62, 77.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/TableSmall" unique_id=624266442]
 shape = SubResource("RectangleShape2D_2f3dj")
@@ -365,11 +365,12 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 position = Vector2(17, 42.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Lamp" unique_id=767654956]
+position = Vector2(0, -1)
 shape = SubResource("SegmentShape2D_5poiv")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="Speakers" type="StaticBody2D" parent="Furniture" unique_id=2041769725]
-position = Vector2(216, 47.5)
+position = Vector2(216, 46.5)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Furniture/Speakers" unique_id=1696269004]
 process_mode = 3
@@ -384,7 +385,7 @@ shape = SubResource("RectangleShape2D_yq6so")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="Sofa" type="StaticBody2D" parent="Furniture" unique_id=2012980441]
-position = Vector2(62, 48.5)
+position = Vector2(62, 47.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Sofa" unique_id=1003915637]
 position = Vector2(-21, 2)
@@ -405,7 +406,7 @@ shape = SubResource("RectangleShape2D_tel4y")
 debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="WhiteChairs" type="StaticBody2D" parent="Furniture" unique_id=1589697238]
-position = Vector2(123, 147.5)
+position = Vector2(123, 146.5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/WhiteChairs" unique_id=900968066]
 polygon = PackedVector2Array(-24, -14.5, -22, -14.5, -22, -4.5, -11, -4.5, -11, 6.5, -24, 6.5)
@@ -419,13 +420,13 @@ shape = SubResource("RectangleShape2D_fv21b")
 debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 
 [node name="Armchair" type="StaticBody2D" parent="Furniture" unique_id=176626666]
-position = Vector2(25, 85.5)
+position = Vector2(25, 84.5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Armchair" unique_id=1900531474]
 polygon = PackedVector2Array(-10, -17.5, -5, -17.5, -4, -13.5, 10, -13.5, 10, 13.5, -10, 13.5, -11, -5.5)
 
 [node name="WoodenChair" type="StaticBody2D" parent="Furniture" unique_id=2010053754]
-position = Vector2(301.5, 94.5)
+position = Vector2(301.5, 93.5)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Furniture/WoodenChair" unique_id=978158541]
 position = Vector2(-17.929691, 5.3958297)
@@ -433,7 +434,7 @@ scale = Vector2(1.0546873, 1.0416665)
 polygon = PackedVector2Array(9, -6.5, 17, -10.5, 17, -21.5, 25, -15.5, 25, -3.5, 17.47409, -2.7799911)
 
 [node name="Door" type="Area2D" parent="Furniture" unique_id=767554394]
-position = Vector2(115, 36.5)
+position = Vector2(115, 35.5)
 script = ExtResource("7_yq6so")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Door" unique_id=1936465426]
@@ -442,7 +443,7 @@ debug_color = Color(0.9098039, 0.27058825, 0.3254902, 0.41960785)
 
 [node name="Cat" type="StaticBody2D" parent="Furniture" unique_id=1461439193]
 texture_filter = 1
-position = Vector2(55, 166)
+position = Vector2(55, 165)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Cat" unique_id=584662833]
 rotation = 1.5707964
@@ -453,7 +454,7 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 panel_scene = ExtResource("15_5he1u")
 
 [node name="Painting" parent="Furniture" unique_id=1722158741 instance=ExtResource("15_pibwh")]
-position = Vector2(160, 20)
+position = Vector2(160, 19)
 highlightable = true
 panel_scene = ExtResource("16_5poiv")
 
@@ -469,7 +470,7 @@ shape = SubResource("RectangleShape2D_5poiv")
 [node name="NPCs" type="Node" parent="." unique_id=1065737768]
 
 [node name="Heart" parent="NPCs" unique_id=1732191449 instance=ExtResource("3_sugp2")]
-position = Vector2(216, 109)
+position = Vector2(216, 108)
 interaction_data = ExtResource("5_trceg")
 npc_name = "Alix & Alex"
 
@@ -484,7 +485,7 @@ sprite_frames = ExtResource("6_2wyq8")
 shape = SubResource("CapsuleShape2D_jbj1t")
 
 [node name="Circle" parent="NPCs" unique_id=1442999823 instance=ExtResource("3_sugp2")]
-position = Vector2(69, 47)
+position = Vector2(69, 46)
 interaction_data = ExtResource("6_choun")
 npc_name = "Charlie"
 
@@ -494,7 +495,7 @@ offset = Vector2(0, -2)
 
 [node name="StarPath" type="Path2D" parent="NPCs" unique_id=2122718659]
 process_mode = 1
-position = Vector2(220, 121)
+position = Vector2(220, 120)
 curve = SubResource("Curve2D_dp3eg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCs/StarPath" unique_id=693324908]
@@ -514,7 +515,7 @@ sprite_frames = ExtResource("11_y6deb")
 animation = &"walking_left_default"
 
 [node name="Triangle" parent="NPCs" unique_id=1381732978 instance=ExtResource("3_sugp2")]
-position = Vector2(277, 137)
+position = Vector2(277, 136)
 interaction_data = ExtResource("7_tipki")
 npc_name = "Greg"
 
@@ -539,7 +540,7 @@ autoplay = "default"
 speed_scale = 0.8
 
 [node name="Square" parent="NPCs" unique_id=1404120910 instance=ExtResource("3_sugp2")]
-position = Vector2(220, 64)
+position = Vector2(220, 63)
 interaction_data = ExtResource("7_85g3d")
 npc_name = "Talia"
 
@@ -547,7 +548,7 @@ npc_name = "Talia"
 sprite_frames = ExtResource("14_yc10j")
 
 [node name="Music" parent="NPCs" unique_id=766634978 instance=ExtResource("3_sugp2")]
-position = Vector2(29, 82)
+position = Vector2(29, 81)
 script = ExtResource("32_fuf3a")
 interaction_data = ExtResource("33_pibwh")
 npc_name = "Jules"
@@ -559,7 +560,7 @@ shape = SubResource("CapsuleShape2D_pibwh")
 sprite_frames = ExtResource("15_gqmmt")
 
 [node name="Eye" parent="NPCs" unique_id=1329434704 instance=ExtResource("3_sugp2")]
-position = Vector2(15, 142)
+position = Vector2(15, 141)
 interaction_data = ExtResource("15_jbj1t")
 npc_name = "Theo"
 
