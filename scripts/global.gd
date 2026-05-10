@@ -26,10 +26,14 @@ var nb_interactions : int = 0:
 			nb_interactions = value
 			return
 		nb_interactions = value
-		if (nb_interactions) == 1:
+		if nb_interactions == 1:
 			timer.start(GAME_TIME)
 			tuto_done = true
 			tuto_finished.emit()
+		if nb_interactions >= TOTAL_INTERACTIONS:
+			if timer.time_left >= 20:
+				timer.start(20)
+			
 
 
 var score : int = 2:
