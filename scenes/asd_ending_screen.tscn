@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bgen47o3tvrf0"]
+
+[ext_resource type="Theme" uid="uid://b7f08ixy72g71" path="res://assets/theme.tres" id="1_u5v8b"]
+[ext_resource type="Script" uid="uid://d01ikpwii117i" path="res://scripts/asd_ending_screen.gd" id="2_bltfc"]
+[ext_resource type="Texture2D" uid="uid://chjgo71a2jf0d" path="res://assets/cat.png" id="3_jbxbu"]
+[ext_resource type="SpriteFrames" uid="uid://63puqjupoafp" path="res://assets/NPCs/sprites/animation_mc.tres" id="4_jbxbu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5v8b"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.21176471, 0.13725491, 0.24705882, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09867471, 0.055416435, 0.11914625, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf3a"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(0, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pibwh"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(16, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6pm6"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(32, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5he1u"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(48, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5poiv"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(64, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cjbq"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(80, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chjal"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(96, 0, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjqg0"]
+atlas = ExtResource("3_jbxbu")
+region = Rect2(112, 0, 16, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk00g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuf3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pibwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6pm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5he1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5poiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cjbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chjal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjqg0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AsdEndingScreen" type="Control" unique_id=1577981289]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_u5v8b")
+script = ExtResource("2_bltfc")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=638007499]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u5v8b")
+
+[node name="Cat" type="AnimatedSprite2D" parent="PanelContainer" unique_id=1009360308]
+top_level = true
+texture_filter = 1
+position = Vector2(45, 133)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mk00g")
+autoplay = "default"
+
+[node name="MC" type="AnimatedSprite2D" parent="PanelContainer" unique_id=363705837]
+top_level = true
+texture_filter = 1
+position = Vector2(263, 118)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("4_jbxbu")
+animation = &"sitting"
+autoplay = "sitting"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=718893183]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=933628325]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1081635070]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1984055752]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Thanks for playing our game! If you’re confused, we should let you know that this game is about Autism Spectrum Disorder. Our goal was to make neurotypical people experience what some people with ASD might feel in social contexts, at a party for instance.
+"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1265972754]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Return to menu"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
