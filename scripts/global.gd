@@ -15,7 +15,7 @@ signal score_changed(value: int)
 signal ending(text: String)
 
 @onready var timer : Timer = $Timer
-const GAME_TIME: int = 540
+const GAME_TIME: int = 520
 
 var nb_interactions : int = 0:
 	set(value):
@@ -29,7 +29,7 @@ var nb_interactions : int = 0:
 			tuto_finished.emit()
 		if nb_interactions >= TOTAL_INTERACTIONS:
 			await get_tree().create_timer(5).timeout
-			_on_timer_timeout()
+			#_on_timer_timeout()
 
 var score : int = 2:
 	set(value):

@@ -14,6 +14,8 @@ func setup(tex: CompressedTexture2D, text: String) -> void:
 		%TextureRect.visible = false
 	get_tree().paused = true
 	visible = true
+	%NextButton.disabled = true
+	get_tree().create_timer(0.4).timeout.connect(func() -> void : %NextButton.disabled = false)
 
 
 func _on_next_button_pressed() -> void:
