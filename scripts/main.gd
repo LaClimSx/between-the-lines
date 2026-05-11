@@ -7,12 +7,7 @@ func _ready() -> void:
 	Global.score_changed.connect(func(val: int) -> void:
 		%ProgressBar.value = val
 		)
-	Global.ending.connect(func(text: String) -> void:
-		if !$CanvasLayer/EndPanel.visible:
-			%Label.text = text
-			$CanvasLayer/EndPanel.visible = true
-			get_tree().paused = true
-			%EndButton.grab_focus.call_deferred())
+	Global.ending.connect(end_game)
 	Global.tuto_finished.connect(close_interaction_tuto)
 	Global.fade_to_black.connect(fade_to_black)
 	%ProgressBar.value_changed.connect(move_particle)
@@ -51,13 +46,30 @@ func _sit_on_sofa() -> void:
 	const SOFA_POSITION : Vector2 = Vector2(52, 47)
 	$Player.sit(SOFA_POSITION)
 
+func end_game(text: String) -> void:
+	fade_to_black(true)
+	await get_tree().create_timer(1.3).timeout
+	%AudioStreamPlayer2D.stop()
+	var data: NPCSimpleData = load("res://assets/resources/end_game_data.tres")
+	var panel_scene: PackedScene = load("res://scenes/simple_panel.tscn")
+	var simple_panel: SimplePanel = panel_scene.instantiate()
+	simple_panel.visible = false
+	$CanvasLayer.add_child(simple_panel)
+	simple_panel.setup(data.tex, data.text)
+	simple_panel.next.connect(func() -> void: simple_panel.queue_free())
+	await simple_panel.next
+	if !$CanvasLayer/EndPanel.visible:
+		%Label.text = text
+		$CanvasLayer/EndPanel.visible = true
+		get_tree().paused = true
+		%EndButton.grab_focus.call_deferred()
 
 
-func fade_to_black() -> void:
+func fade_to_black(stay_black: bool = false) -> void:
 	get_tree().paused = true
 	var mat : ShaderMaterial = $ShaderLayer/ColorRect.material;
 	if mat: 
 		var curr_tween : Tween = get_tree().create_tween().bind_node($ShaderLayer/ColorRect);
 		curr_tween.tween_property(mat, "shader_parameter/fade", 1.0, 1.2);
-		curr_tween.tween_property(mat, "shader_parameter/fade", 0.0, 1.2);
+		if not stay_black: curr_tween.tween_property(mat, "shader_parameter/fade", 0.0, 1.2);
 		curr_tween.tween_callback(func() -> void: get_tree().paused = false)

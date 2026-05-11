@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCSimpleData" format=3 uid="uid://dlwe7ffk06oep"]
+
+[ext_resource type="Script" uid="uid://bl4ey0p7k6r27" path="res://scripts/npcs/npc_simple_data.gd" id="1_v5s8l"]
+[ext_resource type="Texture2D" uid="uid://r1rql65hcg0j" path="res://assets/NPCs/illustrations/hostess.png" id="2_ydg2y"]
+
+[resource]
+script = ExtResource("1_v5s8l")
+text = "Diana: Hey everyone, time to wrap it up! Thank you all for coming, I hope you had fun!"
+tex = ExtResource("2_ydg2y")
+metadata/_custom_type_script = "uid://bl4ey0p7k6r27"

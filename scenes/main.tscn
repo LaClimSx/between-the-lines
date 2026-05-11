@@ -374,6 +374,7 @@ debug_color = Color(0, 0.627451, 0.5019608, 0.2784314)
 position = Vector2(216, 46.5)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Furniture/Speakers" unique_id=1696269004]
+unique_name_in_owner = true
 process_mode = 3
 stream = ExtResource("8_kmb1v")
 autoplay = true
@@ -576,10 +577,10 @@ npc_name = "Theo"
 sprite_frames = ExtResource("16_0ld40")
 animation = &"interacted"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=415475687]
+[node name="ProgressBarLayer" type="CanvasLayer" parent="." unique_id=415475687]
 layer = 0
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=135526445 instance=ExtResource("19_0ld40")]
+[node name="ProgressBar" parent="ProgressBarLayer" unique_id=135526445 instance=ExtResource("19_0ld40")]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 7
@@ -593,6 +594,9 @@ offset_right = 42.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1278512287]
+layer = 2
 
 [node name="EndPanel" type="Control" parent="CanvasLayer" unique_id=1117565338]
 process_mode = 3
