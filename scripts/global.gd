@@ -15,7 +15,7 @@ signal tuto_finished
 signal fade_to_black
 
 signal score_changed(value: int)
-signal ending(text: String)
+signal ending(party_over: bool, text: String)
 
 @onready var timer : Timer = $Timer
 const GAME_TIME: int = 520
@@ -48,14 +48,14 @@ var score : int = 2:
 
 
 func lost_confidence() -> void:
-	ending.emit("Your social battery runs low, you are tired and decide to go home. Before leaving, you find Sarah and thank her for inviting you. Maybe this wasn’t the right day or the right party, but next time will be better for sure.")
+	ending.emit(false, "Your social battery runs low, you are tired and decide to go home. Before leaving, you find Sarah and thank her for inviting you. Maybe this wasn’t the right day or the right party, but next time will be better for sure.")
 
 
 func _on_timer_timeout() -> void:
 	if score >= 0 :
-		ending.emit("The party is ending. Before leaving, you chat with your new friends for a bit. You find Sarah and walk home with her. You’re glad you came with her after all, it wasn’t as bad as you expected.")
+		ending.emit(true, "The party is ending. Before leaving, you chat with your new friends for a bit. You find Sarah and walk home with her. You’re glad you came with her after all, it wasn’t as bad as you expected.")
 	else:
-		ending.emit("The party is ending, you find Sarah and leave together. On your way home, you talk about how you felt meeting these new people. You feel like you had a hard time interacting with them. Maybe this wasn’t the best time for you to go out, or the right party, but next time will be better for sure. You’re glad to have a friend like Sarah to reassure you.")
+		ending.emit(true, "The party is ending, you find Sarah and leave together. On your way home, you talk about how you felt meeting these new people. You feel like you had a hard time interacting with them. Maybe this wasn’t the best time for you to go out, or the right party, but next time will be better for sure. You’re glad to have a friend like Sarah to reassure you.")
 
 
 func restart() -> void:

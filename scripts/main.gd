@@ -46,18 +46,19 @@ func _sit_on_sofa() -> void:
 	const SOFA_POSITION : Vector2 = Vector2(52, 47)
 	$Player.sit(SOFA_POSITION)
 
-func end_game(text: String) -> void:
-	fade_to_black(true)
-	await get_tree().create_timer(1.3).timeout
-	%AudioStreamPlayer2D.stop()
-	var data: NPCSimpleData = load("res://assets/resources/end_game_data.tres")
-	var panel_scene: PackedScene = load("res://scenes/simple_panel.tscn")
-	var simple_panel: SimplePanel = panel_scene.instantiate()
-	simple_panel.visible = false
-	$CanvasLayer.add_child(simple_panel)
-	simple_panel.setup(data.tex, data.text)
-	simple_panel.next.connect(func() -> void: simple_panel.queue_free())
-	await simple_panel.next
+func end_game(party_over: bool, text: String) -> void:
+	if party_over:
+		fade_to_black(true)
+		await get_tree().create_timer(1.3).timeout
+		%AudioStreamPlayer2D.stop()
+		var data: NPCSimpleData = load("res://assets/resources/end_game_data.tres")
+		var panel_scene: PackedScene = load("res://scenes/simple_panel.tscn")
+		var simple_panel: SimplePanel = panel_scene.instantiate()
+		simple_panel.visible = false
+		$CanvasLayer.add_child(simple_panel)
+		simple_panel.setup(data.tex, data.text)
+		simple_panel.next.connect(func() -> void: simple_panel.queue_free())
+		await simple_panel.next
 	if !$CanvasLayer/EndPanel.visible:
 		%Label.text = text
 		$CanvasLayer/EndPanel.visible = true
