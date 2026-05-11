@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func move_particle(diff: float) -> void:
 	var particle : Particle = PARTICLE.instantiate()
-	particle.texture = particle.texture_pos if diff > 0 else particle.texture_neg
+	particle.texture = particle.texture_pos if diff >= 0 else particle.texture_neg
 	add_child(particle)
 	particle.global_position = Vector2(-10, -10)
 	var tween : Tween = get_tree().create_tween()
